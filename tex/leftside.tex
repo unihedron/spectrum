@@ -1,0 +1,60 @@
+
+{
+  %Left side notes
+  %Notes, table of conversions
+  \psset{cornersize=absolute,linearc=4pt,fillstyle=solid,fillcolor=Black, linecolor=white}
+  \white
+
+  \rput[bl]{0}(12.6,22.15){
+    \parbox[t]{4.8in}{
+
+	\psframebox{\parbox[t]{4.8in}{\white\input{tex/description.tex}}}
+
+	\vspace{\VerticalSeparation}
+
+	\psframebox{\parbox[t]{4.8in}{\input{tex/ultraviolet.tex}}}
+
+	\vspace{\VerticalSeparation}
+
+	\psframebox{\parbox[t]{4.8in}{\input{tex/absorption.tex}}}
+
+	\vspace{\VerticalSeparation}
+
+    }
+  }
+
+%   \rput[tl]{0}(12.6,19.31){
+  \rput[tl]{0}(12.6,19.23){
+    \parbox[t]{4.8in}{
+
+	\psframebox{\parbox[t]{4.8in}{\input{tex/tvtext.tex}}}
+
+	\vspace{\VerticalSeparation}
+
+	\psframebox{\parbox[t]{4.8in}{\input{tex/radiotext.tex}}}
+
+    }
+  }
+
+  %\rput[tl]{0}(15.6,14){\psframebox{\parbox[t]{2.3in}{\input{tex/weatherradio.tex}}}}
+  %\rput[tl]{0}(15.4,15.8){\psframebox\parbox[t]{2.1in}{\input{tex/satellite.tex}}}}
+  %\rput[tl]{0}(18.1,19.4){\psframebox{\parbox[t]{1.3in}{\input{tex/cbradio.tex}}}}
+
+  \rput[tl]{0}(13.4,10.5){
+    \parbox[t]{4in}{
+
+	%Description of Sound
+	\psframebox{\parbox[t]{4in}{\input{tex/sound.tex}}}
+
+	\vspace{\VerticalSeparation}
+
+	%Description of Gravity and gravity waves
+	\psframebox{\parbox[t]{4in}{\input{tex/gravity.tex}}}
+
+	\vspace{\VerticalSeparation}
+
+	%Description of Brain waves
+	\psframebox{\parbox[t]{4in}{\input{tex/brain.tex}}}
+    }
+  }
+}

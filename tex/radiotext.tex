@@ -1,0 +1,91 @@
+%Radio description
+{\Large Radio Bands}
+%Draw a sinewave with
+%	{Initial Amplitude x.xxx}{Initial Time-width x.xxx}{Initial Number of cycles x}
+%	{Second Amplitude x.xxx}{Second Time-width x.xxx}{Second Number of cycles x}
+%	{Total repeats}
+\newlength{\nAmplitude}		\newlength{\nAmplitudeNeg}
+\newlength{\nTime}		\newlength{\nTimeTwo}		\newlength{\nTimeThree}		\newlength{\nTimeFour}
+\newlength{\nSAmplitude}	\newlength{\nSAmplitudeNeg}
+\newlength{\nSTime}		\newlength{\nSTimeTwo}		\newlength{\nSTimeThree}	\newlength{\nSTimeFour}
+\newlength{\nTimeEnd}		\newlength{\nSTimeEnd}		\newlength{\nSTimeStart}
+\newcommand{\sinewave}[7]{
+	\setlength{\nAmplitude}{#1}
+	\setlength{\nAmplitudeNeg}{\nAmplitude*-1}
+	\setlength{\nTime}{#2}
+	\setlength{\nTimeTwo}{\nTime*2}
+	\setlength{\nTimeThree}{\nTime*3}
+	\setlength{\nTimeFour}{\nTime*4}
+	\setlength{\nTimeEnd}{\nTime*4*#3}
+	\setlength{\nSAmplitude}{#4}
+	\setlength{\nSAmplitudeNeg}{\nSAmplitude*-1}
+	\setlength{\nSTime}{#5}
+	\setlength{\nSTimeTwo}{\nSTime*2}
+	\setlength{\nSTimeThree}{\nSTime*3}
+	\setlength{\nSTimeFour}{\nSTime*4}
+	\setlength{\nSTimeEnd}{\nTime*4*#3+\nSTime*4*#6}
+	\multido{\dXTimePosition=0.000in+\nSTimeEnd}{#7}{
+		\multido{\dXPosition=\dXTimePosition+\nTimeFour}{#3}{
+			\rput(\dXPosition,0){
+			\parabola(0.00,0)(\nTime,\nAmplitude)\parabola(\nTimeTwo,0)(\nTimeThree,\nAmplitudeNeg)
+			}
+		}
+		\setlength{\nSTimeStart}{\dXTimePosition+\nTimeEnd}
+		\multido{\dXPosition=\nSTimeStart+\nSTimeFour}{#6}{
+			\rput(\dXPosition,0){
+			\parabola(0.00,0)(\nSTime,\nSAmplitude)\parabola(\nSTimeTwo,0)(\nSTimeThree,\nSAmplitudeNeg)
+			}
+		}
+	}
+}
+%
+\begin{itemize}
+
+\item The radio spectrum (ELF to EHF) is populated by many more items than can be shown on this chart. Only a small sampling of bands used around the world have been shown.
+
+\item Communication using EMR is done using either:
+\begin{itemize}
+\item Amplitude Modulation (AM)
+%Amplitude Modulation
+\psframebox[linestyle=none,fillstyle=none]{\rput(.1,0.05){\sinewave{.1in}{0.015in}{5}{.05in}{0.015in}{5}{4}}}\vspace{0.1in}\\
+\vspace{0.04in}OR
+\item Frequency Modulation (FM)
+%Frequency Modulation
+\psframebox[linestyle=none,fillstyle=none]{\rput(.1,0.05){\sinewave{.1in}{0.010in}{7}{.1in}{0.020in}{4}{4}}}
+\vspace{0.1in}
+\end{itemize}
+
+\item Each country has its own rules and regulations for allotting bands in this region. Refer to the authority in your area (Ex. FCC in the USA, DOC in Canada).
+
+\item Not all references agree on the ULF band range, the HAARP range is used here.
+
+\item {\bfseries RA}dio {\bfseries D}etecting {\bfseries A}nd {\bfseries R}anging (RADAR) uses EMR in the microwave range to detect the distance and speed of objects.
+
+\item {\bfseries C}itizens {\bfseries B}and Radio (CB) contains 40 stations between 26.965 - 27.405MHz.
+
+\item Schumann resonance is produced in the cavity between the Earth and the ionosphere. The resonant peaks are depicted as \psframebox[fillstyle=none,linestyle=none]{\blip{0,-.07}{S}}
+
+\item Hydrogen gas emits radio band EMR at 21cm \psframebox[fillstyle=none,linestyle=none]{\blip{0,-.07}{H}}
+
+\item Some individual frequencies are represented as icons:\vspace{0.1in}\\
+\begin{tabular}{cp{1.9in}cp{1.1in}}
+\psframebox[linestyle=none]{\submarine{0.02,.05}{xxHz}}\hspace{0.2in}\vspace{0.05in} & Submarine communications&
+\psframebox[linestyle=none]{\rput(0.15,.05)\pager}&Pager\\
+\psframebox[linestyle=none]{\rput(0.15,.05){\timestandard}\hspace{.03in}}\vspace{0.05in} & Time / frequency standards&\psframebox[linestyle=none]{\rput(0.15,.05){\weatherstation}\hspace{.03in}\vspace{0.08in}} & Weather stations\\
+\psframebox[linestyle=none]{\rput(0.14,0.01){\psframebox[fillstyle=solid,fillcolor=green,linecolor=green,linearc=0]{\textcolor{Black}{xxm}}}}\hspace{.1in}\vspace{0.05in} & Ham / international meter bands&
+\psframebox[linestyle=none]{\rput(0.15,.04){
+	\psframe[linestyle=solid,linecolor=gray,fillstyle=solid,fillcolor=gray,linearc=0](-.2,-.08)(.2,.08)
+	\psframe[hatchwidth=2pt, hatchsep=1.5pt,linestyle=solid,linecolor=yellow,fillstyle=hlines,hatchangle=45,hatchcolor=yellow,fillcolor=gray,linearc=0](-.2,-.08)(.2,.08)
+	}
+	\hspace{.2in}}\vspace{0.05in}
+ 	& Short wave radio\\
+\psframebox[linestyle=none]{\rput(0.05,.05){\psframebox[fillstyle=solid,fillcolor=Itinerant,linecolor=Itinerant,linearc=0,framesep=1pt]{\textcolor{Black}{GMRS}}}}&General Mobile Radio Service&
+\psframebox[linestyle=none]{\rput(0.15,-0.05){\wirelessmic}}&Wireless Microphone\\
+\psframebox[linestyle=none]{\rput(0.11,.05){\psframebox[fillstyle=solid,fillcolor=Itinerant,linecolor=Itinerant,linearc=0,framesep=1pt]{\textcolor{Black}{FRS}}}}&Family Radio Service&
+\psframebox[linestyle=none]{\rput(0.15,.05){\psframebox[fillstyle=solid,linearc=0,linecolor=yellow,framesep=1pt,fillcolor=yellow,linewidth=1pt,linestyle=solid]{\textcolor{Black}{CP}}}\hspace{.03in}\vspace{0.08in}} & Cellular Phones\\
+\psframebox[linestyle=none]{\rput(0.11,.05){\psframebox[linestyle=none,framesep=1pt,fillcolor=red,linearc=0]{\white SOS}}}&
+	\psset{dotsize=1pt 1}Distress signal, in Morse code:\vspace{0.18in}
+\rput(-1.4,-0.18){\rput(0,0.05){\psdots(0,0)(.1,0)(.2,0)\psline{cc-cc}(0.3,0)(0.42,0)\psline{cc-cc}(0.49,0)(0.61,0)\psline{cc-cc}(0.68,0)(0.8,0)\psdots(.9,0)(1,0)(1.1,0)}}&\hspace{0.1in}&\hspace{0.1in}\\
+\end{tabular}
+
+\end{itemize}

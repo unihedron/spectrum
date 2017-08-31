@@ -1,0 +1,18 @@
+  %Piano keys representing audible range
+
+  % repeat = 0.5" / 7_key_spaces_per_octave = 0.071 
+
+  %White keys
+  \multido{\nBottomSide=0.000+0.071,\nTopSide=0.071+0.071}{52}{%
+  \psframe[fillstyle=solid,fillcolor=white,linecolor=Black,linewidth=0.1pt,framearc=0.2](0,\nBottomSide)(0.3,\nTopSide)}
+  %Black keys
+  \multido{\nBottomSide=0.046+0.497,\nTopSide=0.096+0.497}{8}{% A#
+  \psframe[fillstyle=solid,fillcolor=Black,linecolor=Black,linewidth=0.1pt,framearc=0.2](0,\nBottomSide)(0.2,\nTopSide)}
+  \multido{\nBottomSide=0.188+0.497,\nTopSide=0.238+0.497}{7}{% C#
+  \psframe[fillstyle=solid,fillcolor=Black,linecolor=Black,linewidth=0.1pt,framearc=0.2](0,\nBottomSide)(0.2,\nTopSide)}
+  \multido{\nBottomSide=0.259+0.497,\nTopSide=0.309+0.497}{7}{% D#
+  \psframe[fillstyle=solid,fillcolor=Black,linecolor=Black,linewidth=0.1pt,framearc=0.2](0,\nBottomSide)(0.2,\nTopSide)}
+  \multido{\nBottomSide=0.401+0.497,\nTopSide=0.451+0.497}{7}{% F#
+  \psframe[fillstyle=solid,fillcolor=Black,linecolor=Black,linewidth=0.1pt,framearc=0.2](0,\nBottomSide)(0.2,\nTopSide)}
+  \multido{\nBottomSide=0.472+0.497,\nTopSide=0.522+0.497}{7}{% G#
+  \psframe[fillstyle=solid,fillcolor=Black,linecolor=Black,linewidth=0.1pt,framearc=0.2](0,\nBottomSide)(0.2,\nTopSide)}

@@ -1,0 +1,40 @@
+{\psset{gradlines=100,
+ fillstyle=gradient,
+ gradangle=90,
+ gradmidpoint=1.0,
+ linewidth=0pt,
+ linestyle=none,
+ linearc=0pt}
+{\Large Visible Spectrum \hspace{0.05in}
+	\psframebox[fillstyle=none,linestyle=none]{\psset{xunit=2.8in}
+		\multido{%
+			\nStartColor=0.00+0.1,
+			\nEndColor=0.1+0.1,
+			\nLeftSide=0.00+0.10,
+			\nRightSide=0.10+0.10}{8}{%
+			\definecolor{StartColor}{hsb}{\nStartColor,1,1}
+			\definecolor{EndColor}{hsb}{\nEndColor,1,1}
+			\psframe[fillstyle=gradient,
+				gradangle=90,
+				gradbegin=StartColor,
+				gradend=EndColor,
+				gradmidpoint=1.0,
+				linewidth=0pt,
+				linestyle=none]
+			(\nLeftSide,0)(\nRightSide,0.15)}
+			}
+}
+\begin{itemize}
+
+\item The range of EMR visible to humans is called ``Light". The visible spectrum also closely resembles the range of EMR that filters through our atmosphere from the sun.
+
+\item Other creatures see different ranges of visible light; for example bumble-bees can see ultraviolet light and dogs have a different response to colours than do humans.
+
+\item The sky is blue because our atmosphere scatters light and the shorter wavelength blue gets scattered the most. It appears that the entire sky is illuminated by a blue light but in fact that light is scattered from the sun. The longer wavelengths like red and orange move straight through the atmosphere which makes the sun look like a bright white ball containing all the colours of the visible spectrum.
+
+\item Interestingly, the visible spectrum covers approximately one octave.
+
+\item Astronomers use filters to capture specific wavelengths and reject unwanted wavelengths. The major astronomical (visual) filter bands are depicted as  \psframebox[fillstyle=none,linestyle=none]{\astrofilter{0.07,0.03}{X}}
+
+\end{itemize}
+}

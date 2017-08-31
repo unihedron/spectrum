@@ -1,0 +1,176 @@
+% itinerant.tex
+% From: http://www.bcar.us/Frequency%20Reference.htm 
+
+{
+\tiny
+
+\psset{linestyle=none,fillcolor=Itinerant,fillstyle=solid}
+
+% Data and Digital Pager Frequencies
+  \rput(1.78,16.7){\pager}%152.2400MHz
+  \rput(2.32,16.7){\pager}%158.1000MHz
+  \rput(2.37,16.7){\pager}%158.7000MHz
+
+  \rput(7.44,17.3){\pager}%454.3250MHz
+  \rput(7.45,17.3){\pager}%454.6000MHz
+
+  \rput(7.76,17.8){\pager}%929.2125-929.7375MHz
+  \rput(7.77,17.8){\pager}%929.8375-929.9375MHz
+  \rput(7.80,17.8){\pager}%931.8600-931.8875MHz
+  \rput(7.86,17.8){\pager}%936.3500-936.2750MHz
+
+
+% Camcorder Wireless Microphone Frequencies
+  \rput(0.99,15.55){\wirelessmic}%35.9800MHz
+  \rput(1.27,15.55){\wirelessmic}%36.7000MHz
+
+  \rput(5.59,15.6){\wirelessmic}%49.8300MHz
+  \rput(5.60,15.6){\wirelessmic}%MHz
+  \rput(5.61,15.6){\wirelessmic}%49.8900MHz
+
+  \rput(1.00,16.05){\wirelessmic}%72.0250MHz
+  \psline[linestyle=dotted,linecolor=black,linewidth=0.7pt,dotsep=0.01in,fillstyle=none](1.00,16.2)(1.18,16.2)
+  \rput(1.18,16.05){\wirelessmic}%72.9750MHz
+
+  \rput(1.65,16.05){\wirelessmic}%MHz
+  \psline[linestyle=dotted,linecolor=black,linewidth=0.7pt,dotsep=0.01in,fillstyle=none](1.65,16.2)(1.75,16.2)
+  \rput(1.75,16.05){\wirelessmic}%MHz
+
+  \rput(2.00,16.55){\wirelessmic}%154.6000MHz
+  \rput(2.63,16.55){\wirelessmic}%161.6700MHz
+
+  \rput(3.30,16.55){\wirelessmic}%169.4450MHz
+  \rput(3.35,16.55){\wirelessmic}%MHz
+  \rput(3.36,16.55){\wirelessmic}%MHz
+  \rput(3.37,16.55){\wirelessmic}%MHz
+  \rput(3.43,16.55){\wirelessmic}%MHz
+  \rput(3.46,16.55){\wirelessmic}%MHz
+  \rput(3.49,16.55){\wirelessmic}%MHz
+  \rput(3.50,16.55){\wirelessmic}%MHz
+  \rput(3.62,16.55){\wirelessmic}%MHz
+  \rput(3.67,16.55){\wirelessmic}%MHz
+  \rput(3.69,16.55){\wirelessmic}%MHz
+  \rput(3.72,16.55){\wirelessmic}%MHz
+  \rput(3.96,16.55){\wirelessmic}%MHz
+  \rput(4.01,16.55){\wirelessmic}%178.2100MHz
+
+  \rput(4.15,16.55){\wirelessmic}%MHz
+  \rput(4.17,16.55){\wirelessmic}%MHz
+  \rput(4.18,16.55){\wirelessmic}%MHz
+  \rput(4.20,16.55){\wirelessmic}%MHz
+  \rput(4.22,16.55){\wirelessmic}%MHz
+  \rput(4.27,16.55){\wirelessmic}%MHz
+  \rput(4.35,16.55){\wirelessmic}%MHz
+  \rput(4.43,16.55){\wirelessmic}%MHz
+  \rput(4.61,16.55){\wirelessmic}%MHz
+  \rput(4.66,16.55){\wirelessmic}%MHz
+  \rput(4.79,16.55){\wirelessmic}%MHz
+  \rput(4.96,16.55){\wirelessmic}%MHz
+  \rput(4.97,16.55){\wirelessmic}%MHz
+  \rput(5.06,16.55){\wirelessmic}%MHz
+  \rput(5.11,16.55){\wirelessmic}%MHz
+  \rput(5.31,16.55){\wirelessmic}%MHz
+  \rput(5.32,16.55){\wirelessmic}%MHz
+  \rput(5.40,16.55){\wirelessmic}%MHz
+  \rput(5.50,16.55){\wirelessmic}%MHz
+  \rput(5.63,16.55){\wirelessmic}%MHz
+  \rput(5.79,16.55){\wirelessmic}%MHz
+  \rput(5.81,16.55){\wirelessmic}%MHz
+  \rput(5.92,16.55){\wirelessmic}%MHz
+  \rput(6.21,16.55){\wirelessmic}%MHz
+  \rput(6.33,16.55){\wirelessmic}%MHz
+  \rput(6.41,16.55){\wirelessmic}%MHz
+  \rput(6.54,16.55){\wirelessmic}%MHz
+  \rput(3.55,17.55){\wirelessmic}%MHz
+
+
+
+% 46/49 MHz Cordless Telephone Frequencies
+{
+\psset{linestyle=solid,linewidth=0.4pt,linecolor=yellow,fillcolor=yellow,fillstyle=solid}
+\psline[linewidth=2pt](4.25,15.7)(5.29,15.7)
+\psframe(3.74,15.6)(3.99,15.75)
+\psframe(4.65,15.6)(4.76,15.75)
+\psframe(3.74,15.65)(4.76,15.75){\rput(4.25,15.7){Cordless Phone (Out)}}
+\psframe(5.28,15.6)(5.64,15.75){\rput(5.36,15.7){(In)}}
+%channels
+{
+
+ %draw a tiny channel line: \tinyline{xlocation}
+ \newcommand{\tinyline}[1]{\psline(#1,15.59)(#1,15.63)}
+
+ \psset{linecolor=black,linestyle=solid,linewidth=0.4pt}
+ \tinyline{3.74}
+ \tinyline{3.75}
+ \tinyline{3.77}
+ \tinyline{3.78}
+ \tinyline{3.81}
+ \tinyline{3.82}
+ \tinyline{3.87}
+ \tinyline{3.88}
+ \tinyline{3.89}
+ \tinyline{3.90}
+ \tinyline{3.93}
+ \tinyline{3.95}
+ \tinyline{3.96}
+ \tinyline{3.98}
+ \tinyline{3.99}
+ \tinyline{4.65}
+ \tinyline{4.65}
+ \tinyline{4.66}
+ \tinyline{4.68}
+ \tinyline{4.69}
+ \tinyline{4.71}
+ \tinyline{4.73}
+ \tinyline{4.74}
+ \tinyline{4.76}
+ \tinyline{5.28}
+ \tinyline{5.31}
+ \tinyline{5.33}
+ \tinyline{5.36}
+ \tinyline{5.38}
+ \tinyline{5.40}
+ \tinyline{5.41}
+ \tinyline{5.42}
+ \tinyline{5.43}
+ \tinyline{5.46}
+ \tinyline{5.47}
+ \tinyline{5.49}
+ \tinyline{5.50}
+ \tinyline{5.55}
+ \tinyline{5.60}
+ \tinyline{5.57}
+ \tinyline{5.59}
+ \tinyline{5.61}
+ \tinyline{5.62}
+ \tinyline{5.64}
+ \tinyline{5.63}
+}
+}
+
+% Video Production Radio Service Frequencies (a.k.a. Motion Picture Radio Service)152.8700-153.0200, 173.2250-173.3750
+
+% Family Radio Service (FRS) Frequencies 462.5625-467.7125
+\psline[linewidth=1pt,linestyle=solid,linecolor=Itinerant](7.69,17.15)(7.69,17.3)
+\psline[linewidth=1pt,linestyle=solid,linecolor=Itinerant](7.85,17.15)(7.85,17.3)
+\psframe(7.69,17.21)(7.85,17.28)\rput(7.77,17.24){FRS}
+
+% General Mobile Radio Service (GMRS) Frequencies 462.5500-467.5500
+\psframe(7.66,17.27)(7.88,17.35)\rput(7.77,17.31){GMRS}
+
+% Multi-Use Radio Service (MURS) Frequencies 151.8200-154.6000
+%  \psframe(1.74,16.55)(1.75,16.75)\rput(1.75,16.65){MURS}%too thin
+
+% Itinerant Frequencies, Low-Power Business and "Dot" & "Star" Frequencies 27.4900-897.6625MHz
+
+% Global Positioning Satellite Frequencies (GPS) (done in ranges.tex)
+
+% National Law Enforcement Channels (NLEC)
+%  \psframe(2.08,16.55)(2.08,16.75)\rput(2.08,16.65){NLEC}%too thin
+
+%baby monitors 49.3-49.97MHz
+\psframe(5.44,15.625)(5.63,15.745){\rput(5.54,15.71){Baby}\rput(5.54,15.65){mon.}}
+
+
+
+}

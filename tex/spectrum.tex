@@ -1,0 +1,254 @@
+\documentclass{article}
+\usepackage[latin1]{inputenc}
+\DeclareMathAlphabet{\mathrm}{OT1}{cmss}{m}{n}
+%try typewrite font instead of roman (mathrm) for clarity
+% I guess this must be defined at each math statement since defining it above as mathtt does not work
+
+%\usepackage{amsmath}
+%\usepackage{amsfonts}
+%\usepackage{amssymb}
+
+%Fix up for poorly hyphenated words.
+\hyphenation{meas-ured Micro-wave}
+
+\usepackage[dvips]{geometry}
+\usepackage{url}
+
+\usepackage[pstricks,squaren,cdot]{SIunits}	% used for SI units and other symbols like mu
+
+\geometry{
+	verbose,
+	noheadfoot,
+	paperwidth=24in,
+	paperheight=36in,
+	top=0.0in,
+	bottom=0.0in,
+	left=0.0in,
+	right=0.0in
+}
+
+%	textwidth=24in,
+%	height=36in
+
+\newfont{\titlefont}{cmssbx10 at 50pt}    %Title Font
+%\newfont{\titlefont}{cmbx10 at 50pt}    %Old Title Font
+%\newfont{\peoplesize}{cmss10 at 4pt}    %People Font
+
+\usepackage{pstricks,pst-poly,pst-3d,pst-node,pst-tree,pst-grad,pst-plot}
+% \usepackage{pstricks,pst-poly,pst-3d,pst-node,pst-tree,pst-grad,pst-char,pst-plot}
+% \usepackage{pstricks,pstcol,pst-poly,pst-3d,pst-node,pst-tree,pst-grad,pst-char,pst-plot}
+\usepackage{color}
+\usepackage{calc}
+\usepackage{multido}
+\usepackage{graphicx} %for the includegraphics function
+
+%Allow polar co-ordinates (radius,angle) with pstricks
+\SpecialCoor
+
+%\pagecolor{Black}
+\pagestyle{empty}	% suppress page numbering
+
+\definecolor{Black}{rgb}{0.0,0.0,0.0} %Printer uses this layer as CMYK. For testing, alter the values from 0,0,0.
+  
+%Some backgrounds must be same black as gradient, cannot use CMYK black.
+%Try this trick to make an RGB black for the printhouse, use a black that is not quite black.
+\definecolor{RGBBlackBegin}{rgb}{0.001,0.001,0.001}
+\definecolor{RGBBlackEnd}{rgb}{0.002,0.002,0.002}
+
+\definecolor{IonizingYellow}{rgb}{.88,.88,0}
+\definecolor{Itinerant}{rgb}{0.5,1.0,0.5} %Itinerant frequency color
+
+
+\definecolor{Brown}{rgb}{0.65,0.16,0.16}
+\definecolor{DarkBrown}{rgb}{0.463,0.141,0}
+\definecolor{BrightGreen}{rgb}{0.5,1,.5}
+\definecolor{LineGray}{rgb}{0.6,0.6,0.6}
+\definecolor{Gray80}{rgb}{0.8,0.8,0.8}
+\definecolor{Gray20}{rgb}{0.2,0.2,0.2}
+
+\definecolor{FColor}{rgb}{0.8,0.8,1.0} %Frequency label colour
+\definecolor{WColor}{rgb}{0.8,1.0,0.8} %Wavelength label colour
+\definecolor{EColor}{rgb}{1.0,0.8,0.8} %Energy label colour
+
+\definecolor{DarkRange}{rgb}{0.2,0.2,0.2}
+\definecolor{LightRange}{rgb}{0.3,0.3,0.3}
+
+\newlength{\VerticalSeparation}  \setlength{\VerticalSeparation}{.15in} %vertical separation of text boxes
+
+\newlength{\EMRPosition}  \setlength{\EMRPosition}{-1.1in} %vertical centerline for arrows
+\newlength{\EMRPositionA} \setlength{\EMRPositionA}{\EMRPosition-0.2in}
+\newlength{\EMRPositionB} \setlength{\EMRPositionB}{\EMRPosition+0.1in}
+\newlength{\EMRPositionC} \setlength{\EMRPositionC}{\EMRPosition-0.4in} %Far left side of box
+\newlength{\EMRPositionD} \setlength{\EMRPositionD}{\EMRPosition+0.3in} %vertical centerline for alternative arrows
+\newlength{\EMRPositionE} \setlength{\EMRPositionE}{10.1in} %far right side grey backgrounds on chart
+
+\newlength{\AudioPosition}    \setlength{\AudioPosition}{10.4in} % xpos centerline
+\newlength{\AudioPositionA}   \setlength{\AudioPositionA}{\AudioPosition-0.1in} %label left side
+\newlength{\AudioPositionB}   \setlength{\AudioPositionB}{\AudioPosition+0.1in} %label right side
+\newlength{\AudioPositionC}   \setlength{\AudioPositionC}{\AudioPosition-0.2in} %display box left side
+\newlength{\AudioPositionD}   \setlength{\AudioPositionD}{\AudioPosition+0.6in} %display box right side
+\newlength{\AudioPositionE}   \setlength{\AudioPositionE}{\AudioPosition+0.2in} %right side of piano keys
+\newlength{\AudioPositionF}   \setlength{\AudioPositionF}{\AudioPosition-0.5pt} %left side of centerline
+\newlength{\AudioPositionG}   \setlength{\AudioPositionG}{\AudioPosition+0.5pt} %right side of centerline
+
+
+% set normal size text for math fonts
+\newcommand{\D}{\displaystyle}
+
+% Erbium-Doped Fiber Amplifier
+% \edfa{center Xpos, bottom Ypos}
+  \newcommand{\fiberoptics}[2]{
+  \rput(#1){
+	\psset{fillstyle=solid,fillcolor=yellow,framesep=2pt,linearc=0,linestyle=none}
+	%\psframe[fillstyle=solid,fillcolor=yellow](-.175,.05)(.175,.25)
+	\psline[fillstyle=none,linestyle=solid,linewidth=1.5pt,linecolor=yellow](-.17,0)(-.17,.2)(.17,.2)(.17,0)
+	\rput(0,.15){\psframebox[fillstyle=solid,framesep=1pt]{\textcolor{Black}{#2}}}
+  }}
+
+
+  %draw a tiny submarine{location}{text}
+  % The submarine was drawn using xfig then exported as an "Latex picture + epic macros" then the co-ordinates copied into here below
+  \newcommand{\submarine}[2]{
+  	\rput(#1){\rput(-.27,-.07){
+	\psline[unit=.0006in,linecolor=green,fillstyle=solid,fillcolor=WColor,linestyle=solid,linearc=0]{-}(29,190)(240,217)(268,336)
+        (403,315)(414,217)(718,201)
+        (957,163)(989,244)(1016,250)
+        (1016,158)(1027,152)(1027,104)
+        (1016,98)(1016,12)(984,17)
+        (957,104)(729,50)(528,28)
+        (154,28)(40,55)(18,82)
+        (12,158)(29,190)}}
+	\rput(#1){\textcolor{Black}{#2}}}
+
+  \newcommand{\timestandard}{\psset{linecolor=Black,linewidth=1pt,linearc=0}
+	\psframebox[linestyle=none]{%
+		\pscircle[linestyle=none,fillstyle=solid,fillcolor=white]{.11}
+		\pscircle[fillstyle=none,linestyle=solid]{.1}
+		\psline[fillstyle=none,linestyle=solid]{c-c}(.07;150)(0;0)(.05;30)
+		\psline[linestyle=solid](.07;0)(.1;0)
+		\psline[linestyle=solid](.07;90)(.1;90)
+		\psline[linestyle=solid](.07;180)(.1;180)
+		\psline[linestyle=solid](.07;270)(.1;270)
+		}
+	}
+
+  \newcommand{\weatherstation}{
+	\psset{linecolor=white,linewidth=1pt,linestyle=solid,fillstyle=solid,fillcolor=white,linearc=0}
+	\psframebox[linestyle=none,fillstyle=none]{
+		\pscircle(-.03,0.03){.05}
+		\pscircle(0.03,0.03){.05}
+		\pscircle(-.03,-.03){.05}
+		\pscircle(0.03,-.03){.05}
+		\psline(-.12,.05)(0.0,.05)
+		\psline(-.11,.02)(0.01,.02)
+		\psline(-.10,-.01)(0.02,-.01)
+		\rput(0,0){\black W}
+		}
+  }
+
+  \newcommand{\pager}{
+	\psset{linecolor=green,linewidth=0.7pt,linestyle=solid,fillstyle=solid,fillcolor=red,linearc=0}
+	\psframebox[linestyle=none,fillstyle=none]{
+		\psline(0,0)(0,-.1)
+		\pscircle(0,0){.05}
+		\rput(0,0){\tiny\black P}
+	}
+  }
+
+
+  \newcommand{\wirelessmic}{
+	\psset{linecolor=Gray20,linewidth=0.7pt,linestyle=solid,fillstyle=solid,fillcolor=DarkBrown,linearc=0}
+	\psframebox[linestyle=none,fillstyle=none]{
+		\pscurve[linearc=0.04,linewidth=0.5pt,fillstyle=none](-0.015,0.06)(0,0.07)(0,0.09)(0,0.12)
+		\psline[linewidth=1.8pt](0,0.1)(0,0.2)
+		\pscircle(0,0.2){.03}
+	}
+  }
+
+
+  \newcommand{\astrofilter}[2]{
+	\rput(#1){\black\bfseries%\tiny
+		%\psline[fillstyle=solid,fillcolor=white,linestyle=none](.10;90)(.10;234)(.10;18)(.10;162)(.10;306)(.10;90)
+		%\rput(0,0){\pscircle[fillstyle=solid,fillcolor=white,linestyle=none](0,0){.1}}
+		%\rput(0,0){#2}
+		%\rput(0,0){\psdots[linecolor=white](.15;0)(.15;40)(.15;80)(.15;120)(.15;160)(.15;200)(.15;240)(.15;280)(.15;320)}
+		\psline[linecolor=white,linestyle=solid,linewidth=1pt](-.1,-.07)(-.1,.07)
+		\psline[linecolor=white,linestyle=solid,linewidth=1pt](.1,-.07)(.1,.07)
+		\psframe[fillcolor=white,fillstyle=solid,linestyle=none](-.1,-.05)(.1,.05)
+		\rput(0,0){#2}
+	}
+  }
+
+  \newcommand{\blip}[2]{
+	\rput(#1){
+		\pscurve[linestyle=solid,linewidth=.8pt,linecolor=black,fillstyle=solid,fillcolor=white](-.1,0)(-.08,.02)(0,.2)(.08,.02)(.1,0)
+		\psline[linestyle=solid,linewidth=.8pt,linecolor=white](-.12,0)(.12,0)
+		\rput(0,0.09){\textcolor{Black}{#2}}
+	}
+
+  }
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Notes:
+%  - Calibration of the paper size is done with the "\psset{unit=Xin}" setting below
+%    where X should be close to 1.000 depending on your printer.
+%  - All rows are spaced 0.5" apart.
+%  - All columns are determined by dividing the desired width by 12.
+%  - The width should be determined by measuring the circumference of the tube that
+%    the chart is to be wrapped around.
+%    Measure this accurately or use trial and error to line up the sheet once wrapped
+%    around cylinder.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document} %===================================================================
+\flushleft
+
+%\tiny
+%\scriptsize
+%\footnotesize
+\small
+%\normalsize
+%\large
+%\Large
+%\LARGE
+%\huge
+%\Huge
+
+\sffamily
+
+\psset{unit=1in}% scaling factor for perfect printer to equal 1.000"
+%\psset{unit=1.0041841in}% scaling factor for Home Roland Raven printer to equal 1.000"
+
+\begin{pspicture}(-1,-1)(23,35)
+
+  %black background
+  \psframe[fillstyle=solid, fillcolor=Black, linestyle=none, linewidth=0pt](-.8,-.8)(22.8,34.8)
+
+  \rput{0}(-.35,-.6){\input{sources/sources.tex}}
+
+  \rput{0}(.4,-.6){\input{sizes/sizes.tex}}
+
+  \rput{0}(2.4,-.7){\small\input{tex/ranges.tex}}
+
+  %Title
+  \rput[B]{0}(10.1,34.15){\titlefont \white The Electromagnetic Radiation Spectrum}
+
+  %sine wave down the side of the poster
+  \rput{270}(22.4,35.5){
+  	\psplot[linestyle=solid,linewidth=2pt,fillstyle=none, linecolor=white, plotpoints=5000]{1}{36000}{3000000 div x mul x sin 4 div}
+  }
+
+\input{tex/leftside.tex}
+
+\input{tex/rightside.tex}
+
+%If/when copyright permission is ever given for most of these images then this can be restored
+%\input{tex/people.tex}
+
+  \rput[B]{0}(15.4,-.6){\input{tex/contact.tex}}
+
+\end{pspicture}
+
+\end{document} %===============================================================

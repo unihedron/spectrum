@@ -1,0 +1,92 @@
+%Ham radio
+
+{
+
+\psset{linestyle=none,fillcolor=green,fillstyle=solid}
+
+% 160 Meters 1.8-2.0MHz
+\psframe(7.64,13.02)(9.13,13.22)\rput(8.38,13.12){160 Meters Ham Radio}
+
+%from http://www.dxing.com/tuning.htm 2300 to 2498 kHz: This is the 120-meter broadcasting band, mainly used by stations located in the tropics
+\psframe(1.31,13.52)(2.47,13.72)\rput(1.89,13.62){120m Tropics}
+
+%from http://www.dxing.com/tuning.htm  3200-3400 kHz: This is the 90-meter broadcasting band
+\psframe(5.97,13.52)(6.83,13.72)\rput(6.30,13.62){90m}
+
+% 80 Meters 3.5-4.0MHz
+\psframe(7.24,13.52)(9.13,13.72)\rput(8.19,13.62){80m Ham Radio}
+
+%from http://www.dxing.com/tuning.htm 4750 to 4995 kHz: This is the 60-meter tropics
+\psframe(1.76,14.02)(2.47,14.22)\rput(2.11,14.17){60m}\rput(2.11,14.07){Tropics}
+
+%from http://www.dxing.com/tuning.htm 5950 to 6200 kHz: This is the 49-meter band
+\psframe(4.94,14.1)(5.53,14.3)\rput(5.23,14.2){49m}
+
+% 40 Meters 7.0-7.3MHz
+\psframe(7.24,14.1)(7.83,14.3)\rput(7.54,14.2){40m Ham}
+
+%from http://www.dxing.com/tuning.htm 10100 to 10150 kHz: This is the 30-meter
+\psframe(2.62,14.6)(2.69,14.8)
+%too small to fit text in
+%\rput(2.66,14.7){30m}
+
+%from http://www.dxing.com/tuning.htm 11650 to 11975 kHz: This is the 25-meter
+\psframe(4.64,14.6)(5.03,14.8) \rput(4.84,14.725){25m}
+
+%from http://www.dxing.com/tuning.htm 13600 to 13800 kHz: This is the 22-meter
+\psframe(6.83,14.6)(7.04,14.8) \rput(6.93,14.7){22m}
+
+% 20 Meters 14.0-14.35MHz
+\psframe(7.24,14.6)(7.59,14.8) \rput(7.42,14.725){20m}
+
+%from http://www.dxing.com/tuning.htm 15100 to 15600 kHz: This is the 19-meter
+\psframe(8.31,14.6)(8.77,14.8) \rput(8.54,14.7){19m}
+
+%from http://www.dxing.com/tuning.htm 17550 to 17900 kHz: This is the 16-meter
+\psframe(0.64,15.1)(0.92,15.3) \rput(0.78,15.2){16m}
+
+%from http://www.dxing.com/tuning.htm 18068 to 18168 kHz: This is the 17-meter ham
+\psframe(1.05,15.1)(1.13,15.3)
+%too small to fit text in
+%\rput(1.09,15.2){17m}
+
+% 15 Meters 21.0-21.45MHz
+\psframe(3.17,15.1)(3.47,15.3)\rput(3.32,15.2){15m}
+
+%from http://www.dxing.com/tuning.htm 21450 to 21850 kHz: This is the 13-meter international broadcasting band
+\psframe(3.47,15.1)(3.74,15.3) \rput(3.60,15.2){13m}
+
+%from http://www.dxing.com/tuning.htm 24890 to 24990 kHz: This is the 12-meter ham radio band
+%too small to show (also goes behind a time source
+%\psframe(5.58,15.1)(5.63,15.3) \rput(5.61,15.2){12m}
+
+%from http://www.dxing.com/tuning.htm 25670 to 26100 kHz: This is the 11-meter international broadcasting band
+\psframe(6.01,15.1)(6.25,15.3) \rput(6.13,15.2){11m}
+
+% 10 Meters 28.0-29.7MHz
+\psframe(7.24,15.1)(8.07,15.3)\rput(7.66,15.2){10m Ham}
+
+
+% 6 Meters 50-54MHz
+\psframe(5.64,15.6)(6.73,15.8)\rput(6.18,15.7){6m Ham Radio}
+
+% 2 Meters 144-148MHz
+\psframe(0.99,16.6)(1.38,16.75)\rput(1.19,16.675){2m}
+
+{
+
+% The following line allows nice looking fractions but requires texlive-formats-extra):
+% \input eplain
+
+% 1 1/4 Meters 220-225MHz
+% \psframe(6.99,16.6)(7.30,16.85)\rput(7.15,16.77){1\frac 1/4m}
+\psframe(6.99,16.6)(7.30,16.8)\rput(7.15,16.7){$1\frac{1}{4}$m}
+
+% 3/4 Meters 420-450MHz
+% \psframe(6.33,17.1)(7.30,17.35)\rput(6.82,17.27){ \frac 3/4 m Ham}
+% \psframe(6.33,17.1)(7.30,17.35)\rput(6.82,17.27){ $\frac{3}{4}$ m Ham}
+\psframe(6.33,17.1)(7.30,17.35)\rput(6.82,17.27){{3/4}m Ham}
+
+}
+ 
+}
