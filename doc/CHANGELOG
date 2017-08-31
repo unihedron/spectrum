@@ -1,0 +1,75 @@
+ALl comments here are in reverse chronological order.
+
+Version	Description
+-------	-----------
+2010-04-28
+ver 0.18
+	- removed CMB prediction history since it is contested
+	- altered gravity speed statement, "not yet determined"
+2007-10-12
+	- released for printing (2000)
+	- Added pagers, wireless mics, FRS, GMRS, Mil&Aero SOS
+	- Added Terahertz rays label to microwave umm band description
+	- tidied up TV and radio description labels.
+	- O2 and Water absorption positions made more precise
+2006-02-19
+	- released for printing (2000)
+	- removed water absorption near microwave oven
+	- fixed up drawings that have RGB black to fill in frame which has CMYK black
+	- added frame and descriptiopn for mechanical waves near bottom right
+
+2005-11-17
+ver 0.17
+	- internal modifications (not sent to printer yet
+	- Added suggetions from Joel Friend (including A musical note reference).
+
+
+2004-11-12
+ver 0.15
+	- black body radiation graph was incorrectly depicted with frequency increasing to the left, 
+	  should be wavelength increasing to the left. Corrected now.
+	
+	
+2004-10-23
+ver 0.15
+	- ionizing radiation
+	- heartbeats (below sound waves)
+	User based changes implimented, such as:
+	- "vice versa" spelling thanks to Hal Mueller
+	- "absorption bands - around 60 GHz, 118.75GHz" Thanks to Peter Bealo
+	- "Erbium based amplifier bands" Thanks to Alan Dowdell
+	- 3rd harmonic of the power grid,LORAN-C, GPS, and extra time signals, 2.4GHz water Thanks to Poul-Henning Kamp
+	- Ocean waves, thanks to Ward Cunningham
+	Released to printer for 1000 copies.
+
+2003-12-17
+ver 0.14
+	Released to printer for 1000 copies.
+
+
+--------------------------------------
+Suggestions from 2003-11-26:
+	Math font is still too small, parts missing. This is harder to change than it seems.
+Changes from 2003-11-26:
+	Added EEG to brain section as well as brain picture to sources.
+	picture of CMB distribution over universe viewed from earth (WMAP).
+	EMR description moved to top, and photon image added.
+	Add 802.1 Wireless-LAN transmission frequency
+	Title font changed to san serif (cmssbx10) not cmbx10
+	Add other cell phone ranges (FDMA, TDMA, CDMA)
+	Middle C should have a white outline
+	Put ticks onto band division labels (under 2GHz, etc)
+--------------------------------------
+2003-11-26	Initial printing
+--------------------------------------
+0.10	Removed copyrighted images of people
+0.9	Interim release
+0.8	Added more items in the radio range
+0.7	Added more more notes to EMR description, add ULF
+0.6	Added notes on the TV stations
+0.5	Added TV stations and other radio frequency charts
+0.4	Updated EMR facts
+0.3	Added people/discoverers
+	Updated Sound description
+0.2	Updated sizes image placement
+0.1	Initial release

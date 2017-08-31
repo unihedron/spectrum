@@ -1,0 +1,31 @@
+FAQ
+
+
+==================================
+If you try making changes to the the source files you may encounter problems
+with LaTeX because the default memory allocation is too small, please refer
+to the following problem/cause/solution:
+----------------------------------
+Problem:
+ Not enough memory as shown by the following error report:
+    Runaway definition?
+    ->0.8 SLW 0.6 0.6 0.6  setrgbcolor  /ArrowA { BeginArrow 1.  1.  scal\ETC.
+    ! TeX capacity exceeded, sorry [main memory size=350001].
+    \pst@code ...0.04384 1611.62097 470.04384 1589.939
+                                                      76  
+    l.83 }
+          
+    No pages of output.
+
+Cause:
+  A large job was run (spectrum.tex) that is a 7x36in page with lots of lines and text
+Solution:
+  Allow more Tex memory by editing (as root):
+    /usr/share/texmf/web2c/texmf.cnf
+  change:
+    main_memory = 350000 % words of inimemory available; also applies to inimf&mp
+  to:
+    main_memory = 3500000 % words of inimemory available; also applies to inimf&mp
+  save file then run:
+    fmtutil --all
+==================================

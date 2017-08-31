@@ -1,0 +1,137 @@
+%Emission and Absorption lines
+{\Large Emission and Absorption}
+\begin{itemize}
+
+%\item The fluorescent lamp uses luminescent material (phosphor) to convert ultraviolet radiation using photoluminescence into visible light. The phosphor absorbs UV light and emits visible light.
+
+\item As EMR passes through elements, certain wavelength bands get absorbed and some new ones get emitted. This absorption and emission produces characteristic spectral lines for each element which are useful in determining the makeup of distant stars. These lines are used to prove the red-shift amount of distant stars.
+
+\item
+ When a photon hits an atom it may be absorbed if the energy is just right.
+ The energy level of the electron is raised -- essentially holding the radiation.
+ A new photon of specific wavelength is created when the energy is released.
+ The jump in energy is a discrete step and many possible levels of energy exist in an atom.
+
+\item Johann Balmer created this formula defining the photon emission wavelength ($\lambda$); where $m$ is the initial electron energy level and $n$ is the final electron energy level:
+
+\hspace{1in}$\lambda = 364.56nm \left( \frac{\D m^2}{\D m^2 - n^2} \right)$
+
+\item Much of the interstellar matter is made of the simplest atom hydrogen. The hydrogen visible-spectrum emission and absorption lines are shown below:
+
+\end{itemize}
+
+%what happens if the photons energy is slightly higher than required to elevate the electrons energy level? Where does the excess energy go after raising the electrons energy level?
+
+
+%Start X, End X, Label, label offset
+\newcommand{\absorbemit}[4]{
+	\psframe(#1,.075)(#2,.165)
+	\psline[linestyle=solid](#2,0)(#2,.083)
+	\uput{2pt}[270](#2,#4){#3}
+}
+\vspace{0.2in}
+\psframebox[fillstyle=none,linestyle=none]{
+	\rput(0.1,0){
+	%Start at 760nm (0in)
+		\psset{xunit=.0120in,linestyle=none, linewidth=1pt, linecolor=Black, fillstyle=solid, fillcolor=Black,linearc=0}
+{
+%  Red 		760-620 nm
+%  Orange 	620-570 nm
+%  Yellow 	570-550 nm
+%  Green 	550-470 nm
+%  Blue 	470-440 nm
+%  Violet 	440-380 nm
+\psset{gradlines=100,fillstyle=gradient,gradangle=90,gradmidpoint=1.0,linewidth=0pt,linestyle=none}
+\definecolor{StartColor}{hsb}{.0,1,1} \definecolor{EndColor}{hsb}{.1,1,1} \psframe[gradbegin=StartColor,gradend=EndColor](0,0)(165,.15) %Red to Orange
+\definecolor{StartColor}{hsb}{.1,1,1} \definecolor{EndColor}{hsb}{.2,1,1} \psframe[gradbegin=StartColor,gradend=EndColor](165,0)(200,.15) %Orange to Yellow
+\definecolor{StartColor}{hsb}{.2,1,1} \definecolor{EndColor}{hsb}{.38,1,1}\psframe[gradbegin=StartColor,gradend=EndColor](200,0)(250,.15) %Yellow to Green
+\definecolor{StartColor}{hsb}{.4,1,1} \definecolor{EndColor}{hsb}{.5,1,1} \psframe[gradbegin=StartColor,gradend=EndColor](250,0)(305,.15) %Green to Blue
+\definecolor{StartColor}{hsb}{.5,1,1} \definecolor{EndColor}{hsb}{.8,1,1} \psframe[gradbegin=StartColor,gradend=EndColor](305,0)(380.25,.15) %Blue to Violet
+}
+		\absorbemit{-2}{103.715}{$H_\alpha$}{0}
+		\absorbemit{103.715}{273.867}{$H_\beta$}{0}
+		\absorbemit{273.867}{325.953}{$H_\gamma$}{0}
+		\absorbemit{325.953}{349.826}{$H_\delta$}{0}
+		\absorbemit{349.826}{363.03}{$H_\epsilon$}{0}
+		\absorbemit{363.03}{371.14}{$H_\zeta$}{-.13in}
+		\absorbemit{371.14}{376.5}{$H_\eta$}{.32in}
+		\absorbemit{376.5}{380.25}{$H_\theta$}{0}
+		\absorbemit{380.25}{385}{}{0}
+{
+	\psset{linearc=2pt,linecolor=white,linestyle=solid,linewidth=1pt,fillstyle=none}
+	\uput{2pt}[180](70,.17){Emission line}\psline{->}(70,.17)(86,.17)(86,.12)(102,.12)
+	\uput{2pt}[180](70,-.10){Absorption line}\psline{->}(70,-.10)(86,-.10)(86,.04)(102,.04)
+	\uput{2pt}[0](140,-.16){Balmer series name}\psline{->}(140,-.16)(127,-.16)(127,-.09)(113,-.09)
+}
+	}
+}
+\vspace{0.2in}
+
+%longer at opposite end, must use negative co-ordinates (Ex. subtract from the beginning of red visible light 760nm )
+%$H_\alpha$% 656.285nm  103.715
+%$H_\beta$% 486.133nm 273.867
+%$H_\gamma$% 434.047nm 325.953
+%$H_\delta$% 410.174nm 349.826
+%$H_\epsilon$% 396.97nm 363.03
+%$H_\zeta$% 388.86nm 371.14
+%$H_\eta$% 383.50nm 376.5
+%$H_\theta$% 379.75nm 380.25
+
+%from http://hyperphysics.phy-astr.gsu.edu/hbase/quantum/atspect.html#c1
+
+%Emission
+%Wavelength	Relative	Transition	Color
+%(nm)		Intensity
+%383.5384 	5 		9 -> 2 		Violet
+%388.9049 	6 		8 -> 2 		Violet
+%397.0072 	8 		7 -> 2 		Violet
+%410.174 	15 		6 -> 2 		Violet
+%434.047 	30 		5 -> 2 		Violet
+%486.133 	80 		4 -> 2 		Bluegreen (cyan)
+%656.272 	120 		3 -> 2 		Red
+%656.2852 	180 		3 -> 2 		Red
+
+
+\textcolor{gray}{\hrule}
+\vspace{.4in}
+\hspace{.3in}
+\begin{tabular}{rl}
+%blackbody radiation
+\begin{minipage}[b]{1.1in}
+	\psframebox[linestyle=none]{
+		%
+		%The following picture was created using the above Plank formula in a 
+		% spreadsheet (balmer_series.gnumeric) then plotted.
+		%The vertical scale is log(x), temperatures are 2000K, 1000K, 700K.
+		\rput[bl](0,0){\includegraphics{pictures/blackbody.eps}}
+		%
+		\psline[fillstyle=none, linearc=0]{<->}(1.1,0)(0,0)(0,.9)
+		\rput[b]{90}(-.05,.45){Power}
+		\rput[t](.5,-.05){Wavelength}
+		\psset{border=1pt, bordercolor=Black, fillstyle=none, linearc=0,linecolor=green}
+		\psline{o-}(.08,.6)(.5,.6)\uput{2pt}[0](.5,.6){White Hot}
+		\psline{o-}(.12,.43)(.7,.43)\uput{2pt}[0](.7,.43){Red Hot}
+		\psline{o-}(.18,.25)(.9,.25)\uput{2pt}[0](.9,.25){Hot}
+		\psline{o-}(.7,0)(.88,.1)(1.05,.1)\uput{2pt}[0](1.05,.1){CMB}
+	}
+\end{minipage}&
+\hspace{0.0in}
+\begin{minipage}[b]{3in}
+\begin{itemize}
+\item Max Planck determined the relationship between the temperature of an object and its radiation profile; where $R_\lambda$ is the radiation power, $\lambda$ is the wavelength, $T$ is the temperature:
+
+\hspace{.7in} $R_\lambda = \frac{\D 37418}{\D \lambda^5 \epsilon^{\left( \frac{\D 14388}{\D \lambda T}\D - 1 \right) }}$
+
+\end{itemize}
+\end{minipage}
+\end{tabular}
+\vspace{.15in}
+
+
+
+
+%Fluorescent lamp 12,000K
+%Sun 6,000K
+%Incandescent lamp 3000K
+%Cosmic Microwave Background radiation 3K
+

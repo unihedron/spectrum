@@ -1,0 +1,20 @@
+\setlength{\unitlength}{0.00000083in}
+%
+\begingroup\makeatletter\ifx\SetFigFont\undefined%
+\gdef\SetFigFont#1#2#3#4#5{%
+  \reset@font\fontsize{#1}{#2pt}%
+  \fontfamily{#3}\fontseries{#4}\fontshape{#5}%
+  \selectfont}%
+\fi\endgroup%
+{\renewcommand{\dashlinestretch}{30}
+\begin{picture}(1039,363)(0,-10)
+\drawline(29,190)(240,217)(268,336)
+	(403,315)(414,217)(718,201)
+	(957,163)(989,244)(1016,250)
+	(1016,158)(1027,152)(1027,104)
+	(1016,98)(1016,12)(984,17)
+	(957,104)(729,50)(528,28)
+	(154,28)(40,55)(18,82)
+	(12,158)(29,190)
+\end{picture}
+}

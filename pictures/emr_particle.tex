@@ -1,0 +1,34 @@
+%Description: Electromagnetic radiation schematic with travelling photon
+
+\definecolor{DarkGreen}{rgb}{0,0.6,0}
+\definecolor{MagneticBlue}{rgb}{.7,.7,1}
+\definecolor{ElectricRed}{rgb}{1,.7,.7}
+
+\psset{unit=0.5in}
+
+\psset{viewpoint=1 1 1}
+
+\psset{hatchsep=2pt}
+
+%Axis labels
+\ThreeDput[normal=1 0 0 ]{\psline[linecolor=ElectricRed]{<->}(0,-1.5)(0,1.5)}
+
+\ThreeDput[normal=0 0 1,embedangle=90]{\psline[linecolor=MagneticBlue]{<->}(0,-1.5)(0,1.5)}
+
+
+% Source and Space label
+\ThreeDput[normal=1 0 0]{
+       \psline[linecolor=white,linestyle=solid]{cc->}(0,0)(1.65,0)
+       \uput{5pt}[180](0,0){\white Source}
+       \uput{4pt}[270](1,0){\white Space}
+       }
+
+%Draw photon (position approximate since THREED system is confusing and circle must not be squashed)
+\rput(1.3,-.74){
+	\pscircle[fillstyle=solid,fillcolor=DarkGreen,linecolor=DarkGreen](0,0){0.1}
+	\psarc[linestyle=solid,linecolor=white,linewidth=0.5pt]{cc-cc}(0,0){0.065}{100}{150}
+	}
+
+\rput[l](-1,-2.2){\parbox[t]{2in}{
+	\textcolor{white}{Particle Nature}}}
+

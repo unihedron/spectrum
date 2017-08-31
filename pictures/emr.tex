@@ -1,0 +1,98 @@
+%Description: Electromagnetic radiation schematic with travelling photon
+
+\definecolor{DarkGreen}{rgb}{0,0.6,0}
+\definecolor{MagneticBlue}{rgb}{.7,.7,1}
+\definecolor{ElectricRed}{rgb}{1,.7,.7}
+
+\psset{unit=0.5in}
+
+\psset{viewpoint=1 1 1}
+
+\psset{hatchsep=2pt}
+
+%Axis labels
+\ThreeDput[normal=1 0 0 ]{\textcolor{ElectricRed}{
+       \psline[linecolor=ElectricRed]{<->}(0,-1.5)(0,1.5)
+       \uput{2pt}[90](0,1.5){+E}
+       \uput{2pt}[270](0,-1.5){-E}}
+}
+
+\ThreeDput[normal=0 0 1,embedangle=90]{\textcolor{MagneticBlue}{
+	\psline[linecolor=MagneticBlue]{<->}(0,-1.5)(0,1.5)
+	\uput{2pt}[270](0,-1.5){+B}
+	\uput{2pt}[90](0,1.5){-B}}
+}
+
+
+
+%% In-phase magnetic (all three humps)
+\ThreeDput[normal=0 0 1,embedangle=90]{
+	\psset{linestyle=none, fillstyle=hlines,hatchangle=90,hatchcolor=MagneticBlue}
+	\parabola(0,0)(.5,-1)
+	\parabola(1,0)(1.5,1)
+	\parabola(2,0)(2.5,-1)
+      }
+
+%% Out-of-phase magnetic (first half-hump)
+% \ThreeDput[normal=0 0 1,embedangle=90]{
+% 	\psset{linestyle=none, fillstyle=hlines,hatchangle=90,hatchcolor=MagneticBlue}
+% 	\psclip{\psframe[linestyle=none, fillstyle=none](0,0)(0.5,-1)}
+% 	\parabola(-0.5,0)(0,-1)
+% 	\endpsclip	
+%        }
+%% Out-of-phase magnetic (second hump)
+% \ThreeDput[normal=0 0 1,embedangle=90]{
+% 	\psset{linestyle=none, fillstyle=hlines,hatchangle=90,hatchcolor=MagneticBlue}
+% 	\parabola(0.5,0)(1,1)
+%        }
+
+\ThreeDput[normal=1 0 0]{
+	\psset{linestyle=none, fillstyle=hlines,hatchangle=90,hatchcolor=ElectricRed}
+	\parabola(0,0)(.5,1)
+       }
+
+%% Out-of-phase magnetic (fourth half-hump)
+% \ThreeDput[normal=0 0 1,embedangle=90]{
+% 	\psset{linestyle=none, fillstyle=hlines,hatchangle=90,hatchcolor=MagneticBlue}
+% 	\psclip{\psframe[linestyle=none, fillstyle=none](2.5,0)(3,1)}
+% 	\parabola(2.5,0)(3,1)
+% 	\endpsclip	
+%        }
+
+\ThreeDput[normal=1 0 0]{
+	\psset{linestyle=none, fillstyle=hlines,hatchangle=90,hatchcolor=ElectricRed}
+	\parabola(1,0)(1.5,-1)
+       }
+
+%% Out-of-phase magnetic (third hump)
+% \ThreeDput[normal=0 0 1,embedangle=90]{
+% 	\psset{linestyle=none, fillstyle=hlines,hatchangle=90,hatchcolor=MagneticBlue}
+% 	\parabola(1.5,0)(2,-1)
+%        }
+
+
+
+\ThreeDput[normal=1 0 0]{
+	\psset{linestyle=none, fillstyle=hlines,hatchangle=90,hatchcolor=ElectricRed}
+	\parabola(2,0)(2.5,1)
+       }
+
+%%Draw photon
+%\ThreeDput[normal=1 -1 1](4,0,0){
+%	\pscircle[fillstyle=solid,fillcolor=DarkGreen,linecolor=DarkGreen](0,0){0.1}
+%	\psarc[linestyle=solid,linecolor=white,linewidth=0.5pt]{cc-cc}(0,0){0.065}{100}{150}
+%	}
+
+% Space label
+\ThreeDput[normal=1 0 0]{
+       \psline[linecolor=white,linestyle=solid]{cc->}(0,0)(3.4,0)
+       \uput{5pt}[180](0,0){\white Source}
+       \uput{4pt}[270](2.8,0){\white Space}
+       }
+
+
+\rput[l](-1,-2.2){\parbox[t]{2in}{
+	\textcolor{ElectricRed}{E = Electric Field Strength}\\
+	\textcolor{MagneticBlue}{B = Magnetic Field Strength}\\
+	\textcolor{white}{Wave Nature}}}
+

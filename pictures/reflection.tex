@@ -1,0 +1,18 @@
+%Description: reflection schematic
+{
+\psset{linearc=0}
+\psframe[fillstyle=solid,fillcolor=gray,linestyle=solid,linecolor=gray](-.8,.04)(.8,.1)	% Mirror body
+\psline[linestyle=dashed,linecolor=gray](0,.1)(0,.7)
+\psline[linecolor=gray](-.1,.1)(-.1,.2)(0,.2)
+\psline[linecolor=white]{-}(-.8,0.1)(.8,0.1)	%Mirror surface
+\rput(0,.1){
+	\uput{4pt}[90](-.8;-30){\textcolor{white}{Source}}
+	\psline[linecolor=white,fillstyle=none]{->}(-.8;-30)(0,0)(.8;30)
+}
+\rput(-.2,.5){\textcolor{white}{$\theta_i$}}
+\rput(.2,.5){\textcolor{white}{$\theta_r$}}
+\psarc[linecolor=white]{<->}(0,.1){.3}{30}{90}
+\psarc[linecolor=white]{<->}(0,.1){.3}{90}{150}
+\rput[t](0,0){\textcolor{white}{Reflector}}
+
+}

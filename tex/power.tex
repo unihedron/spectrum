@@ -1,0 +1,82 @@
+%Power lines
+
+  % 50Hz Power Lines used in Europe
+  \psframe[framearc=0, fillstyle=solid, fillcolor=FColor,linewidth=0pt,linestyle=none](5.9,5.5)(6.72,5.8)
+  \rput(6.31,5.73){50Hz Power}
+  \rput(6.02,5.58){
+	\psframebox[linestyle=none,fillstyle=none]{
+		\psset{linestyle=solid,linecolor=Black,linewidth=1pt,fillstyle=none}
+		\psline[linestyle=solid,linecolor=gray](0.2,0)(.64,0)
+		\rput(0.05,0){v=}
+		\parabola(0.24,0)(0.27,.07)\parabola(0.30,0)(0.33,-.07)
+		\parabola(0.36,0)(0.39,.07)\parabola(0.42,0)(0.45,-.07)
+		\parabola(0.48,0)(0.51,.07)\parabola(0.54,0)(0.57,-.07)
+	}
+  }
+  \psframe[framearc=0, fillstyle=crosshatch, fillcolor=FColor,linewidth=0pt,linestyle=none, hatchcolor=FColor,hatchsep=1.5pt,hatchwidth=.2pt](5.9,5.8)(6.72,6.0)
+  \psframe[framearc=0, fillstyle=solid, fillcolor=FColor,linewidth=0pt,linestyle=none](5.9,6.0)(6.72,6.3)
+  \rput(6.31,6.23){100Hz Lights}
+  \rput(6.02,6.08){
+	\psframebox[linestyle=none,fillstyle=none]{
+		\psset{linestyle=solid,linecolor=Black,linewidth=1pt,fillstyle=none}
+		\psline[linestyle=solid,linecolor=gray](0.2,-.07)(.64,-.07)
+		\rput(0.05,0){p=}
+		\parabola(0.24,0)(.255,.07)\parabola(0.27,0)(.285,-.07)
+		\parabola(0.30,0)(.315,.07)\parabola(0.33,0)(.345,-.07)
+		\parabola(0.36,0)(.375,.07)\parabola(0.39,0)(.405,-.07)
+		\parabola(0.42,0)(.435,.07)\parabola(0.45,0)(.465,-.07)
+		\parabola(0.48,0)(.495,.07)\parabola(0.51,0)(.525,-.07)
+		\parabola(0.54,0)(.555,.07)\parabola(0.57,0)(.585,-.07)
+	}
+  }
+
+  %60Hz Power Lines
+  \psframe[framearc=0, fillstyle=solid, fillcolor=FColor,linewidth=0pt,linestyle=none](8.48,5.5)(9.3,5.8)
+  \rput(8.89,5.73){60Hz Power}
+  \rput(8.6,5.58){
+	\psframebox[linestyle=none,fillstyle=none]{
+		\psset{linestyle=solid,linecolor=Black,linewidth=1pt,fillstyle=none}
+		\psline[linestyle=solid,linecolor=gray](0.2,0)(.64,0)
+		\rput(0.05,0){v=}
+		\parabola(0.24,0)(0.27,.07)\parabola(0.30,0)(0.33,-.07)
+		\parabola(0.36,0)(0.39,.07)\parabola(0.42,0)(0.45,-.07)
+		\parabola(0.48,0)(0.51,.07)\parabola(0.54,0)(0.57,-.07)
+	}
+  }
+  \psframe[framearc=0, fillstyle=crosshatch, fillcolor=FColor,linewidth=0pt,linestyle=none, hatchcolor=FColor,hatchsep=1.5pt,hatchwidth=.2pt](8.48,5.8)(9.3,6)
+  \psframe[framearc=0, fillstyle=solid, fillcolor=FColor,linewidth=0pt,linestyle=none](8.48,6)(9.3,6.3)
+  \rput(8.89,6.23){120Hz Lights}
+  \rput(8.6,6.08){
+	\psframebox[linestyle=none,fillstyle=none]{
+	\psset{linestyle=solid,linecolor=Black,linewidth=1pt,fillstyle=none}
+	\psline[linestyle=solid,linecolor=gray](0.2,-.07)(.64,-.07)
+	\rput(0.05,0){p=}
+	\parabola(0.24,0)(.255,.07)\parabola(0.27,0)(.285,-.07)
+	\parabola(0.30,0)(.315,.07)\parabola(0.33,0)(.345,-.07)
+	\parabola(0.36,0)(.375,.07)\parabola(0.39,0)(.405,-.07)
+	\parabola(0.42,0)(.435,.07)\parabola(0.45,0)(.465,-.07)
+	\parabola(0.48,0)(.495,.07)\parabola(0.51,0)(.525,-.07)
+	\parabola(0.54,0)(.555,.07)\parabola(0.57,0)(.585,-.07)
+	}
+  }
+
+{\psset{fillstyle=none, linecolor=FColor, linestyle=solid, linewidth=.5pt, linearc=1pt}
+\psbezier{->}(5.9,5.6)(4.9,5.6)(4.9,6.65)(2.59,6.65)
+\psbezier{->}(8.48,5.6)(7.7,5.6)(7.7,6.65)(5.17,6.65)
+} 
+% Third harmonics of power lines, suggested by Poul-Henning Kamp
+\psframe[framearc=0, fillstyle=solid, fillcolor=FColor,linewidth=0pt,linestyle=none](1.88,6.5)(2.6,6.8)
+  \rput(2.24,6.71){150Hz}
+  \rput(2.24,6.59){3rd harmonic}
+\psframe[framearc=0, fillstyle=solid, fillcolor=FColor,linewidth=0pt,linestyle=none](4.46,6.5)(5.18,6.8)
+  \rput(4.82,6.71){180Hz}
+  \rput(4.82,6.59){3rd harmonic}
+
+
+  %Airplane Power
+  \psframe[framearc=0, fillstyle=solid, fillcolor=FColor,linewidth=0pt,linestyle=none](5.90,7)(6.72,7.3)
+  \rput(6.31,7.23){400Hz}\rput(6.31,7.07){Airplane Power}
+
+
+
+

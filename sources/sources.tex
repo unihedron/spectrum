@@ -1,0 +1,78 @@
+%Sources of EMR
+%This is displayed as a column of images and text
+
+%The sun and most stars produce a wide range of frequencies in the spectrum (almost filling this entire chart). Many of the frequencies are filtered by our atmosphere.
+
+% Sources shown as images in a vertical strip
+{\white
+
+\psset{%old style (pre 2005-07-28
+	fillcolor=black,
+	fillstyle=solid,
+	cornersize=absolute,
+	linearc=4pt,
+	linestyle=solid,
+	linewidth=2pt,
+	linecolor=FColor}
+
+\psset{%new style after 2005-07-28
+	cornersize=absolute,
+	linearc=4pt,
+	linestyle=solid,
+	linewidth=2pt,
+	linecolor=FColor,
+	fillstyle=gradient,
+	gradangle=0,
+	gradbegin=RGBBlackBegin,
+	gradend=RGBBlackEnd,
+	gradmidpoint=1.0}
+
+
+\psline(0,0)(0,35.1)
+
+\rput{0}(0,35.1){\psframebox{\parbox[t]
+	{0.5in}{\centering Sources of EMR}}}
+\rput{0}(0,0.1){\psframebox{\parbox[t]
+	{0.5in}{\centering Sources of EMR}}}
+
+\rput{0}(0,3){\psframebox{\parbox[t]
+	{0.5in}{\centering\includegraphics{sources/brain.eps} Human Brain}}}
+
+\rput{0}(0,5.65){\psframebox{\parbox[t]
+	{0.5in}{\centering\includegraphics{sources/powerline.eps} Power Lines (50,60Hz)}}}
+
+%50Hz - 25KHz
+\rput{0}(0,7.9){\psframebox{\parbox[t]
+	{0.5in}{\centering\includegraphics{sources/induction.eps} Induction Heating}}}
+
+\rput{0}(0,17.6){\psframebox{\parbox[t]
+	{0.5in}{\centering\includegraphics{sources/cellphone.eps} Cell phone}}}
+
+% 2.4GHz
+\rput{0}(0,18.595){\psframebox{\parbox[t]
+	{0.5in}{\centering\includegraphics{sources/microwave.eps} Microwave oven}}}
+
+\rput{0}(0,20){\psframebox{\parbox[t]
+	{0.5in}{\centering\includegraphics{sources/radar.eps} Radar}}}
+
+\rput{0}(0,27.2){\psframebox{\parbox[t]
+	{0.5in}{\centering\includegraphics{sources/light1.eps} Light bulb}}}
+
+%unneccessary clutter
+%\rput{0}(0,27.8){\psframebox{\parbox[t]
+%	{0.5in}{\centering\includegraphics{sources/light2.eps} Flourescent light bulb}}}
+
+\rput{0}(0,25){\psframebox{\parbox[t]
+	{0.5in}{\centering\includegraphics{sources/people.eps} People}}}
+
+\rput{0}(0,13){\psframebox{\parbox[t]
+	{0.5in}{\centering\includegraphics{sources/radio.eps} Radio tower}}}
+
+\rput{0}(0,32){\psframebox{\parbox[t]
+	{0.5in}{\centering\includegraphics{sources/xray.eps} X-Ray machines}}}
+
+\rput{0}(0,34){\psframebox{\parbox[t]
+	{0.5in}{\centering\includegraphics{sources/radiation.eps} Radioactive elements}}}
+
+
+}

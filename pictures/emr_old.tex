@@ -1,0 +1,57 @@
+%Description: Electromagnetic radiation schematic with travelling photon
+
+\definecolor{DarkGreen}{rgb}{0,0.6,0}
+
+\psset{unit=0.5in}
+
+\psset{viewpoint=1 -1 1}
+
+\psset{hatchsep=2pt}
+
+\ThreeDput[normal=0 -1 0]{
+	\psset{linestyle=none,fillstyle=vlines,hatchangle=0,hatchcolor=red}
+	\parabola(2,0)(3,-1)
+	%\parabola(4,0)(5,1)
+	}
+
+\ThreeDput[normal=0  0 1]{
+	\psset{linestyle=none, fillstyle=hlines,hatchangle=90,hatchcolor=blue}
+	\psclip{\psframe[linestyle=none,fillstyle=none](3,0)(4,1)}
+	  \parabola(3,0)(4,1)
+	\endpsclip
+	}
+
+\ThreeDput[normal=0  0 1]{
+	\psset{linestyle=none, fillstyle=hlines,hatchangle=90,hatchcolor=blue}
+	\psclip{\psframe[linestyle=none,fillstyle=none](0,0)(1,1)}
+	  \parabola(-1,0)(0,1)
+	\endpsclip
+	\parabola(1,0)(2,-1)
+	}
+
+\ThreeDput[normal=0 -1 0]{
+	\psset{linestyle=none,fillstyle=vlines,hatchangle=0,hatchcolor=red}
+	\parabola(0,0)(1,1)}
+	
+%Axis labels
+\ThreeDput[normal=1 0 0]{
+	\red\psline[linecolor=red]{<->}(0,-1.4)(0,1.4)\uput{2pt}[90](0,1.4){+E}\uput{2pt}[270](0,-1.4){-E}
+	\blue\psline[linecolor=blue]{<->}(-1.4,0)(1.4,0)\uput{2pt}[180](-1.4,0){-M}\uput{2pt}[0](1.4,0){+M}
+	}
+
+% travel line
+\ThreeDput[normal=0 -1 0]{\psline(0,0)(4,0)}
+
+%Draw photon
+\ThreeDput[normal=1 -1 1](4,0,0){
+	\pscircle[fillstyle=solid,fillcolor=DarkGreen,linecolor=DarkGreen](0,0){0.1}
+	\psarc[linestyle=solid,linecolor=white,linewidth=0.5pt]{cc-cc}(0,0){0.065}{100}{150}
+	}
+
+% Space label
+\ThreeDput[normal=0 -1 0]{
+	\psline{cc->}(4.07,0)(4.4,0)
+	\uput{2pt}[0](4.4,0){Space}
+	}
+
+Continuous electromagnetic radiation represented as a wave.

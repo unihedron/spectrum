@@ -1,0 +1,32 @@
+%Description: Sound wave schematic travelling through air
+
+\psset{unit=0.5in}
+
+\psset{viewpoint=1 -1 1}
+
+\definecolor{EarColour}{rgb}{1,0.8,0.8}
+
+%Draw speaker
+\ThreeDput[normal=1 0 0](0,0,0){
+	\pscircle[fillstyle=solid,fillcolor=red,linecolor=red](0,0){0.4}
+	}
+
+
+\input{pictures/waves.tex}
+
+% Speaker label
+\ThreeDput[normal=0 -1 0]{
+	\uput{0.2in}[180](0,0){\white Speaker}
+	}
+
+%Draw ear
+\ThreeDput[normal=1 0 0](5,0,0){
+	\pscircle[fillstyle=solid,fillcolor=EarColour,linecolor=gray](0,0){0.4}
+	}
+
+
+
+% Ear label
+\ThreeDput[normal=1 0 0](5,0,0){
+	\rput(0,0){Ear}
+	}

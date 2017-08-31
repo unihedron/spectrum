@@ -1,0 +1,16 @@
+
+==========================================================================
+Requirements:
+For viewing:
+	Adobe Acobat Reader (acroread) version 5 does a nice job of
+	smoothing the lines.
+
+If you want to make changes and compile your own copy:
+	LaTeX
+	Ghostscript
+	SIunits (Tex) for the mathematical symbols.
+
+==========================================================================
+To Build from source:
+
+./configure && make

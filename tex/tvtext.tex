@@ -1,0 +1,47 @@
+%TV text
+{\Large Television}
+{
+\definecolor{HumanAudioColor}{rgb}{0.2,0.2,0.6}
+\begin{itemize}
+
+\item Terrestrial broadcast TV uses the VHF and UHF ranges (30MHz - 3GHz)  \psframebox[linestyle=none]{\rput(0.05,.05){\psframebox[fillstyle=solid,framearc=0.25,fillcolor=red]{\textcolor{white}{\tiny 05}}}}\hspace{.1in}.
+
+\item Satellite television is transmitted in the C-band (4 - 8 GHz)
+\psframebox[linestyle=none]{\rput(0.05,.05){\psframebox[fillstyle=solid,framearc=.25,fillcolor=green]{\textcolor{black}{\tiny 05}}}}\hspace{.1in} and Ku-band (12 - 18 GHz)  \psframebox[linestyle=none]{\rput(0.04,0.02){\psdots[framesep=1pt,fillcolor=BrightGreen,fillstyle=solid,dotstyle=triangle,linecolor=BrightGreen](0,0)}}\hspace{.08in} where one of many satellites is shown. To eliminate interference, the stations are broadcast in alternating polarities, for example, Ch 1 is vertical and Ch 2 is horizontal and vice versa on neighbouring satellites.
+
+%\item Each station is transmitted in its own band.
+\item TV channels transmitted through cable (CATV) are shown as  \psframebox[linestyle=none]{\rput(0.05,.05){\psframebox[fillstyle=solid,framearc=0.1,fillcolor=blue]{\textcolor{white}{\tiny 05}}}}\hspace{.1in}. CATV channels starting with ``T-" are channels fed back to the cable TV station (like news feeds).
+\item Air and cable analog TV stations are broadcast with the separate video, colour, and audio frequency carriers grouped together in a channel band as follows:\vspace{.31in}\\
+	\psframebox[linestyle=none]{\psset{xunit=1.7in}
+		\psline{|<->|}(0,.28)(2.5,.28)\uput{1pt}[90](1.25,.28){6MHz}
+		\white
+		\psframe[linestyle=solid,framearc=0.25,fillcolor=red,fillstyle=solid](0,0)(2.5,.25)
+		\psdots[linecolor=white,dotstyle=triangle*](0.625,0.02)(1.915,0.02)(2.375,0.02)
+		\psline[linecolor=white](0.625,0)(0.625,.25)
+		\psline[linecolor=white](1.915,0)(1.915,.15)
+		\psline[linecolor=white](2.375,0)(2.375,.25)
+		\psline[linecolor=white]{<->}(0,.125)(.625,.125)\rput(.29,.125){
+			\psframebox[linearc=1pt,linestyle=none,framesep=0pt,fillcolor=white,fillstyle=solid]{\textcolor{Black}{1.25MHz}}}
+		\psline[linecolor=white]{<->}(.625,.07)(1.915,.07)\rput(1.27,.07){
+			\psframebox[linearc=1pt,linestyle=none,framesep=0pt,fillcolor=white,fillstyle=solid]{\textcolor{Black}{3.58MHz}}}
+		\psline[linecolor=white]{<->}(.625,.18)(2.375,.18)\rput(1.50,.18){
+			\psframebox[linearc=1pt,linestyle=none,framesep=0pt,fillcolor=white,fillstyle=solid]{\textcolor{Black}{4.5MHz}}}
+		\uput{1pt}[270](.625,0){Video}
+		\uput{1pt}[270](1.915,0){Colour}
+		\uput{1pt}[270](2.375,0){Audio}
+		}\vspace{0.1in}
+
+%TV horizontal refresh
+\item 15.7 kHz horizontal sweep signal is a common contaminant to VLF listening \hspace{.05in}
+  \psframebox[framearc=0,linearc=0]{\rput(0,.05){
+	\psframe[cornersize=relative,linecolor=white, linestyle=solid, linewidth=0.8pt,fillstyle=solid,framearc=.25,fillcolor=red,linearc=0.25](-.1,-.1)(.1,.1)
+	\psline[linecolor=white,linestyle=solid,linewidth=1pt]{<->}(-.1,0)(.1,0)
+  }}\hspace{0.07in}.
+\item Digital compression methods are used for HDTV broadcasts in order to pack more channels into the same 6MHz bandwidth as analog TV.
+
+\end{itemize}
+
+}
+
+
+

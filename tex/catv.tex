@@ -1,0 +1,700 @@
+%catv signals
+{
+\tiny
+\psset{linecolor=Black, linestyle=solid, linewidth=0.8pt,fillstyle=solid}
+\definecolor{TVText}{rgb}{1,1,1}
+
+%channel T-7 5.75-11.75 (7,11.5)MHz
+\psframe[framearc=0.25,fillcolor=blue](4.46,14.00)(9.85,14.10)
+\psframe[linecolor=DarkRange,fillcolor=DarkRange](9.805,13.995)(9.86,14.105)\wrapuparrow{blue}{14.05}
+\psframe[framearc=0.25,fillcolor=blue](-.05,14.50)(4.76,14.60)
+\psframe[linecolor=DarkRange,fillcolor=DarkRange](-.06,14.445)(-.005,14.605)\wrapdnarrow{blue}{14.55}
+\rput(2,14.55){\textcolor{TVText}{T-7}}
+
+%channel T-8 11.75-17.75 (13,17.5)MHz
+\psframe[framearc=0.25,fillcolor=blue](4.76,14.50)(9.85,14.60)
+\psframe[linecolor=DarkRange,fillcolor=DarkRange](9.805,14.395)(9.86,14.605)\wrapuparrow{blue}{14.55}
+\psframe[framearc=0.25,fillcolor=blue](-1.6pt,15.00)(0.80,15.10)
+\psframe[linecolor=DarkRange,fillcolor=DarkRange](-1.7pt,14.995)(-.5pt,15.105)
+\wrapdnarrow{blue}{15.05}
+\rput(0.40,15.05){\textcolor{TVText}{T-8}}
+\rput(7.28,14.55){\textcolor{TVText}{T-8}}
+
+%channel T-9 17.75-23.75(19,23.5)MHz
+\psframe[framearc=0.25,fillcolor=blue](0.80,15.00)(4.91,15.10)
+\rput(2.86,15.05){\textcolor{TVText}{T-9}}
+
+%channel T-10 23.75-29.75 (25,29.5)MHz
+\psframe[framearc=0.25,fillcolor=blue](4.91,15.00)(8.10,15.10)
+\rput(6.51,15.05){\textcolor{TVText}{T-10}}
+
+%channel T-11 29.75-35.75 (31,35.5)MHz
+\psframe[framearc=0.25,fillcolor=blue](8.10,15.00)(9.85,15.10)
+\psframe[linecolor=LightRange,fillcolor=LightRange](9.805,14.995)(9.86,15.105)\wrapuparrow{blue}{15.05}
+\psframe[framearc=0.25,fillcolor=blue](-.05,15.50)(0.90,15.60)
+\psframe[linecolor=LightRange,fillcolor=LightRange](-.06,15.495)(-.005,15.605)\wrapdnarrow{blue}{15.55}
+\rput(.5,15.55){\textcolor{TVText}{T-11}}
+
+%channel T-12 35.75-41.75 (37,41.5)MHz
+\psframe[framearc=0.25,fillcolor=blue](0.90,15.50)(3.09,15.60)
+\rput(1.99,15.55){\textcolor{TVText}{T-12}}
+
+%channel T-13 41.75-47.75 (43,47.5)MHz
+\psframe[framearc=0.25,fillcolor=blue](3.09,15.50)(4.99,15.60)
+\rput(4.04,15.55){\textcolor{TVText}{T-13}}
+
+%channel T-14 47.75-53.75 (49,53.5)MHz approx up to 54MHz
+\psframe[framearc=0.25,fillcolor=blue](4.99,15.50)(6.73,15.60)
+\rput(5.82,15.55){\textcolor{TVText}{T-14}}
+
+%channel 2 54-60MHz
+\psframe[framearc=0.25,fillcolor=blue](6.73,15.50)(8.22,15.60)
+\rput(7.47,15.55){\textcolor{TVText}{2}}
+
+%channel 3 60-66MHz
+\psframe[framearc=0.25,fillcolor=blue](8.22,15.50)(9.56,15.60)
+\rput(8.89,15.55){\textcolor{TVText}{3}}
+
+%channel 4 66-72MHz
+\psframe[framearc=0.25,fillcolor=blue](9.56,15.50)(9.85,15.60)
+\psframe[linecolor=LightRange,fillcolor=LightRange](9.805,15.495)(9.86,15.605)\wrapuparrow{blue}{15.55}
+\psframe[framearc=0.25,fillcolor=blue](-1.6pt,16.0)(0.99,16.1)
+\psframe[linecolor=LightRange,fillcolor=LightRange](-1.7pt,15.995)(-.5pt,16.105)\wrapdnarrow{blue}{16.05}
+\rput(0.50,16.05){\textcolor{TVText}{4}}
+
+%Cannot find the reference for this odd station??
+%channel 01 72-78MHz
+%\psframe[framearc=0.25,fillcolor=blue](0.99,16.0)(2.13,16.1)
+%\rput(1.56,16.05){\textcolor{TVText}{01}}
+
+%channel 05 76-82MHz
+\psframe[framearc=0.25,fillcolor=blue](1.76,16.0)(2.83,16.1)
+\rput(2.30,16.05){\textcolor{TVText}{05}}
+
+%channel 06 82-88MHz
+\psframe[framearc=0.25,fillcolor=blue](2.83,16.0)(3.83,16.1)
+\rput(3.33,16.05){\textcolor{TVText}{06}}
+
+%channel 95 90-96MHz
+\psframe[framearc=0.25,fillcolor=blue](4.15,16.0)(5.06,16.1)
+\rput(4.61,16.05){\textcolor{TVText}{95}}
+
+%channel 96 96-102MHz
+\psframe[framearc=0.25,fillcolor=blue](5.06,16.0)(5.92,16.1)
+\rput(5.49,16.05){\textcolor{TVText}{96}}
+
+%channel 97 102-108MHz
+\psframe[framearc=0.25,fillcolor=blue](5.92,16.0)(6.73,16.1)
+\rput(6.32,16.05){\textcolor{TVText}{97}}
+
+%channel 98 108-114MHz
+\psframe[framearc=0.25,fillcolor=blue](6.73,16.0)(7.49,16.1)
+\rput(7.11,16.05){\textcolor{TVText}{98}}
+
+%channel 99 114-120MHz
+\psframe[framearc=0.25,fillcolor=blue](7.49,16.0)(8.22,16.1)
+\rput(7.85,16.05){\textcolor{TVText}{99}}
+
+%channel 07 174-180MHz
+\psframe[framearc=0.25,fillcolor=blue](3.67,16.5)(4.15,16.6)
+\rput(3.91,16.55){\textcolor{TVText}{07}}
+
+%channel 08 180-186MHz
+\psframe[framearc=0.25,fillcolor=blue](4.15,16.5)(4.61,16.6)
+\rput(4.38,16.55){\textcolor{TVText}{08}}
+
+%channel 09 186-192MHz
+\psframe[framearc=0.25,fillcolor=blue](4.61,16.5)(5.06,16.6)
+\rput(4.84,16.55){\textcolor{TVText}{09}}
+
+%channel 10 192-198MHz
+\psframe[framearc=0.25,fillcolor=blue](5.06,16.5)(5.50,16.6)
+\rput(5.28,16.55){\textcolor{TVText}{10}}
+
+%channel 11 198-204MHz
+\psframe[framearc=0.25,fillcolor=blue](5.50,16.5)(5.92,16.6)
+\rput(5.71,16.55){\textcolor{TVText}{11}}
+
+%channel 12 204-210MHz
+\psframe[framearc=0.25,fillcolor=blue](5.92,16.5)(6.33,16.6)
+\rput(6.12,16.55){\textcolor{TVText}{12}}
+
+%channel 13 210-216MHz
+\psframe[framearc=0.25,fillcolor=blue](6.33,16.5)(6.73,16.6)
+\rput(6.53,16.55){\textcolor{TVText}{13}}
+
+%channel 14 120-126MHz
+\psframe[framearc=0.25,fillcolor=blue](8.22,16.0)(8.91,16.1)
+\rput(8.56,16.05){\textcolor{TVText}{14}}
+
+%channel 15 126-132MHz
+\psframe[framearc=0.25,fillcolor=blue](8.91,16.0)(9.56,16.1)
+\rput(9.24,16.05){\textcolor{TVText}{15}}
+
+%channel 16 132-138MHz
+\psframe[framearc=0.25,fillcolor=blue](9.56,16.0)(9.85,16.1)
+\psframe[linecolor=LightRange,fillcolor=LightRange](9.805,15.995)(9.86,16.105)\wrapuparrow{blue}{16.05}
+\psframe[framearc=0.25,fillcolor=blue](-1.6pt,16.5)(0.39,16.6)
+\psframe[linecolor=LightRange,fillcolor=LightRange](-1.7pt,16.495)(-.5pt,16.605)\wrapdnarrow{blue}{16.55}
+\rput(0.19,16.55){\textcolor{TVText}{16}}
+
+%channel 17 138-1444MHz
+\psframe[framearc=0.25,fillcolor=blue](0.39,16.5)(0.99,16.6)
+\rput(0.69,16.55){\textcolor{TVText}{17}}
+
+%channel 18 144-150MHz
+\psframe[framearc=0.25,fillcolor=blue](0.99,16.5)(1.57,16.6)
+\rput(1.28,16.55){\textcolor{TVText}{18}}
+
+%channel 19 150-156MHz
+\psframe[framearc=0.25,fillcolor=blue](1.57,16.5)(2.13,16.6)
+\rput(1.85,16.55){\textcolor{TVText}{19}}
+
+%channel 20 156-162MHz
+\psframe[framearc=0.25,fillcolor=blue](2.13,16.5)(2.66,16.6)
+\rput(2.39,16.55){\textcolor{TVText}{20}}
+
+%channel 21 162-168MHz
+\psframe[framearc=0.25,fillcolor=blue](2.66,16.5)(3.17,16.6)
+\rput(2.92,16.55){\textcolor{TVText}{21}}
+
+%channel 22 168-174MHz
+\psframe[framearc=0.25,fillcolor=blue](3.17,16.5)(3.67,16.6)
+\rput(3.42,16.55){\textcolor{TVText}{22}}
+
+%channel 23 216-222MHz
+\psframe[framearc=0.25,fillcolor=blue](6.73,16.5)(7.11,16.6)
+\rput(6.92,16.55){\textcolor{TVText}{23}}
+
+%channel 24 222-228MHz
+\psframe[framearc=0.25,fillcolor=blue](7.11,16.5)(7.49,16.6)
+\rput(7.30,16.55){\textcolor{TVText}{24}}
+
+%channel 25 228-234MHz
+\psframe[framearc=0.25,fillcolor=blue](7.49,16.5)(7.86,16.6)
+\rput(7.68,16.55){\textcolor{TVText}{25}}
+
+%channel 26 234-240MHz
+\psframe[framearc=0.25,fillcolor=blue](7.86,16.5)(8.22,16.6)
+\rput(8.04,16.55){\textcolor{TVText}{26}}
+
+%channel 27 240-246MHz
+\psframe[framearc=0.25,fillcolor=blue](8.22,16.5)(8.57,16.6)
+\rput(8.39,16.55){\textcolor{TVText}{27}}
+
+%channel 28 246-252MHz
+\psframe[framearc=0.25,fillcolor=blue](8.57,16.5)(8.91,16.6)
+\rput(8.74,16.55){\textcolor{TVText}{28}}
+
+%channel 29 252-258MHz
+\psframe[framearc=0.25,fillcolor=blue](8.91,16.5)(9.24,16.6)
+\rput(9.07,16.55){\textcolor{TVText}{29}}
+
+%channel 30 258-264MHz
+\psframe[framearc=0.25,fillcolor=blue](9.24,16.5)(9.56,16.6)
+\rput(9.40,16.55){\textcolor{TVText}{30}}
+
+%channel 31 264-270MHz
+\psframe[framearc=0.25,fillcolor=blue](9.56,16.5)(9.8,16.6)
+\psline[linecolor=LineGray,linewidth=0.7pt](9.8,16.5)(9.8,16.6)%line to cover outline
+\wrapuparrow{blue}{16.55}
+\psframe[framearc=0.25,fillcolor=blue](-1.6pt,17.1)(0.08,17.2)
+\psframe[linecolor=DarkRange,fillcolor=DarkRange](-1.7pt,17.095)(-.5pt,17.205)
+\wrapdnarrow{blue}{17.15}
+\rput(9.68,16.55){\textcolor{TVText}{31}}
+
+%channel 32 270-276MHz
+\psframe[framearc=0.25,fillcolor=blue](0.08,17.1)(0.39,17.2)
+\rput(0.24,17.15){\textcolor{TVText}{32}}
+
+%channel 33 276-282MHz
+\psframe[framearc=0.25,fillcolor=blue](0.39,17.1)(0.70,17.2)
+\rput(0.54,17.15){\textcolor{TVText}{33}}
+
+%channel 34 282-288MHz
+\psframe[framearc=0.25,fillcolor=blue](0.70,17.1)(0.99,17.2)
+\rput(0.85,17.15){\textcolor{TVText}{34}}
+
+%channel 35 288-294MHz
+\psframe[framearc=0.25,fillcolor=blue](0.99,17.1)(1.29,17.2)
+\rput(1.14,17.15){\textcolor{TVText}{35}}
+
+%channel 36 294-300MHz
+\psframe[framearc=0.25,fillcolor=blue](1.29,17.1)(1.57,17.2)
+\rput(1.43,17.15){\textcolor{TVText}{36}}
+
+%channel 37 300-306MHz
+\psframe[framearc=0.25,fillcolor=blue](1.57,17.1)(1.85,17.2)
+\rput(1.71,17.15){\textcolor{TVText}{37}}
+
+%channel 38 306-312MHz
+\psframe[framearc=0.25,fillcolor=blue](1.85,17.1)(2.13,17.2)
+\rput(1.99,17.15){\textcolor{TVText}{38}}
+
+%channel 39 312-318MHz
+\psframe[framearc=0.25,fillcolor=blue](2.13,17.1)(2.40,17.2)
+\rput(2.26,17.15){\textcolor{TVText}{39}}
+
+%channel 40 318-324MHz
+\psframe[framearc=0.25,fillcolor=blue](2.40,17.1)(2.66,17.2)
+\rput(2.53,17.15){\textcolor{TVText}{40}}
+
+%channel 41 324-330MHz
+\psframe[framearc=0.25,fillcolor=blue](2.66,17.1)(2.92,17.2)
+\rput(2.79,17.15){\textcolor{TVText}{41}}
+
+%channel 42 330-336MHz
+\psframe[framearc=0.25,fillcolor=blue](2.92,17.1)(3.17,17.2)
+\rput(3.05,17.15){\textcolor{TVText}{42}}
+
+%channel 43 336-342MHz
+\psframe[framearc=0.25,fillcolor=blue](3.17,17.1)(3.42,17.2)
+\rput(3.30,17.15){\textcolor{TVText}{43}}
+
+% channel 44 342-348MHz
+\psframe[framearc=0.25,fillcolor=blue](3.42,17.1)(3.67,17.2)
+\rput(3.55,17.15){\textcolor{TVText}{44}}
+
+% channel 45 348-354MHz
+\psframe[framearc=0.25,fillcolor=blue](3.67,17.1)(3.91,17.2)
+\rput(3.79,17.15){\textcolor{TVText}{45}}
+
+% channel 46 354-360MHz
+\psframe[framearc=0.25,fillcolor=blue](3.91,17.1)(4.15,17.2)
+\rput(4.03,17.15){\textcolor{TVText}{46}}
+
+% channel 47 360-366MHz
+\psframe[framearc=0.25,fillcolor=blue](4.15,17.1)(4.38,17.2)
+\rput(4.27,17.15){\textcolor{TVText}{47}}
+
+% channel 48 366-372MHz
+\psframe[framearc=0.25,fillcolor=blue](4.38,17.1)(4.61,17.2)
+\rput(4.50,17.15){\textcolor{TVText}{48}}
+
+% channel 49 372-378MHz
+\psframe[framearc=0.25,fillcolor=blue](4.61,17.1)(4.84,17.2)
+\rput(4.73,17.15){\textcolor{TVText}{49}}
+
+% channel 50 378-384MHz
+\psframe[framearc=0.25,fillcolor=blue](4.84,17.1)(5.06,17.2)
+\rput(4.95,17.15){\textcolor{TVText}{50}}
+
+% channel 51 384-390MHz
+\psframe[framearc=0.25,fillcolor=blue](5.06,17.1)(5.28,17.2)
+\rput(5.17,17.15){\textcolor{TVText}{51}}
+
+% channel 52 390-396MHz
+\psframe[framearc=0.25,fillcolor=blue](5.28,17.1)(5.50,17.2)
+\rput(5.39,17.15){\textcolor{TVText}{52}}
+
+% channel 53 396-402MHz
+\psframe[framearc=0.25,fillcolor=blue](5.50,17.1)(5.71,17.2)
+\rput(5.60,17.15){\textcolor{TVText}{53}}
+
+% channel 54 402-408MHz
+\psframe[framearc=0.25,fillcolor=blue](5.71,17.1)(5.92,17.2)
+\rput(5.81,17.15){\textcolor{TVText}{54}}
+
+% channel 55 408-414MHz
+\psframe[framearc=0.25,fillcolor=blue](5.92,17.1)(6.13,17.2)
+\rput(6.02,17.15){\textcolor{TVText}{55}}
+
+% channel 56 414-420MHz
+\psframe[framearc=0.25,fillcolor=blue](6.13,17.1)(6.33,17.2)
+\rput(6.23,17.15){\textcolor{TVText}{56}}
+
+% channel 57 420-426MHz
+\psframe[framearc=0.25,fillcolor=blue](6.33,17.1)(6.53,17.2)
+\rput(6.43,17.15){\textcolor{TVText}{57}}
+
+% channel 58 426-432MHz
+\psframe[framearc=0.25,fillcolor=blue](6.53,17.1)(6.73,17.2)
+\rput(6.63,17.15){\textcolor{TVText}{58}}
+
+% channel 59 432-438MHz
+\psframe[framearc=0.25,fillcolor=blue](6.73,17.1)(6.92,17.2)
+\rput(6.82,17.15){\textcolor{TVText}{59}}
+
+% channel 60 438-444MHz
+\psframe[framearc=0.25,fillcolor=blue](6.92,17.1)(7.11,17.2)
+\rput(7.02,17.15){\textcolor{TVText}{60}}
+
+% channel 61 444-450MHz
+\psframe[framearc=0.25,fillcolor=blue](7.11,17.1)(7.30,17.2)
+\rput(7.21,17.15){\textcolor{TVText}{61}}
+
+% channel 62 450-456MHz
+\psframe[framearc=0.25,fillcolor=blue](7.30,17.1)(7.49,17.2)
+\rput(7.40,17.15){\textcolor{TVText}{62}}
+
+% channel 63 456-462MHz
+\psframe[framearc=0.25,fillcolor=blue](7.49,17.1)(7.68,17.2)
+\rput(7.58,17.15){\textcolor{TVText}{63}}
+
+% channel 64 462-468MHz
+\psframe[framearc=0.25,fillcolor=blue](7.68,17.1)(7.86,17.2)
+\rput(7.77,17.15){\textcolor{TVText}{64}}
+
+% channel 65 468-474MHz
+\psframe[framearc=0.25,fillcolor=blue](7.86,17.1)(8.04,17.2)
+\rput(7.95,17.15){\textcolor{TVText}{65}}
+
+% channel 66 474-480MHz
+\psframe[framearc=0.25,fillcolor=blue](8.04,17.1)(8.22,17.2)
+\rput(8.13,17.15){\textcolor{TVText}{66}}
+
+% channel 67 480-486MHz
+\psframe[framearc=0.25,fillcolor=blue](8.22,17.1)(8.39,17.2)
+\rput(8.30,17.15){\textcolor{TVText}{67}}
+
+% channel 68 486-492MHz
+\psframe[framearc=0.25,fillcolor=blue](8.39,17.1)(8.57,17.2)
+\rput(8.48,17.15){\textcolor{TVText}{68}}
+
+% channel 69 492-498MHz
+\psframe[framearc=0.25,fillcolor=blue](8.57,17.1)(8.74,17.2)
+\rput(8.65,17.15){\textcolor{TVText}{69}}
+
+% channel 70 498-504MHz
+\psframe[framearc=0.25,fillcolor=blue](8.74,17.1)(8.91,17.2)
+\rput(8.82,17.15){\textcolor{TVText}{70}}
+
+% channel 71 504-510MHz
+\psframe[framearc=0.25,fillcolor=blue](8.91,17.1)(9.07,17.2)
+\rput(8.99,17.15){\textcolor{TVText}{71}}
+
+% channel 72 510-516MHz
+\psframe[framearc=0.25,fillcolor=blue](9.07,17.1)(9.24,17.2)
+\rput(9.16,17.15){\textcolor{TVText}{72}}
+
+% channel 73 516-522MHz
+\psframe[framearc=0.25,fillcolor=blue](9.24,17.1)(9.40,17.2)
+\rput(9.32,17.15){\textcolor{TVText}{73}}
+
+% channel 74 522-528MHz
+\psframe[framearc=0.25,fillcolor=blue](9.40,17.1)(9.56,17.2)
+\rput(9.48,17.15){\textcolor{TVText}{74}}
+
+% channel 75 528-534MHz
+\psframe[framearc=0.25,fillcolor=blue](9.56,17.1)(9.72,17.2)
+\rput(9.64,17.15){\textcolor{TVText}{75}}
+
+% channel 76 534-540MHz
+\psframe[framearc=0.25,fillcolor=blue](9.72,17.1)(9.85,17.2)
+\rput(9.80,17.15){\textcolor{TVText}{76}}
+\psframe[linecolor=DarkRange,fillcolor=DarkRange](9.805,17.095)(9.86,17.205)\wrapuparrow{blue}{17.15}
+\psframe[framearc=0.25,fillcolor=blue](-.05,17.6)(0.08,17.7)
+\rput(0.00,17.65){\textcolor{TVText}{76}}
+\psframe[linecolor=DarkRange,fillcolor=DarkRange](-.06,17.595)(-.005,17.705)\wrapdnarrow{blue}{17.65}
+
+% channel 77 540-546MHz
+\psframe[framearc=0.25,fillcolor=blue](0.08,17.6)(0.24,17.7)
+\rput(0.16,17.65){\textcolor{TVText}{77}}
+
+% channel 78 546-552MHz
+\psframe[framearc=0.25,fillcolor=blue](0.24,17.6)(0.39,17.7)
+\rput(0.32,17.65){\textcolor{TVText}{78}}
+
+% channel 79 552-558MHz
+\psframe[framearc=0.25,fillcolor=blue](0.39,17.6)(0.55,17.7)
+\rput(0.47,17.65){\textcolor{TVText}{79}}
+
+% channel 80 558-564MHz
+\psframe[framearc=0.25,fillcolor=blue](0.55,17.6)(0.70,17.7)
+\rput(0.62,17.65){\textcolor{TVText}{80}}
+
+% channel 81 564-570MHz
+\psframe[framearc=0.25,fillcolor=blue](0.70,17.6)(0.85,17.7)
+\rput(0.77,17.65){\textcolor{TVText}{81}}
+
+% channel 82 570-576MHz
+\psframe[framearc=0.25,fillcolor=blue](0.85,17.6)(0.99,17.7)
+\rput(0.92,17.65){\textcolor{TVText}{82}}
+
+% channel 83 576-582MHz
+\psframe[framearc=0.25,fillcolor=blue](0.99,17.6)(1.14,17.7)
+\rput(1.07,17.65){\textcolor{TVText}{83}}
+
+% channel 84 582-588MHz
+\psframe[framearc=0.25,fillcolor=blue](1.14,17.6)(1.29,17.7)
+\rput(1.21,17.65){\textcolor{TVText}{84}}
+
+% channel 85 588-594MHz
+\psframe[framearc=0.25,fillcolor=blue](1.29,17.6)(1.43,17.7)
+\rput(1.36,17.65){\textcolor{TVText}{85}}
+
+% channel 86 594-600MHz
+\psframe[framearc=0.25,fillcolor=blue](1.43,17.6)(1.57,17.7)
+\rput(1.50,17.65){\textcolor{TVText}{86}}
+
+% channel 87 600-606MHz
+\psframe[framearc=0.25,fillcolor=blue](1.57,17.6)(1.71,17.7)
+\rput(1.64,17.65){\textcolor{TVText}{87}}
+
+% channel 88 606-612MHz
+\psframe[framearc=0.25,fillcolor=blue](1.71,17.6)(1.85,17.7)
+\rput(1.78,17.65){\textcolor{TVText}{88}}
+
+% channel 89 612-618MHz
+\psframe[framearc=0.25,fillcolor=blue](1.85,17.6)(1.99,17.7)
+\rput(1.92,17.65){\textcolor{TVText}{89}}
+
+% channel 90 618-624MHz
+\psframe[framearc=0.25,fillcolor=blue](1.99,17.6)(2.13,17.7)
+\rput(2.06,17.65){\textcolor{TVText}{90}}
+
+% channel 91 624-630MHz
+\psframe[framearc=0.25,fillcolor=blue](2.13,17.6)(2.26,17.7)
+\rput(2.19,17.65){\textcolor{TVText}{91}}
+
+% channel 92 630-636MHz
+\psframe[framearc=0.25,fillcolor=blue](2.26,17.6)(2.40,17.7)
+\rput(2.33,17.65){\textcolor{TVText}{92}}
+
+% channel 93 636-642MHz
+\psframe[framearc=0.25,fillcolor=blue](2.40,17.6)(2.53,17.7)
+\rput(2.46,17.65){\textcolor{TVText}{93}}
+
+% channel 94 642-648MHz
+\psframe[framearc=0.25,fillcolor=blue](2.53,17.6)(2.66,17.7)
+\rput(2.59,17.65){\textcolor{TVText}{94}}
+
+
+
+% channel 100 648-654MHz
+\psframe[framearc=0.25,fillcolor=blue](2.66,17.54)(2.79,17.7)
+\rput{90}(2.73,17.62){\textcolor{TVText}{100}}
+
+% channel 101 654-660MHz
+\psframe[framearc=0.25,fillcolor=blue](2.79,17.54)(2.92,17.70)
+\rput{90}(2.85,17.62){\textcolor{TVText}{101}}
+
+% channel 102 660-666MHz
+\psframe[framearc=0.25,fillcolor=blue](2.92,17.54)(3.05,17.70)
+\rput{90}(2.98,17.62){\textcolor{TVText}{102}}
+
+% channel 103 666-672MHz
+\psframe[framearc=0.25,fillcolor=blue](3.05,17.54)(3.17,17.70)
+\rput{90}(3.11,17.62){\textcolor{TVText}{103}}
+
+% channel 104 672-678MHz
+\psframe[framearc=0.25,fillcolor=blue](3.17,17.54)(3.30,17.70)
+\rput{90}(3.24,17.62){\textcolor{TVText}{104}}
+
+% channel 105 678-684MHz
+\psframe[framearc=0.25,fillcolor=blue](3.30,17.54)(3.42,17.70)
+\rput{90}(3.36,17.62){\textcolor{TVText}{105}}
+
+% channel 106 684-690MHz
+\psframe[framearc=0.25,fillcolor=blue](3.42,17.54)(3.54,17.70)
+\rput{90}(3.49,17.62){\textcolor{TVText}{106}}
+
+% channel 107 690-696MHz
+\psframe[framearc=0.25,fillcolor=blue](3.54,17.54)(3.67,17.70)
+\rput{90}(3.61,17.62){\textcolor{TVText}{107}}
+
+% channel 108 696-702MHz
+\psframe[framearc=0.25,fillcolor=blue](3.67,17.54)(3.79,17.70)
+\rput{90}(3.73,17.62){\textcolor{TVText}{108}}
+
+% channel 109 702-708MHz
+\psframe[framearc=0.25,fillcolor=blue](3.79,17.54)(3.91,17.70)
+\rput{90}(3.85,17.62){\textcolor{TVText}{109}}
+
+% channel 110 708-714MHz
+\psframe[framearc=0.25,fillcolor=blue](3.91,17.54)(4.03,17.70)
+\rput{90}(3.97,17.62){\textcolor{TVText}{110}}
+
+% channel 111 714-720MHz
+\psframe[framearc=0.25,fillcolor=blue](4.03,17.54)(4.15,17.70)
+\rput{90}(4.09,17.62){\textcolor{TVText}{111}}
+
+% channel 112 720-726MHz
+\psframe[framearc=0.25,fillcolor=blue](4.15,17.54)(4.27,17.70)
+\rput{90}(4.21,17.62){\textcolor{TVText}{112}}
+
+% channel 113 726-732MHz
+\psframe[framearc=0.25,fillcolor=blue](4.27,17.54)(4.38,17.70)
+\rput{90}(4.33,17.62){\textcolor{TVText}{113}}
+
+% channel 114 732-738MHz
+\psframe[framearc=0.25,fillcolor=blue](4.38,17.54)(4.50,17.70)
+\rput{90}(4.44,17.62){\textcolor{TVText}{114}}
+
+% channel 115 738-744MHz
+\psframe[framearc=0.25,fillcolor=blue](4.50,17.54)(4.61,17.70)
+\rput{90}(4.56,17.62){\textcolor{TVText}{115}}
+
+% channel 116 744-750MHz
+\psframe[framearc=0.25,fillcolor=blue](4.61,17.54)(4.73,17.70)
+\rput{90}(4.67,17.62){\textcolor{TVText}{116}}
+
+% channel 117 750-756MHz
+\psframe[framearc=0.25,fillcolor=blue](4.73,17.54)(4.84,17.70)
+\rput{90}(4.78,17.62){\textcolor{TVText}{117}}
+
+% channel 118 756-762MHz
+\psframe[framearc=0.25,fillcolor=blue](4.84,17.54)(4.95,17.70)
+\rput{90}(4.90,17.62){\textcolor{TVText}{118}}
+
+% channel 119 762-768MHz
+\psframe[framearc=0.25,fillcolor=blue](4.95,17.54)(5.06,17.70)
+\rput{90}(5.01,17.62){\textcolor{TVText}{119}}
+
+% channel 120 768-774MHz
+\psframe[framearc=0.25,fillcolor=blue](5.06,17.54)(5.17,17.70)
+\rput{90}(5.12,17.62){\textcolor{TVText}{120}}
+
+% channel 121 774-780MHz
+\psframe[framearc=0.25,fillcolor=blue](5.17,17.54)(5.28,17.70)
+\rput{90}(5.23,17.62){\textcolor{TVText}{121}}
+
+% channel 122 780-786MHz
+\psframe[framearc=0.25,fillcolor=blue](5.28,17.54)(5.39,17.70)
+\rput{90}(5.34,17.62){\textcolor{TVText}{122}}
+
+% channel 123 786-792MHz
+\psframe[framearc=0.25,fillcolor=blue](5.39,17.54)(5.50,17.70)
+\rput{90}(5.44,17.62){\textcolor{TVText}{123}}
+
+% channel 124 792-798MHz
+\psframe[framearc=0.25,fillcolor=blue](5.50,17.54)(5.60,17.70)
+\rput{90}(5.54,17.62){\textcolor{TVText}{124}}
+
+% channel 125 798-804MHz
+\psframe[framearc=0.25,fillcolor=blue](5.60,17.54)(5.71,17.70)
+\rput{90}(5.66,17.62){\textcolor{TVText}{125}}
+
+% channel 126 804-810MHz
+\psframe[framearc=0.25,fillcolor=blue](5.71,17.54)(5.81,17.70)
+\rput{90}(5.76,17.62){\textcolor{TVText}{126}}
+
+% channel 127 810-816MHz
+\psframe[framearc=0.25,fillcolor=blue](5.81,17.54)(5.92,17.70)
+\rput{90}(5.87,17.62){\textcolor{TVText}{127}}
+
+% channel 128 816-822MHz
+\psframe[framearc=0.25,fillcolor=blue](5.92,17.54)(6.02,17.70)
+\rput{90}(5.97,17.62){\textcolor{TVText}{128}}
+
+% channel 129 822-828MHz
+\psframe[framearc=0.25,fillcolor=blue](6.02,17.54)(6.13,17.70)
+\rput{90}(6.07,17.62){\textcolor{TVText}{129}}
+
+% channel 130 828-834MHz
+\psframe[framearc=0.25,fillcolor=blue](6.13,17.54)(6.23,17.70)
+\rput{90}(6.18,17.62){\textcolor{TVText}{130}}
+
+% channel 131 834-840MHz
+\psframe[framearc=0.25,fillcolor=blue](6.23,17.54)(6.33,17.70)
+\rput{90}(6.28,17.62){\textcolor{TVText}{131}}
+
+% channel 132 840-846MHz
+\psframe[framearc=0.25,fillcolor=blue](6.33,17.54)(6.43,17.70)
+\rput{90}(6.38,17.62){\textcolor{TVText}{132}}
+
+% channel 133 846-852MHz
+\psframe[framearc=0.25,fillcolor=blue](6.43,17.54)(6.53,17.70)
+\rput{90}(6.48,17.62){\textcolor{TVText}{133}}
+
+% channel 134 852-858MHz
+\psframe[framearc=0.25,fillcolor=blue](6.53,17.54)(6.63,17.70)
+\rput{90}(6.58,17.62){\textcolor{TVText}{134}}
+
+% channel 135 858-864MHz
+\psframe[framearc=0.25,fillcolor=blue](6.63,17.54)(6.73,17.70)
+\rput{90}(6.68,17.62){\textcolor{TVText}{135}}
+
+% channel 136 864-870MHz
+\psframe[framearc=0.25,fillcolor=blue](6.73,17.54)(6.83,17.70)
+\rput{90}(6.78,17.62){\textcolor{TVText}{136}}
+
+% channel 137 870-876MHz
+\psframe[framearc=0.25,fillcolor=blue](6.83,17.54)(6.92,17.70)
+\rput{90}(6.87,17.62){\textcolor{TVText}{137}}
+
+% channel 138 876-882MHz
+\psframe[framearc=0.25,fillcolor=blue](6.92,17.54)(7.02,17.70)
+\rput{90}(6.97,17.62){\textcolor{TVText}{138}}
+
+% channel 139 882-888MHz
+\psframe[framearc=0.25,fillcolor=blue](7.02,17.54)(7.11,17.70)
+\rput{90}(7.07,17.62){\textcolor{TVText}{139}}
+
+% channel 140 888-894MHz
+\psframe[framearc=0.25,fillcolor=blue](7.11,17.54)(7.21,17.70)
+\rput{90}(7.16,17.62){\textcolor{TVText}{140}}
+
+% channel 141 894-900MHz
+\psframe[framearc=0.25,fillcolor=blue](7.21,17.54)(7.30,17.70)
+\rput{90}(7.26,17.62){\textcolor{TVText}{141}}
+
+% channel 142 900-906MHz
+\psframe[framearc=0.25,fillcolor=blue](7.30,17.54)(7.40,17.70)
+\rput{90}(7.35,17.62){\textcolor{TVText}{142}}
+
+% channel 143 906-912MHz
+\psframe[framearc=0.25,fillcolor=blue](7.40,17.54)(7.49,17.70)
+\rput{90}(7.45,17.62){\textcolor{TVText}{143}}
+
+% channel 144 912-918MHz
+\psframe[framearc=0.25,fillcolor=blue](7.49,17.54)(7.58,17.70)
+\rput{90}(7.54,17.62){\textcolor{TVText}{144}}
+
+% channel 145 918-924MHz
+\psframe[framearc=0.25,fillcolor=blue](7.58,17.54)(7.68,17.70)
+\rput{90}(7.63,17.62){\textcolor{TVText}{145}}
+
+% channel 146 924-930MHz
+\psframe[framearc=0.25,fillcolor=blue](7.68,17.54)(7.77,17.70)
+\rput{90}(7.72,17.62){\textcolor{TVText}{146}}
+
+% channel 147 930-936MHz
+\psframe[framearc=0.25,fillcolor=blue](7.77,17.54)(7.86,17.70)
+\rput{90}(7.81,17.62){\textcolor{TVText}{147}}
+
+% channel 148 936-942MHz
+\psframe[framearc=0.25,fillcolor=blue](7.86,17.54)(7.95,17.70)
+\rput{90}(7.90,17.62){\textcolor{TVText}{148}}
+
+% channel 149 942-948MHz
+\psframe[framearc=0.25,fillcolor=blue](7.95,17.54)(8.04,17.70)
+\rput{90}(7.99,17.62){\textcolor{TVText}{149}}
+
+% channel 150 948-954MHz
+\psframe[framearc=0.25,fillcolor=blue](8.04,17.54)(8.13,17.70)
+\rput{90}(8.08,17.62){\textcolor{TVText}{150}}
+
+% channel 151 954-960MHz
+\psframe[framearc=0.25,fillcolor=blue](8.13,17.54)(8.22,17.70)
+\rput{90}(8.17,17.62){\textcolor{TVText}{151}}
+
+% channel 152 960-966MHz
+\psframe[framearc=0.25,fillcolor=blue](8.22,17.54)(8.30,17.70)
+\rput{90}(8.26,17.62){\textcolor{TVText}{152}}
+
+% channel 153 966-972MHz
+\psframe[framearc=0.25,fillcolor=blue](8.30,17.54)(8.39,17.70)
+\rput{90}(8.35,17.62){\textcolor{TVText}{153}}
+
+% channel 154 972-978MHz
+\psframe[framearc=0.25,fillcolor=blue](8.39,17.54)(8.48,17.70)
+\rput{90}(8.44,17.62){\textcolor{TVText}{154}}
+
+% channel 155 978-984MHz
+\psframe[framearc=0.25,fillcolor=blue](8.48,17.54)(8.57,17.70)
+\rput{90}(8.52,17.62){\textcolor{TVText}{155}}
+
+% channel 156 984-990MHz
+\psframe[framearc=0.25,fillcolor=blue](8.57,17.54)(8.65,17.70)
+\rput{90}(8.61,17.62){\textcolor{TVText}{156}}
+
+% channel 157 990-996MHz
+\psframe[framearc=0.25,fillcolor=blue](8.65,17.54)(8.74,17.70)
+\rput{90}(8.69,17.62){\textcolor{TVText}{157}}
+
+% channel 158 996-1002MHz
+\psframe[framearc=0.25,fillcolor=blue](8.74,17.54)(8.82,17.70)
+\rput{90}(8.78,17.62){\textcolor{TVText}{158}}
+
+}
