@@ -9,8 +9,17 @@ If you want to make changes and compile your own copy:
 	LaTeX
 	Ghostscript
 	SIunits (Tex) for the mathematical symbols.
+	PSTricks
+
+On Debian-derived systems, install the following packages:
+	ghostscript
+	texlive-science (for SIunits)
+	texlive-pstricks (for PSTricks)
+	texlive-lang-cyrillic (for Cyrillic text)
 
 ==========================================================================
 To Build from source:
 
 ./configure && make
+
+The output is in spectrum_current.pdf
