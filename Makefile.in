@@ -3,7 +3,6 @@ VERSION=@VERSION@
 NAME=@FULL-PACKAGE-NAME@
 LATEX=@LATEX@
 DVIPS=@DVIPS@
-PDF_VIEWER=@PDF_VIEWER@
 GS=@GS@
 CC=@CC@
 
@@ -17,7 +16,6 @@ spectrum: pictures
 	$(LATEX) tex/spectrum.tex
 	$(DVIPS)  -Ppdf -T 24in,36in spectrum.dvi -f > spectrum.eps
 	$(GS) -dSAFER -q -dNOPAUSE -dBATCH -sDEVICE=pdfwrite -sOutputFile=spectrum_current.pdf -dSAFER -c .setpdfwrite -f spectrum.eps
-	$(PDF_VIEWER) spectrum_current.pdf&
 
 pictures:
 	cd pictures && make
@@ -42,7 +40,6 @@ jpeg600:
 split:
 	poster -v -c5% -s1 -mletter  spectrum.eps -ospectrum_pages.eps
 	ps2pdf spectrum_pages.eps
-	$(PDF_VIEWER) spectrum_pages.pdf&
 	zip spectrum_pages spectrum_pages.pdf
 
 # Compile the C program that generates the numbers on the scales

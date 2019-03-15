@@ -15,7 +15,6 @@ For example, run '$0 LATEX=some-other-latex'.]])
 }
 
 AC_PATH_PROG([DVIPS], [dvips])
-AC_PATH_PROGS([PDF_VIEWER], [acroread, open], [])
 
 # Checks for programs.
 AC_PROG_CC
