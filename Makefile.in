@@ -107,8 +107,5 @@ dist:
 configure: configure.ac
 	autoconf
 
-Makefile: Makefile.in config.status
-	./config.status
-
 config.status: configure
 	[ ! -f config.status ] || ./config.status --recheck
