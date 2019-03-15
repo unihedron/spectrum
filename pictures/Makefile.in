@@ -6,7 +6,6 @@ emr.pdf: emr.tex
 	@DVIPS@  -Ppdf -G0 emrmaster.dvi -f > emrmaster.eps
 	#ps2pdf emrmaster.eps
 	@GS@ -dSAFER -q -dNOPAUSE -dBATCH -sDEVICE=pdfwrite -sOutputFile=emrmaster.pdf -dSAFER -c .setpdfwrite -f emrmaster.eps
-	@PDF_VIEWER@ emrmaster.pdf&
 
 waves: waves.c
 	cc -lm -o waves waves.c
