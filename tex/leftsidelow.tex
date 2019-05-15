@@ -1,0 +1,40 @@
+
+{
+  %Lower Left side notes
+  \psset{cornersize=absolute,linearc=4pt,fillstyle=solid,fillcolor=Black, linecolor=white}
+  \white
+
+  %\rput[tl]{0}(15.6,14){\psframebox{\parbox[t]{2.3in}{\input{weatherradio.tex}}}}
+  %\rput[tl]{0}(15.4,15.8){\psframebox\parbox[t]{2.1in}{\input{satellite.tex}}}}
+  %\rput[tl]{0}(18.1,19.4){\psframebox{\parbox[t]{1.3in}{\input{cbradio.tex}}}}
+
+  \newlength{\nLeftSmallWidth}\setlength{\nLeftSmallWidth}{5.44in}
+
+  %Set to the right to make room for the sound banner
+  \rput[tl]{0}(0.8,0){
+    \parbox[t]{\nLeftSmallWidth}{
+
+	%Description of Sound
+	\psframebox{\parbox[t]{\nLeftSmallWidth}{\input{tex/sound.tex}}}
+
+	\vspace{\VerticalSeparation}
+
+	%Description of Gravity and gravity waves
+	\psframebox{\parbox[t]{\nLeftSmallWidth}{\input{tex/gravity.tex}}}
+
+	\vspace{\VerticalSeparation}
+
+	%Description of Brain waves
+	\psframebox{\parbox[t]{\nLeftSmallWidth}{\input{tex/brain.tex}}}
+
+	\vspace{\VerticalSeparation}
+
+	%SI units and measurements
+	% Fonts can be a bit larger (\small) instead of \footnote.
+	\psframebox{\small\parbox[t]{\nLeftSmallWidth}{\input{tex/notes.tex}}}
+
+    }
+  }
+  
+  
+}

@@ -14,7 +14,7 @@
   	\rput(0,#2){\pscurve[linecolor=#1,fillstyle=none,linewidth=1pt,linestyle=solid]{->}(0,0)(-0.1,-0.05)(-0.02,-0.12)}}
 
 
-  %define colours used in this file
+  %define colors used in this file
   \definecolor{HumanAudioColor}{rgb}{0.2,0.2,0.6}
 
   \psset{fillstyle=solid,linestyle=none}
@@ -66,28 +66,24 @@
   \psframe[fillcolor=LightRange](\EMRPositionC,28.705)(\EMRPositionE,30.368)
 
 
-
-
 %Large Labels defining the major ranges of EMR
 {\large\yellow
 \psset{linecolor=yellow,linestyle=solid}
-\newlength{\LargeLabelPosition}  \setlength{\LargeLabelPosition}{\EMRPosition+0.7in}
+\newlength{\LargeLabelPosition}  \setlength{\LargeLabelPosition}{\EMRPosition+0.55in}
 \newlength{\LargeLabelRightPosition}  \setlength{\LargeLabelRightPosition}{\EMRPosition+1.2in}
 
 \newlength{\LargeLabelPositionLeft}  \setlength{\LargeLabelPositionLeft}{\LargeLabelPosition-0.2in}
 \newlength{\LargeLabelPositionRight}  \setlength{\LargeLabelPositionRight}{\LargeLabelPosition+0.2in}
-%\psframe(\LargeLabelPositionLeft,1)(\LargeLabelPositionRight,34.5)
 
-\uput[180]{0}(\LargeLabelPosition,34.14){GAMMA RAYS}
+\uput[180]{90}(\LargeLabelPosition,34.3){GAMMA RAYS}
 \psline[linecolor=LightRange](\EMRPositionC,33.690)(\LargeLabelRightPosition,33.690)
-\psline{<-}(\LargeLabelPosition,33.690)(\LargeLabelPosition,35.5)
-
+\psline{<->}(\LargeLabelPosition,33.690)(\LargeLabelPosition,35.3)
 
 \psline{<->}(\LargeLabelPosition,33.690)(\LargeLabelPosition,30.368)
-\uput[180]{0}(\LargeLabelPosition,32.03){X-RAYS}
+\uput[180]{90}(\LargeLabelPosition,32.03){X-RAYS}
 
 \psline{<->}(\LargeLabelPosition,30.368)(\LargeLabelPosition,27.707)
-\uput[180]{90}(\LargeLabelPosition,29.04){ULTRAVIOLET}
+\uput[180]{90}(\LargeLabelPosition,28.65){ULTRAVIOLET}
 
 %760-400nm (394-749 THz)
 \psline[linecolor=LightRange](\EMRPositionC,27.243)(\LargeLabelRightPosition,27.243)
@@ -96,11 +92,11 @@
 
 \psline[linecolor=LightRange](\EMRPositionC,23.724)(\LargeLabelRightPosition,23.724)
 \psline{<->}(\LargeLabelPosition,27.243)(\LargeLabelPosition,23.724)
-\uput[180]{0}(\LargeLabelPosition,25.48){INFRARED}
+\uput[180]{90}(\LargeLabelPosition,25.48){INFRARED}
 
 %0.3GHz bottom
 \psline{<->}(\LargeLabelPosition,23.724)(\LargeLabelPosition,17.080)
-\uput[180]{90}(\LargeLabelPosition,20.40){MICROWAVE}
+\uput[180]{90}(\LargeLabelPosition,19.55){MICROWAVE}
 
 \psline{<->}(\LargeLabelPosition,17.080)(\LargeLabelPosition,9.144)
 \uput[180]{90}(\LargeLabelPosition,13.11){RADIO WAVES}
@@ -147,7 +143,7 @@
   \newcounter{StartHeight}	\setcounter{StartHeight}{3}
   \newcounter{EndHeight}	\setcounter{EndHeight}{4}
 
-  %From Doug Welch: Crosshatch style for non-visible colours
+  %From Doug Welch: Crosshatch style for non-visible colors
   \psset{fillstyle=crosshatch,linewidth=0pt,linestyle=none, hatchwidth=2pt, hatchsep=1.5pt}
 
 
@@ -161,7 +157,7 @@
   \psframe(0.00,3.05)(9.80,3.25)\wrapbtarrow{Fill}{3.15}
   \psframe(0.00,3.55)(5.73,3.75)\wrapdnarrow{Fill}{3.65}
   \rput(6.55,1.15){\psframebox[framearc=0.25,fillstyle=solid, fillcolor=Fill,linecolor=Black,framesep=1pt]{0.1Hz}}
-  \rput(4.9,2.65){\psframebox[fillstyle=solid,fillcolor=Fill,framesep=1pt]{ $\delta$ (Delta brain waves)}}
+  \rput(4.9,2.65){\psframebox[fillstyle=solid,fillcolor=Fill,framesep=1pt]{\boldmath$\delta$ (Delta brain waves)}}
   {\psset{linecolor=yellow,linestyle=solid,linewidth=1pt}
 	\psline{<-}(6.55,1.05)(9.80,1.05)
 	\psline{-}(0,1.55)(9.80,1.55)
@@ -176,7 +172,7 @@
   \psframe(5.73,3.55)(9.8,3.75)\wrapuparrow{Fill}{3.65}
   \psframe(0.00,4.05)(9.8,4.25)\wrapdnarrow{Fill}{4.15}
   \rput(5.73,3.65){\psframebox[framearc=0.25,fillstyle=solid, fillcolor=Fill,linecolor=Black,framesep=1pt]{3Hz}}
-  \rput(4.9,4.15){\psframebox[fillstyle=solid,fillcolor=Fill,framesep=1pt]{$\theta$ (Theta brain waves)}}
+  \rput(4.9,4.15){\psframebox[fillstyle=solid,fillcolor=Fill,framesep=1pt]{\boldmath$\theta$ (Theta brain waves)}}
   \rput(9.8,4.15){\psframebox[framearc=0.25,fillstyle=solid, fillcolor=Fill,linecolor=Black]{8Hz}}
   {\psset{linecolor=yellow,linestyle=solid,linewidth=1pt}
 	\psline{<-}(5.73,3.55)(9.8,3.55)
@@ -187,14 +183,14 @@
   \definecolor{Fill}{rgb}{1,0.7,0.7}\psset{hatchcolor=Fill}
   \psframe(0.00,4.55)(5.73,4.75)
   \rput(0,4.65){\psframebox[framearc=0.25,fillstyle=solid, fillcolor=Fill,linecolor=Black,framesep=1pt]{8Hz}}
-  \rput(2.87,4.65){\psframebox[fillstyle=solid,fillcolor=Fill,framesep=1pt]{$\alpha$ (Alpha brain waves)}}
+  \rput(2.87,4.65){\psframebox[fillstyle=solid,fillcolor=Fill,framesep=1pt]{\boldmath$\alpha$ (Alpha brain waves)}}
   \psline[linecolor=yellow,linestyle=solid,linewidth=1pt]{<->}(0.00,4.55)(5.73,4.55)
 
   % Low Beta 12-15
   \definecolor{Fill}{rgb}{1,0.6,0.6}\psset{hatchcolor=Fill}
   \psframe(5.73,4.55)(8.89,4.75)
   \rput(5.73,4.65){\psframebox[framearc=0.25,fillstyle=solid, fillcolor=Fill,linecolor=Black,framesep=1pt]{12Hz}}
-  \rput(6.82,4.65){\psframebox[fillstyle=solid,fillcolor=Fill,framesep=1pt]{$\beta$ (Low Beta brain waves)}}
+  \rput(6.82,4.65){\psframebox[fillstyle=solid,fillcolor=Fill,framesep=1pt]{\boldmath$\beta$ (Low Beta brain waves)}}
   \psline[linecolor=yellow,linestyle=solid,linewidth=1pt]{<->}(5.73,4.55)(8.89,4.55)
 
   % Mid Beta 15-18
@@ -202,7 +198,7 @@
   \psframe(8.89,4.55)(9.8,4.75)\wrapuparrow{Fill}{4.65}
   \psframe(0.00,5.05)(1.67,5.25)\wrapdnarrow{Fill}{5.15}
   \rput(8.89,4.65){\psframebox[framearc=0.25,fillstyle=solid, fillcolor=Fill,linecolor=Black,framesep=1pt]{15Hz}}
-  \rput(0.7,5.15){\psframebox[fillstyle=solid,fillcolor=Fill,framesep=1pt]{$\beta$ (Mid Beta brain waves)}}
+  \rput(0.7,5.15){\psframebox[fillstyle=solid,fillcolor=Fill,framesep=1pt]{\boldmath$\beta$ (Mid Beta brain waves)}}
   {\psset{linecolor=yellow,linestyle=solid,linewidth=1pt}
 	\psline{<-}(8.89,4.55)(9.8,4.55)
 	\psline{->}(0.00,5.05)(1.67,5.05)
@@ -212,7 +208,7 @@
   \definecolor{Fill}{rgb}{1,0.4,0.4}\psset{hatchcolor=Fill}
   \psframe(1.67,5.05)(8.89,5.25)
   \rput(1.67,5.15){\psframebox[framearc=0.25,fillstyle=solid, fillcolor=Fill,linecolor=Black,framesep=1pt]{\textcolor{white}{18Hz}}}
-  \rput(5.28,5.15){\psframebox[fillstyle=solid,fillcolor=Fill,framesep=1pt]{$\beta$ (High Beta brain waves)}}
+  \rput(5.28,5.15){\psframebox[fillstyle=solid,fillcolor=Fill,framesep=1pt]{\boldmath$\beta$ (High Beta brain waves)}}
   \psline[linecolor=yellow,linestyle=solid,linewidth=1pt]{<->}(1.67,5.05)(8.89,5.05)
 
   % Gamma 30Hz
@@ -221,7 +217,7 @@
   \psframe(0.00,5.55)(3.0,5.75)\wrapdnarrow{Fill}{5.65}
   \psframe[fillstyle=gradient,gradangle=90,gradbegin=Fill,gradend=DarkRange,gradmidpoint=1.0,linewidth=0pt,linestyle=none](3.0,5.55)(4.0,5.75)
   \rput(8.89,5.15){\psframebox[framearc=0.25,fillstyle=solid, fillcolor=Fill,linecolor=Black,framesep=1pt]{\textcolor{white}{30Hz}}}
-  \rput(1.5,5.65){\psframebox[fillstyle=solid,fillcolor=Fill,framesep=1pt]{$\gamma$ (Gamma brain waves)}}
+  \rput(1.5,5.65){\psframebox[fillstyle=solid,fillcolor=Fill,framesep=1pt]{\boldmath$\gamma$ (Gamma brain waves)}}
   {\psset{linecolor=yellow,linestyle=solid,linewidth=1pt}
 	\psline{<-}(8.89,5.05)(9.8,5.05)
 	\psline{->}(0.00,5.55)(4.0,5.55)
@@ -236,7 +232,7 @@
   \input{tex/amradio.tex}
 
   %Middle A musical note 440 Hz
-  \rput(7.66,7.16){\pscirclebox[linestyle=solid, linecolor=white, linewidth=1pt, fillstyle=solid,fillcolor=HumanAudioColor]{\textcolor{white}{A}}}
+  \rput(7.66,7.16){\pscirclebox[linestyle=solid, linecolor=white, linewidth=1pt, fillstyle=solid,fillcolor=HumanAudioColor]{\textcolor{white}{A4}}}
   %Middle C was 261.63Hz located at \rput(0.31,7.66)
 
   % Marine Radio 235-325kHz
@@ -562,8 +558,8 @@
   \definecolor{Fill}{rgb}{0.1,0.1,0.67}\psset{hatchcolor=Fill}
   \psframe(1.57,17.0)(9.8,17.1)\wrapuparrow{Fill}{17.05}
   \psframe(0.0,17.5)(8.79,17.6)\wrapdnarrow{Fill}{17.55}
-  \rput(1.57,17.05){\textcolor{white}{0.3GHz}}
-  \rput(1,17.55){\psframebox[fillstyle=solid,fillcolor=Fill,framesep=1pt]{\textcolor{white}{Microwave P-band (Previous)}}}
+%   \rput(1.57,17.05){\textcolor{white}{0.3GHz}}
+  \rput(1,17.55){\psframebox[fillstyle=solid,fillcolor=Fill,framesep=1pt]{\textcolor{white}{\tiny Microwave P-band (Previous)}}}
 
   % Microwave L-band (1-2 GHz)
   \definecolor{Fill}{rgb}{0.2,0.1,0.67}\psset{hatchcolor=Fill}
@@ -583,25 +579,24 @@
   \input{tex/catv.tex}
   
   
-  % Cell phone 800MHz (Time division multiple access (TDMA))
-  \rput(5.64,17.5){\psframebox[fillstyle=solid,linecolor=yellow,framesep=0pt,fillcolor=yellow,linewidth=1pt,linestyle=solid]{\textcolor{Black}{CP}}}
-
+  % Cell phone 800MHz (Time division multiple access (TDMA)) not actuially 800MHz, and already covered in the 3G list
+%   \rput(5.64,17.5){\psframebox[fillstyle=solid,linecolor=yellow,framesep=0pt,fillcolor=yellow,linewidth=1pt,linestyle=solid]{\textcolor{Black}{CP}}}
+  %from http://www.dxing.com/tuning.htm 825-894MHz cell phone including 850MHz GSM phones
+  %(Frequency division multiple access (FDMA))
+%   \psline[linecolor=yellow,linewidth=1pt,linestyle=solid]{|<*->|}(6.07,17.5)(7.21,17.5)
+%   \rput(6.64,17.5){\psframebox[fillstyle=solid,linecolor=yellow,framesep=0pt,fillcolor=yellow,linewidth=1pt,linestyle=solid]{\textcolor{Black}{CP}}}
 
   % Cell phone 1.8GHz (GSM phone)
-  \rput[b](7.30,18.0){\psframebox[fillstyle=solid,linecolor=yellow,framesep=0pt,fillcolor=yellow,linewidth=1pt,linestyle=solid]{\textcolor{Black}{CP}}}
+%   \rput[b](7.30,18.0){\psframebox[fillstyle=solid,linecolor=yellow,framesep=0pt,fillcolor=yellow,linewidth=1pt,linestyle=solid]{\textcolor{Black}{CP}}}
 
   % Cell phone 1.9GHz
   %\rput[b](8.07,18.0){\psframebox[fillstyle=solid,linecolor=yellow,framesep=0pt,fillcolor=yellow,linewidth=1pt,linestyle=solid]{\textcolor{Black}{CP}}}
 
   % Code division multiple access (CDMA) 1850-1990MHz (PCS phones)
   % notes from from http://electronics.howstuffworks.com/cell-phone8.htm
-  \psline[linecolor=yellow,linewidth=1pt,linestyle=solid]{|<*->|}(7.69,18.05)(8.72,18.05)
-  \rput[b](8.21,18.0){\psframebox[fillstyle=solid,linecolor=yellow,framesep=0pt,fillcolor=yellow,linewidth=1pt,linestyle=solid]{\textcolor{Black}{CP}}}
+%   \psline[linecolor=yellow,linewidth=1pt,linestyle=solid]{|<*->|}(7.69,18.0)(8.72,18.0)
+%   \rput[b](8.21,18.0){\psframebox[fillstyle=solid,linecolor=yellow,framesep=0pt,fillcolor=yellow,linewidth=1pt,linestyle=solid]{\textcolor{Black}{CP}}}
 
-  %from http://www.dxing.com/tuning.htm 825-894MHz cell phone including 850MHz GSM phones
-  %(Frequency division multiple access (FDMA))
-  \psline[linecolor=yellow,linewidth=1pt,linestyle=solid]{|<*->|}(6.07,17.5)(7.21,17.5)
-  \rput(6.64,17.5){\psframebox[fillstyle=solid,linecolor=yellow,framesep=0pt,fillcolor=yellow,linewidth=1pt,linestyle=solid]{\textcolor{Black}{Cell Phone}}}
 
   %from:
   % - Radioshack PatrolMan SW-60 shortwave radio guide
@@ -645,39 +640,27 @@
 %     \rput(.5,.2){\psframebox[framesep=1pt,framearc=0.2,fillstyle=solid, fillcolor=Black,linewidth=0pt,linestyle=none]{\textcolor{white}{Water absorption}}}
 % 
 %   \endpsclip}
-  
-  
-  
-  % cordless phone 2.4GHz
-  % Microwave oven 2.45GHz
-  {
-    \psset{linecolor=yellow,linestyle=solid, linewidth=1pt, linearc=.05}
-    \rput[r](1.47,18.65){\textcolor{yellow}{Cordless phone}}
-    \rput[r](1.47,18.55){\textcolor{yellow}{2.4GHz}}
-    \psline{->}(1.51,18.65)(1.57,18.65)(1.57,18.5)
-    \rput[l](1.96,18.65){\textcolor{yellow}{Microwave Oven}}
-    \rput[l](1.96,18.55){\textcolor{yellow}{2.45GHz}}
-    \psline{->}(1.92,18.65)(1.86,18.65)(1.86,18.5)
-  }
 
   % Microwave C-band (4-8 GHz)
   \definecolor{Fill}{rgb}{0.4,0.1,0.67}\psset{hatchcolor=Fill}
   \psframe(8.79,18.55)(9.8,18.75)\wrapuparrow{Fill}{18.65}
   \psframe(0.0,19.05)(8.79,19.25)\wrapdnarrow{Fill}{19.15}
-  \rput(8.79,18.75){\textcolor{white}{4GHz}}
+  \psdots[linewidth=1.2pt,linecolor=white,linestyle=none, fillcolor=white, dotstyle=triangle*](8.79,18.52)
+  \rput(8.79,18.77){\textcolor{white}{4GHz}}
   \rput(5.5,19.15){\psframebox[fillstyle=solid,fillcolor=Fill,framesep=2pt]{\textcolor{white}{Microwave C-band (Compromise)}}}
 
   %Wireless LAN   Frequency Range; 2.4GHz to 2.5GHz , 5.15GHz to 5.875GHz  (From D-Link Air expert card, good for America and Europe)
   %2.4GHz to 2.5GHz
-  \psframe[fillstyle=solid, fillcolor=gray](1.57,18.72)(2.15,18.82)\rput(1.86,18.77){\textcolor{yellow}{W-LAN}}
+  \psframe[fillstyle=solid, fillcolor=gray](1.57,18.67)(2.15,18.77)\rput(1.86,18.72){\textcolor{yellow}{W-LAN}}
   %5.15GHz to 5.875GHz
-  \psframe[fillstyle=solid, fillcolor=gray](2.57,19.02)(4.43,19.12)\rput(3.50,19.07){\textcolor{yellow}{Wireless LAN}}
+  \psframe[fillstyle=solid, fillcolor=gray](2.57,19.15)(4.43,19.25)\rput(3.50,19.20){\textcolor{yellow}{Wireless LAN}}
 
  
  %MVDDS/ITFS (Multichannel Multipoint Data Service/ Instructional Television Fixed Service, Thanks to Ranjan Acharya (source IEE spectrum March 2004) 2.5-2.7GHz
-{\tiny
-\psframe[fillstyle=solid,linestyle=solid,linecolor=Black,linewidth=1pt,framearc=0.25,fillcolor=red](2.15,18.72)(3.24,18.82)
-\rput(2.69,18.77){\textcolor{white}{ITFS}}
+{
+	\tiny
+	\psframe[fillstyle=solid,linestyle=solid,linecolor=Black,linewidth=1pt,framearc=0.25,fillcolor=red](2.15,18.67)(3.24,18.77)
+	\rput(2.69,18.72){\textcolor{white}{ITFS}}
 }
   
 % Satellite Radio (too crowded to show properly)
@@ -690,32 +673,34 @@
 
 
 {%C-Band satellite channels
+\newlength{\nCBANDOddYOffset} \setlength{\nCBANDOddYOffset}{18.60in}
+\newlength{\nCBANDEvenYOffset} \setlength{\nCBANDEvenYOffset}{\nCBANDOddYOffset+0.08in}
 \tiny
   \psset{framesep=1pt,framearc=.25,fillcolor=green,fillstyle=solid}
-  \rput(7.77,18.55){\psframebox{01}}	%3720MHz
-  \rput(7.84,18.65){\psframebox{02}}	%3740
-  \rput(7.92,18.55){\psframebox{03}}	%3760
-  \rput(7.99,18.65){\psframebox{04}}	%3780
-  \rput(8.07,18.55){\psframebox{05}}	%3800
-  \rput(8.14,18.65){\psframebox{06}}	%3820
-  \rput(8.22,18.55){\psframebox{07}}	%3840
-  \rput(8.29,18.65){\psframebox{08}}	%3860
-  \rput(8.36,18.55){\psframebox{09}}	%3880
-  \rput(8.44,18.65){\psframebox{10}}	%3900
-  \rput(8.51,18.55){\psframebox{11}}	%3920
-  \rput(8.58,18.65){\psframebox{12}}	%3940
-  \rput(8.65,18.55){\psframebox{13}}	%3960
-  \rput(8.72,18.65){\psframebox{14}}	%3980
-  \rput(8.79,18.55){\psframebox{15}}	%4000
-  \rput(8.86,18.65){\psframebox{16}}	%4020
-  \rput(8.93,18.55){\psframebox{17}}	%4040
-  \rput(9.00,18.65){\psframebox{18}}	%4060
-  \rput(9.07,18.55){\psframebox{19}}	%4080
-  \rput(9.14,18.65){\psframebox{20}}	%4100
-  \rput(9.21,18.55){\psframebox{21}}	%4120
-  \rput(9.28,18.65){\psframebox{22}}	%4140
-  \rput(9.35,18.55){\psframebox{23}}	%4160
-  \rput(9.42,18.65){\psframebox{24}}	%4180
+  \rput(7.77,\nCBANDOddYOffset){\psframebox{01}}	%3720MHz
+  \rput(7.84,\nCBANDEvenYOffset){\psframebox{02}}	%3740
+  \rput(7.92,\nCBANDOddYOffset){\psframebox{03}}	%3760
+  \rput(7.99,\nCBANDEvenYOffset){\psframebox{04}}	%3780
+  \rput(8.07,\nCBANDOddYOffset){\psframebox{05}}	%3800
+  \rput(8.14,\nCBANDEvenYOffset){\psframebox{06}}	%3820
+  \rput(8.22,\nCBANDOddYOffset){\psframebox{07}}	%3840
+  \rput(8.29,\nCBANDEvenYOffset){\psframebox{08}}	%3860
+  \rput(8.36,\nCBANDOddYOffset){\psframebox{09}}	%3880
+  \rput(8.44,\nCBANDEvenYOffset){\psframebox{10}}	%3900
+  \rput(8.51,\nCBANDOddYOffset){\psframebox{11}}	%3920
+  \rput(8.58,\nCBANDEvenYOffset){\psframebox{12}}	%3940
+  \rput(8.65,\nCBANDOddYOffset){\psframebox{13}}	%3960
+  \rput(8.72,\nCBANDEvenYOffset){\psframebox{14}}	%3980
+  \rput(8.79,\nCBANDOddYOffset){\psframebox{15}}	%4000
+  \rput(8.86,\nCBANDEvenYOffset){\psframebox{16}}	%4020
+  \rput(8.93,\nCBANDOddYOffset){\psframebox{17}}	%4040
+  \rput(9.00,\nCBANDEvenYOffset){\psframebox{18}}	%4060
+  \rput(9.07,\nCBANDOddYOffset){\psframebox{19}}	%4080
+  \rput(9.14,\nCBANDEvenYOffset){\psframebox{20}}	%4100
+  \rput(9.21,\nCBANDOddYOffset){\psframebox{21}}	%4120
+  \rput(9.28,\nCBANDEvenYOffset){\psframebox{22}}	%4140
+  \rput(9.35,\nCBANDOddYOffset){\psframebox{23}}	%4160
+  \rput(9.42,\nCBANDEvenYOffset){\psframebox{24}}	%4180
 }
 
   % Microwave X-band (8-12.5 GHz)
@@ -851,12 +836,16 @@
     \rput(1,.2){\psframebox[framesep=1pt,framearc=0.2,fillstyle=solid, fillcolor=Black,linewidth=0pt,linestyle=none]{\textcolor{white}{Water absorption 22GHz}}}
   \endpsclip}
 
-  %Wireless communications, Thanks to Ranjan Acharya (erroneously source IEE spectrum March 2004) 1710-1770 MHZ and 2110-2170 MHZ Bands
- \psframe[fillstyle=solid, fillcolor=yellow](6.58,18.0)(7.07,18.1)\rput(6.82,18.05){3G}
- \psframe[fillstyle=solid, fillcolor=yellow](9.55,18.0)(9.80,18.1)\rput[r](9.8,18.05){3G}\wrapuparrow{yellow}{18.05}
- \psframe[fillstyle=solid, fillcolor=yellow](0.00,18.5)(0.15,18.6)\rput[l](0.0,18.55){3G}\wrapdnarrow{yellow}{18.55}
- 
-   
+{
+	% Cordless phone 2.4GHz
+	\psset{fillstyle=none, linecolor=yellow,linestyle=solid, linewidth=1pt, linearc=.05}
+	\rput[r](1.47,18.62){\textcolor{yellow}{Cordless phone 2.4GHz}}
+	\psline{-*}(1.50,18.62)(1.57,18.62)(1.57,18.5)
+	%     
+	% Microwave oven 2.45GHz
+	\rput[l](1.96,18.62){\textcolor{yellow}{2.45GHz Microwave Oven}}
+	\psline{-*}(1.92,18.62)(1.86,18.62)(1.86,18.5)
+}
 
   % Microwave Ka-band (27.25 - 36 GHz)
   \definecolor{Fill}{rgb}{0.8,0.1,0.67}\psset{hatchcolor=Fill}
@@ -875,6 +864,33 @@
   \psdots[linewidth=1.2pt,linecolor=white,linestyle=none, fillcolor=white, dotstyle=triangle*](0.66,20.52)
   \rput(0.66,20.65){\textcolor{white}{36GHz}}
   \rput(2.39,20.65){\psframebox[fillstyle=solid,fillcolor=Fill,framesep=2pt]{\textcolor{white}{Microwave Q-band}}}
+
+% Cellular phone notes:
+% https://en.wikipedia.org/wiki/Cellular_frequencies  
+% 
+% 3G cell phone bands from https://en.wikipedia.org/wiki/UMTS_frequency_bands
+{
+	\psset{fillstyle=solid, fillcolor=orange} 
+% 	\psframe(9.653,18.14)(9.800,18.24)\rput[r](9.8,18.19){3G}\wrapuparrow{orange}{18.19}
+% 	\psframe(0.00,18.64)(0.147,18.74)\rput[l](0.0,18.69){3G}\wrapdnarrow{orange}{18.69}
+% 	\psframe(6.628,18.14)(6.776,18.24)\rput(6.702,18.19){3G}
+	\input{tex/3Gbands.tex} % 3G cell phone bands
+}
+
+% 4G/LTE bands
+% https://en.wikipedia.org/wiki/LTE_frequency_bands#Frequency_bands_and_channel_bandwidths
+{
+	\psset{fillstyle=solid, fillcolor=green} 
+	\input{tex/4Gbands.tex}
+}
+
+% 5G bands
+% https://en.wikipedia.org/wiki/5G_NR_frequency_bands
+{
+	\psset{fillstyle=solid, fillcolor=cyan} 
+	\input{tex/5GF1bands.tex}
+	\input{tex/5GF2bands.tex}
+}
 
 %V  46 - 56 GHz
   \definecolor{Fill}{rgb}{0.9,0.1,0.67}\psset{hatchcolor=Fill}
@@ -966,7 +982,7 @@
   \psframe(0.00,24.05)(9.80,24.25)\wrapbtarrow{Fill}{24.15}
   \psframe(0.00,24.55)(1.81,24.75)\wrapdnarrow{Fill}{24.65}
   \psdots[linewidth=1.2pt,linecolor=white,linestyle=none, fillcolor=white, dotstyle=triangle*](4.39,23.52)
-  \rput(4.39,23.70){\textcolor{white}{100\micro \meter}}
+  \rput(4.39,23.70){\textcolor{white}{\si{100\micro\meter}}}
   \rput(4.39,23.60){\textcolor{white}{3THz}}
   \rput(4.9,24.15){\psframebox[fillstyle=solid,fillcolor=Fill,framesep=2pt]{\textcolor{white}{Far Infrared}}}
 
@@ -978,7 +994,7 @@
   \psframe(0.00,25.55)(9.80,25.75)\wrapbtarrow{Fill}{25.65}
   \psframe(0.00,26.05)(4.97,26.25)\wrapdnarrow{Fill}{26.15}
   \psdots[linewidth=1.2pt,linecolor=white,linestyle=none, fillcolor=white, dotstyle=triangle*](1.81,24.52)
-  \rput(1.81,24.65){\textcolor{white}{30\micro \meter}}
+  \rput(1.81,24.65){\textcolor{white}{\si{30\micro\meter}}}
   \rput(4.9,25.65){\psframebox[fillstyle=solid,fillcolor=Fill,framesep=2pt]{\textcolor{white}{Thermal Infrared}}}
 
   % Near Infrared 3um-760nm 	100-394 THz
@@ -987,7 +1003,7 @@
   \psframe(0.00,26.55)(9.80,26.75)\wrapbtarrow{Fill}{26.65}
   \psframe(0.00,27.05)(4.75,27.25)\wrapdnarrow{Fill}{27.15}
   \psdots[linewidth=1.2pt,linecolor=white,linestyle=none, fillcolor=white, dotstyle=triangle*](4.97,26.02)
-  \rput(4.97,26.15){\textcolor{white}{3\micro \meter}}
+  \rput(4.97,26.15){\textcolor{white}{\si{3\micro\meter}}}
   \rput(5.3,26.65){\psframebox[fillstyle=solid,fillcolor=Fill,framesep=2pt]{\textcolor{white}{Near Infrared}}}
 
   
@@ -998,10 +1014,10 @@
   \fiberoptics{6.87,26.55}{Telecom} %  for shorter distances, (1310nm)
  
   
-  % The hsb colour model starts and stops at Red (Hue = 0 to 1)
+  % The hsb color model starts and stops at Red (Hue = 0 to 1)
   %   which is different than the visible spectrum which starts at Red and ends at Violet.
   % Therefore, the range must be divided into pieces.
-  % Some colour fading between violet and red must be ignored
+  % Some color fading between violet and red must be ignored
   %
   % Visible spectrum 394-749THz (two rows)
   % Go from Red to Green (first row of visible spectrum)
@@ -1207,7 +1223,7 @@
   \psline[linecolor=white,linestyle=solid,linewidth=1pt]{->}(6.9,34.152)(7,34.152)
   \psframe[fillstyle=gradient,gradangle=90,gradbegin=GammRayColor,gradend=white,gradmidpoint=1.0,linewidth=0pt,linestyle=none](6,34.143)(6.97,34.157)
   \uput{2pt}[0](7.07,34.02){\textcolor{EColor}{$\infty$eV}}
-  \uput{2pt}[0](7.07,34.15){\textcolor{WColor}{$\frac{1}{\infty}\meter$}}
+  \uput{2pt}[0](7.07,34.15){\textcolor{WColor}{$\frac{1}{\infty}\si{\meter}$}}
   \uput{2pt}[0](7.07,34.28){\textcolor{FColor}{$\infty$Hz}}
   \psframe[fillstyle=gradient,gradangle=90,gradbegin=white,gradend=Black,gradmidpoint=1.0,linewidth=0pt,linestyle=none](5.98,33.991)(7,34.002)
 
@@ -1223,7 +1239,7 @@
   \psframe[fillstyle=gradient,gradangle=90,gradbegin=white,gradend=DarkRange,gradmidpoint=1.0,linewidth=0pt,linestyle=none](2,0.146)(2.9,0.157)
   %
   \uput{2pt}[180](1.9,0.02){\textcolor{EColor}{$\frac{1}{\infty}$eV}}
-  \uput{2pt}[180](1.9,0.15){\textcolor{WColor}{$\infty\meter$}}
+  \uput{2pt}[180](1.9,0.15){\textcolor{WColor}{$\infty\si{\meter}$}}
   \uput{2pt}[180](1.9,0.28){\textcolor{FColor}{$\frac{1}{\infty}$Hz}}
   \psframe[fillstyle=gradient,gradangle=90,gradbegin=Black,gradend=white,gradmidpoint=1.0,linewidth=0pt,linestyle=none](1.9,-.005)(2.9,0.006)
 
@@ -1273,37 +1289,30 @@
 %GPS submitted by Poul-Henning Kamp
 %Each frequency is +/- 15MHz  according to details at http://www.edu-observatory.org/gps/BostonSection.ppt 
 %
-\psset{fillstyle=solid, fillcolor=yellow,linecolor=yellow,linewidth=1pt,linestyle=solid}
+\psset{fillstyle=solid, fillcolor=yellow,linecolor=yellow,linewidth=1pt,linestyle=solid,framearc=0.4, framesep=0}
 % GPS-L1: 1575.4200 MHz (Civil Frequency  Coarse Acquisition)
-% \psline[linecolor=yellow,linestyle=solid,linewidth=1pt](1.11,18.25)(5.55,18.25)
-\psframe(5.24,18.05)(5.6,18.25)\psline(5.42,18.20)(5.42,18)
-\rput(5.42,18.19){\textcolor{Black}{GPS}}
-\rput(5.42,18.10){\textcolor{Black}{\tiny L1 Civil}}
+\psline(5.42,18.20)(5.42,18)
+\rput(5.42,18.15){\psframebox[boxsep=false]{\parbox{0.25in}{\centering GPS\\\tiny Civil}}}
 	
 % GPS-L2: 1227.60 MHz (Military Frequency  	(encrypted) Available 2003)
-\psframe(1.71,18.05)(2.07,18.25)\psline(1.89,18.20)(1.89,18)
-\rput(1.89,18.19){\textcolor{Black}{GPS}}
-\rput(1.89,18.10){\textcolor{Black}{\tiny L2 Mil.}}
+\psline(1.89,18.20)(1.89,18)
+\rput(1.89,18.15){\psframebox[boxsep=false]{\parbox{0.25in}{\centering GPS\\\tiny Mil.}}}
 
 % GPS-L3: 1381.0500 MHz (Nuclear Burst Detection  	NUDET - Nuclear Detonation)
-\psframe(3.38,18.05)(3.74,18.25)\psline(3.56,18.20)(3.56,18)
-\rput(3.56,18.19){\textcolor{Black}{GPS}}
-\rput(3.56,18.10){\textcolor{Black}{\tiny L3 Nuc.}}
+\psline(3.56,18.20)(3.56,18)
+\rput(3.56,18.15){\psframebox[boxsep=false]{\parbox{0.25in}{\centering GPS\\\tiny Nuc.}}}
 
 % GPS-L4: 1841.4000 MHz (Ionospheric correction  	Proposed)
-\psframe(7.45,18.05)(7.81,18.25)\psline(7.63,18.20)(7.63,18)
-\rput(7.63,18.19){\textcolor{Black}{GPS}}
-\rput(7.63,18.10){\textcolor{Black}{\tiny L4 Ion.}}
+\psline(7.63,18.20)(7.63,18)
+\rput(7.63,18.15){\psframebox[boxsep=false]{\parbox{0.25in}{\centering GPS\\\tiny Ion.}}}
 
 % GPS-L5: 1176.45 MHz (Proposed Frequency for 2008)
-\psframe(1.11,18.05)(1.47,18.25)\psline(1.29,18.20)(1.29,18)
-\rput(1.29,18.19){\textcolor{Black}{GPS}}
-\rput(1.29,18.10){\textcolor{Black}{\tiny [L5 SoL]}} %Safety of Life 
+\psline(1.29,18.20)(1.29,18)
+\rput(1.29,18.15){\psframebox[boxsep=false]{\parbox{0.25in}{\centering GPS\\\tiny SoL}}}
 
 % GPS 2227.5000MHz Spacecraft Telemetry 
-\psframe(0.34,18.05)(0.7,18.25)\psline(0.52,18.20)(0.52,18)
-\rput(0.52,18.19){\textcolor{Black}{GPS}}
-\rput(0.52,18.10){\textcolor{Black}{\tiny Space}}
+\psline(0.52,18.20)(0.52,18)
+\rput(0.52,18.15){\psframebox[boxsep=false]{\parbox{0.25in}{\centering GPS\\\tiny Space}}}
 }
 
 
@@ -1409,16 +1418,23 @@
 
   % Microwave u mm band (300 - 3000 GHz)(Terahertz 1mm - 100umm)
   \psline{<->}(\EMRPositionD,22.063)(\EMRPositionD,23.724)
-  \rput{90}(\EMRPositionD,22.89){\psframebox[fillcolor=DarkRange]{\parbox{1.1in}{\begin{center}\footnotesize\textcolor{RangesText}{Microwave \micro mm-band\\Terahertz rays}\end{center}}}}
+	\rput{90}(\EMRPositionD,22.89){%
+		\psframebox[fillcolor=DarkRange]{%
+			\parbox{1.3in}{%
+				\centering
+				\footnotesize \textcolor{RangesText}{Microwave\ } \SI[color=RangesText]{}{\micro\milli\meter-band}\\\textcolor{RangesText}{Terahertz rays}
+			}%
+		}%
+	}%
   \rput[t]{90}(\EMRPositionC,23.724){\psframebox[linestyle=none, fillstyle=solid,fillcolor=Black]{\textcolor{RangesText}{3THz}}}
 
 
   % Draw Ultraviolet labels for NUV, MUV, FUV, EUV, VUV
-  \rput[t]{90}(\EMRPositionC,27.707){\psframebox[linestyle=none, fillstyle=gradient,gradbegin=DarkRange,gradend=Black]{\textcolor{RangesText}{400}}}
-  \rput{90}(\EMRPositionD,27.916){\psframebox[linestyle=none, fillstyle=gradient,gradbegin=LightRange,gradend=DarkRange]{\textcolor{RangesText}{300}}}
-  \rput[t]{90}(\EMRPositionC,28.207){\psframebox[linestyle=none, fillstyle=gradient,gradbegin=DarkRange,gradend=LightRange]{\textcolor{RangesText}{200nm}}}
-  \rput[t]{90}(\EMRPositionC,28.705){\psframebox[linestyle=none, fillstyle=gradient,gradbegin=LightRange,gradend=DarkRange]{\textcolor{RangesText}{100nm}}}
-  \rput[t]{90}(\EMRPositionC,30.368){\psframebox[linestyle=none, fillstyle=gradient,gradbegin=Black,gradend=LightRange]{\textcolor{RangesText}{10nm}}}
+  \rput[t]{90}(\EMRPositionC,27.707){\psframebox[linestyle=none, fillstyle=gradient,gradbegin=DarkRange,gradend=Black]{\textcolor{RangesText}{\SI{400}{\nano\meter}}}}
+  \rput{90}(\EMRPositionD,27.95){\psframebox[linestyle=none, fillstyle=gradient,gradbegin=LightRange,gradend=DarkRange]{\textcolor{RangesText}{\SI{300}{\nano\meter}}}}%y was 27.916
+  \rput[t]{90}(\EMRPositionC,28.207){\psframebox[linestyle=none, fillstyle=gradient,gradbegin=DarkRange,gradend=LightRange]{\textcolor{RangesText}{\SI{200}{\nano\meter}}}}
+  \rput[t]{90}(\EMRPositionC,28.705){\psframebox[linestyle=none, fillstyle=gradient,gradbegin=LightRange,gradend=DarkRange]{\textcolor{RangesText}{\SI{100}{\nano\meter}}}}
+  \rput[t]{90}(\EMRPositionC,30.368){\psframebox[linestyle=none, fillstyle=gradient,gradbegin=Black,gradend=LightRange]{\textcolor{RangesText}{\SI{10}{\nano\meter}}}}
   \psline{<->}(\EMRPosition,27.707)(\EMRPosition,27.916)% NUV arrow
   \psline{<->}(\EMRPosition,27.916)(\EMRPosition,28.207)% MUV arrow
   \psline{<->}(\EMRPosition,28.207)(\EMRPosition,28.705)% FUV arrow
@@ -1427,8 +1443,8 @@
   \rput(\EMRPosition,27.812){\psframebox[fillcolor=DarkRange]{\textcolor{RangesText}{NUV}}}
   \rput(\EMRPosition,28.062){\psframebox[fillcolor=LightRange]{\textcolor{RangesText}{MUV}}}
   \rput(\EMRPosition,28.456){\psframebox[fillcolor=DarkRange]{\textcolor{RangesText}{FUV}}}
-  \rput(\EMRPosition,29.537){\psframebox[fillcolor=LightRange]{\textcolor{RangesText}{EUV}}}
-  \rput{90}(\EMRPositionD,29.288){\psframebox[fillcolor=LightRange]{\textcolor{RangesText}{VUV}}}
+  \rput(\EMRPosition,29.75){\psframebox[fillcolor=LightRange]{\textcolor{RangesText}{EUV}}}
+  \rput{90}(\EMRPositionD,29.4){\psframebox[fillcolor=LightRange]{\textcolor{RangesText}{VUV}}}
 
 
 
@@ -1454,12 +1470,12 @@
   \definecolor{DarkBackground}{rgb}{0.2,0.2,0.2}
   \definecolor{LightBackground}{rgb}{0.4,0.4,0.4}
   \definecolor{BoxColor}{rgb}{0.2,0.2,0.2}
-  \newlength{\LowerAudioRange}   \setlength{\LowerAudioRange}{5.161in} %20Hz
-  \newlength{\LowerSubSonicRange}   \setlength{\LowerSubSonicRange}{\LowerAudioRange-1.5in}
-  \newlength{\UpperAudioRange}   \setlength{\UpperAudioRange}{10.144in} %20kHz
-  \newlength{\UpperUltrasonicRange}   \setlength{\UpperUltrasonicRange}{\UpperAudioRange+1in}
+  \newlength{\LowerAudioRange}		\setlength{\LowerAudioRange}{5.161in} %20Hz
+  \newlength{\LowerSubSonicRange}	\setlength{\LowerSubSonicRange}{\LowerAudioRange-1.5in}
+  \newlength{\UpperAudioRange}		\setlength{\UpperAudioRange}{10.144in} %20kHz
+  \newlength{\UpperUltrasonicRange}	\setlength{\UpperUltrasonicRange}{\UpperAudioRange+1in}
 
-  % Fill backround of these with RGB colours so that fades appear smooth
+  % Fill backround of these with RGB colors so that fades appear smooth
   \psframe[fillstyle=gradient,
 	gradangle=0,
 	gradbegin=RGBBlackBegin,
@@ -1476,15 +1492,12 @@
 	gradmidpoint=0,
 	linewidth=0pt,
 	linestyle=none](\AudioPositionC,\UpperAudioRange)(\AudioPositionD,\UpperUltrasonicRange)
-  \psline[linecolor=AudioLineColor]{>-}(\AudioPosition,\UpperAudioRange)(\AudioPosition,\UpperUltrasonicRange)
-  \rput{90}(\AudioPosition,10.644){%
-  	\psframebox[framearc=0.25, fillstyle=solid,fillcolor=BoxColor, linecolor=AudioLineColor]{\textcolor{AudioLineColor}{Ultrasonic}}}
 
   % Human audio range  20Hz - 20kHz
-  \psframe[fillstyle=solid, fillcolor=HumanAudioColor,linewidth=0pt, linestyle=none](\AudioPositionC,\LowerAudioRange)(\AudioPositionD,\UpperAudioRange)
-  \psline[linecolor=AudioLineColor]{<->}(\AudioPosition,\LowerAudioRange)(\AudioPosition,\UpperAudioRange)
-  \rput{90}(\AudioPosition,7.64){%
-  	\psframebox[framearc=0.25,fillstyle=solid,fillcolor=BoxColor,linecolor=AudioLineColor]{\textcolor{AudioLineColor}{Human Audible range}}}
+  \psframe[fillstyle=solid, 
+	fillcolor=HumanAudioColor,
+	linewidth=0pt, 
+	linestyle=none](\AudioPositionC,\LowerAudioRange)(\AudioPositionD,\UpperAudioRange)
 
   % Subsonic audio range  infinitely small - 20Hz
   \psframe[fillstyle=gradient,
@@ -1494,16 +1507,10 @@
 	gradmidpoint=1.0,
 	linewidth=0pt,
 	linestyle=none](\AudioPositionC,\LowerAudioRange)(\AudioPositionD,\LowerSubSonicRange)
-  \psline[linecolor=AudioLineColor]{-<}(\AudioPosition,\LowerSubSonicRange)(\AudioPosition,\LowerAudioRange)
-  %faded out centerline
-  \rput{90}(\AudioPosition,4.4){%
-  	\psframebox[framearc=0.25, fillstyle=solid,fillcolor=BoxColor, linecolor=AudioLineColor]
-	{\textcolor{AudioLineColor}{Subsonic - Infrasound}}}
 
   %Piano keys starting place at 27.5Hz - 0.071"/2
   \rput{0}(\AudioPositionE,5.355){\psframebox[fillstyle=none,linewidth=0pt,linestyle=none]
   	{\parbox[t]{.001in}{\input{tex/piano.tex}}}}
-
 
 %Heart Beats
 % More information can be found here http://hypertextbook.com/facts/1998/ArsheAhmed.shtml
@@ -1528,7 +1535,7 @@
 	gradmidpoint=1.0,
 	linewidth=0pt,
 	linestyle=none](\AudioPositionC,3.007)(\AudioPositionD,3.107)
-\rput(\AudioPositionE,3.29){\textcolor{white}{Heartbeats}}
+\rput(\AudioPositionH,3.29){\begin{minipage}[t]{0.6in}{\begin{center}\textcolor{white}{Heart beats}\end{center}}\end{minipage}}
 
 
 %Ocean waves thanks to Ward Cunningham
@@ -1550,37 +1557,54 @@
 	gradmidpoint=1.0,
 	linewidth=0pt,
 	linestyle=none](\AudioPositionC,1.082)(\AudioPositionD,2.132)
-\rput(\AudioPositionE,1.12){\textcolor{white}{Ocean Waves}}
-
+\rput(\AudioPositionH,1.12){\begin{minipage}[t]{0.6in}{\begin{center}\textcolor{white}{Ocean waves}\end{center}}\end{minipage}}
 
 \psframe[fillstyle=solid,
 	linewidth=0pt,
 	fillcolor=FColor,
-	linestyle=none](\AudioPositionC,.26)(\AudioPositionD,0)
-\rput(\AudioPositionE,.19){\textcolor{black}{Mechanical}}
-\rput(\AudioPositionE,.07){\textcolor{black}{Waves}}
-\psline[linecolor=white,linewidth=0.7pt](\AudioPositionC,\UpperUltrasonicRange)(\AudioPositionC,0)
-\psline[linecolor=white,linewidth=0.7pt](\AudioPositionD,\UpperUltrasonicRange)(\AudioPositionD,0)
+	linestyle=none](\AudioPositionC,.36)(\AudioPositionD,0)
+\rput(\AudioPositionH,0.19){\begin{minipage}[t]{0.6in}{\begin{center}\textcolor{black}{Pressure waves}\end{center}}\end{minipage}}
+% \rput(\AudioPositionE,.19){\textcolor{black}{Mechanical}}
+% \rput(\AudioPositionE,.07){\textcolor{black}{Waves}}
+
+%Audio left side arrows 
+\psline[linecolor=AudioLineColor]{>-}(\AudioPositionC,\UpperAudioRange)(\AudioPositionC,\UpperUltrasonicRange) %Ultrasonic arrow
+\psline[linecolor=AudioLineColor]{<->}(\AudioPositionC,\LowerAudioRange)(\AudioPositionC,\UpperAudioRange) %Audio range arrow
+\psline[linecolor=AudioLineColor]{-<}(\AudioPositionC,0)(\AudioPositionC,\LowerAudioRange) %Subsonic arrow
+%Audio left side labels
+\rput{90}(\AudioPositionC,7.64){%
+	\psframebox[framearc=0.25,fillstyle=solid,fillcolor=BoxColor,linecolor=AudioLineColor]{\textcolor{AudioLineColor}{Human Audible range}}}
+\rput{90}(\AudioPositionC,10.644){%
+	\psframebox[framearc=0.25, fillstyle=solid,fillcolor=BoxColor, linecolor=AudioLineColor]{\textcolor{AudioLineColor}{Ultrasonic}}}
+\rput{90}(\AudioPositionC,4.4){%
+	\psframebox[framearc=0.25, fillstyle=solid,fillcolor=BoxColor, linecolor=AudioLineColor]{\textcolor{AudioLineColor}{Subsonic - Infrasound}}}
+  	
+  	
+
+%\psline[linecolor=white,linewidth=0.7pt](\AudioPositionC,\UpperUltrasonicRange)(\AudioPositionC,0) %Left border line
+% \psline[linecolor=white,linewidth=0.7pt]{->}(\AudioPositionC,\LowerSubSonicRange)(\AudioPositionC,0) %Left border line
+\psline[linecolor=white,linewidth=0.7pt](\AudioPositionD,\UpperUltrasonicRange)(\AudioPositionD,0) %Right border line
 
 
   %Label "one cycle per second" so people can easily see the starting point (1Hz) of the frequency marker on the poster
   % Leave room on the right side for heartbeats.
-  %\rput(9.9,3.08){
-  %	\psline[linecolor=yellow,linewidth=2pt]{<-}(0,0)(.5,0)
-  %	\rput[l]{0}(.2,0){
-  %		\psframebox[fillstyle=solid,fillcolor=yellow,linewidth=1pt,linecolor=yellow,framearc=0.25]{
-  %			\parbox[t]{.6in}{One Cycle Per Second}
-  %		}
-  %	}
-  %}
-  \rput(-.15,3.08){
-  	\psline[linecolor=yellow,linewidth=2pt]{->}(-.5,0)(0,0)
-  	\rput[r]{0}(-.2,0){
-  		\psframebox[fillstyle=solid,fillcolor=yellow,linewidth=1pt,linecolor=yellow,framearc=0.25]{
-			\parbox[t]{.6in}{One Cycle Per Second}
+%   \rput(-.15,3.08){
+%   	\psline[linecolor=yellow,linewidth=2pt]{->}(-.5,0)(0,0)
+%   	\rput[r]{0}(-.2,0){
+%   		\psframebox[fillstyle=solid,fillcolor=yellow,linewidth=1pt,linecolor=yellow,framearc=0.25]{
+% 			\parbox[t]{.6in}{One Cycle Per Second}
+% 		}
+%   	}
+%   }
+\rput(-.85,2.93){
+	\psline[linecolor=yellow,linewidth=2pt]{->}(0,0)(0.65,0)%points to grid
+	\rput[r]{0}(0,0){
+		\pscircle[linestyle=none, fillcolor=FColor, fillstyle=solid](0,0){0.44}
+		\psarc[linecolor=black, linewidth=2pt, linestyle=solid,fillstyle=none]{<-<}(0,0){0.37in}{90}{85}
 		}
-  	}
-  }
+	\rput(0,0){\parbox[t]{.6in}{\centering One cycle per second}}
+}
+  
   
 %For more info, see: http://www.arpansa.gov.au/basics/ion_nonion.htm  or http://hyperphysics.phy-astr.gsu.edu/hbase/nuclear/radrisk.html
 %Ionizing radiation (>10eV) has enough energy to strip electrons from an atom or, in the case of very high-energy radiation, break up the nucleus of the atom. This effect can cause damage to living tissue. 

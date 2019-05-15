@@ -39,53 +39,151 @@
 	}
 }
 %
+
+% None: f(x) = sin(20x)
+% AM: f(x) = cos(.5x)∙sin(20∙x)
+% FM: f(x) = cos(20∙x+15∙sin(x))
+
+
+% Preamble: 
+% \pgfplotsset{width=7cm,compat=1.14}
+% \begin{tikzpicture}
+% \begin{axis}[
+% hide x axis,
+% hide y axis
+% ]
+% \addplot [red]{sin(deg(x))};
+% \addplot [green]{cos(deg(x))};
+% \end{axis}
+
+% \begin{axis}[enlarge x limits=false]
+% \addplot [red,samples=500] {sin(deg(x))};
+% \addplot [orange,samples=7] {sin(deg(x))};
+% \addplot [teal,const plot,samples=14]
+% {sin(deg(x))};
+% \end{axis}
+% \end{tikzpicture}% <- eliminate space.
+% \end{document}
+
+% None: f(x) = sin(20x)
+% AM: f(x) = cos(.5x)∙sin(20∙x)
+% FM: f(x) = cos(20∙x+15∙sin(x))
+
+\pgfplotsset{%
+	axis line style={draw=none},
+	tick style={draw=none},
+	xticklabels=\empty,
+	yticklabels=\empty,
+	domain=0:3*pi,
+	samples=1e3,
+	width=2.3in,
+	height=1in,
+	xlabel shift=-8pt,
+}
+
 \begin{itemize}
 
-\item The radio spectrum (ELF to EHF) is populated by many more items than can be shown on this chart. Only a small sampling of bands used around the world have been shown.
+%Country flags from here (using MIT license):
+% https://github.com/stevenrskelton/flag-icon
+% use inkscape to convert to eps which is smaller than using "convert"
+%
+%List of telecommunications regulatory bodies
+% https://en.wikipedia.org/wiki/List_of_telecommunications_regulatory_bodies
+% 
+\item {%
+\setlength{\fboxsep}{0pt}%
+\setlength{\fboxrule}{0.5pt}%
+The radio spectrum (ELF to EHF) is populated by many more items than can be shown on this chart. Only a small sampling of the bands used around the world are shown. Each country has its own rules and regulations for allotting bands in this region. FCC \fbox{\includegraphics[width=0.15in]{tex/us.eps}}, CRTC \fbox{\includegraphics[width=0.15in]{tex/ca.eps}}, OFCOM \fbox{\includegraphics[width=0.15in]{tex/gb.eps}}, BNA  \fbox{\includegraphics[width=0.15in]{tex/de.eps}}, CII  \fbox{\includegraphics[width=0.15in]{tex/cn.eps}}...
+}%
+\item Communication by EMR is done by modulating the carrier waveform:
 
-\item Communication using EMR is done using either:
-\begin{itemize}
-\item Amplitude Modulation (AM)
-%Amplitude Modulation
-\psframebox[linestyle=none,fillstyle=none]{\rput(.1,0.05){\sinewave{.1in}{0.015in}{5}{.05in}{0.015in}{5}{4}}}\vspace{0.1in}\\
-\vspace{0.04in}OR
-\item Frequency Modulation (FM)
-%Frequency Modulation
-\psframebox[linestyle=none,fillstyle=none]{\rput(.1,0.05){\sinewave{.1in}{0.010in}{7}{.1in}{0.020in}{4}{4}}}
-\vspace{0.1in}
-\end{itemize}
+\begin{tabular}{ccc}%
+\begin{tikzpicture} % No modulation
+	\begin{axis}[smooth,grid=none,scale=1,xlabel={No modulation},line width=1pt,]
+		\addplot[white, smooth,xlabel={No modulation},line join=round, line cap=round] {sin(x*20*180/pi)};
+	\end{axis}
+\end{tikzpicture}&
+\begin{tikzpicture} %AM
+	\begin{axis}[smooth,grid=none,scale=1,xlabel={Amplitude Modulation (AM)},line width=1pt,]
+		%\addplot[white, smooth,line join=round, line cap=round] {sin(x*20*180/pi)*sin(x*1*180/pi)};
+		\addplot[white, smooth,line join=round, line cap=round] {0.5*sin(x*20*180/pi)*(1+sin(x*1.7*180/pi))+8};
 
-\item Each country has its own rules and regulations for allotting bands in this region. Refer to the authority in your area (Ex. FCC in the USA, DOC in Canada).
+	\end{axis}
+\end{tikzpicture}&
+\begin{tikzpicture} % FM
+	\begin{axis}[smooth,grid=none,scale=1,xlabel={Frequency Modulation (FM)},line width=1pt,]
+		\addplot[white, smooth,line join=round, line cap=round] {sin((x*20 + 6*(sin(x*2*180/pi)))*180/pi)};
+	\end{axis}
+\end{tikzpicture}
+\end{tabular}
+%
+% \item Not all references agree on the ULF band range, the HAARP range is used here.
+%
+\item {\bfseries RA}dio {\bfseries D}etecting {\bfseries A}nd {\bfseries R}anging (RADAR) uses microwaves to detect the distance and speed of objects.
 
-\item Not all references agree on the ULF band range, the HAARP range is used here.
-
-\item {\bfseries RA}dio {\bfseries D}etecting {\bfseries A}nd {\bfseries R}anging (RADAR) uses EMR in the microwave range to detect the distance and speed of objects.
-
-\item {\bfseries C}itizens {\bfseries B}and Radio (CB) contains 40 stations between 26.965 - 27.405MHz.
-
-\item Schumann resonance is produced in the cavity between the Earth and the ionosphere. The resonant peaks are depicted as \psframebox[fillstyle=none,linestyle=none]{\blip{0,-.07}{S}}
-
-\item Hydrogen gas emits radio band EMR at 21cm \psframebox[fillstyle=none,linestyle=none]{\blip{0,-.07}{H}}
-
-\item Some individual frequencies are represented as icons:\vspace{0.1in}\\
-\begin{tabular}{cp{1.9in}cp{1.1in}}
-\psframebox[linestyle=none]{\submarine{0.02,.05}{xxHz}}\hspace{0.2in}\vspace{0.05in} & Submarine communications&
-\psframebox[linestyle=none]{\rput(0.15,.05)\pager}&Pager\\
-\psframebox[linestyle=none]{\rput(0.15,.05){\timestandard}\hspace{.03in}}\vspace{0.05in} & Time / frequency standards&\psframebox[linestyle=none]{\rput(0.15,.05){\weatherstation}\hspace{.03in}\vspace{0.08in}} & Weather stations\\
-\psframebox[linestyle=none]{\rput(0.14,0.01){\psframebox[fillstyle=solid,fillcolor=green,linecolor=green,linearc=0]{\textcolor{Black}{xxm}}}}\hspace{.1in}\vspace{0.05in} & Ham / international meter bands&
+\item {\bfseries C}itizens {\bfseries B}and Radio (CB) contains 40 stations between 26.965 - 27.405MHz %\hspace{0.02in}
+{% CB Radio
+  \definecolor{BoxColor}{rgb}{0.6,0.68,0.86}
+  \psframebox[linestyle=none,framesep=1pt,fillcolor=BoxColor,linearc=0]{\black CB}
+}.
+%
+ Schumann resonances are produced in the cavity between the Earth and the ionosphere \hspace{0.02in}%
+ \psframebox[fillstyle=none,linestyle=none]{\psscalebox{0.7}{\blip{0,-.07}{S}}}%
+ \hspace{0.02in}.
+%
+ Hydrogen gas emits radio band EMR at 21cm  \hspace{0.05in}%
+ \psframebox[fillstyle=none,linestyle=none]{\psscalebox{0.7}{\blip{0,-.07}{H}}}%
+ \hspace{0.02in}.
+%
+ Time / frequency standards shown as \psframebox[linestyle=none] {\rput(0.1in,0){\timestandard}} \hspace{0.1in}.
+% 
+ Other individual frequencies are represented as icons:\vspace{0.1in}\\
+\begin{tabular}{cp{1.4in}cp{1in}cp{1.7in}}
+% 
+\psframebox[linestyle=none]{\submarine{0.02,.0}{xxHz}}\hspace{0.2in}\vspace{0.05in} & Submarine&
+\psframebox[linestyle=none]{\rput(0.15,.05)\pager}&Pager&
+\psframebox[linestyle=none]{\rput(0.05,.05){\psframebox[fillstyle=solid,fillcolor=Itinerant,linecolor=Itinerant,linearc=0,framesep=1pt]{\textcolor{Black}{GMRS}}}}&General Mobile Radio Service\\%
+%
+\psframebox[linestyle=none]{\rput(0.14,0.01){\psframebox[fillstyle=solid,fillcolor=green,linecolor=green,linearc=0]{\textcolor{Black}{xxm}}}}\hspace{.1in}\vspace{0.05in} & Ham / international&
+\psframebox[linestyle=none]{\rput(0.14,.03){\weatherstation}\hspace{.03in}\vspace{0.08in}} & Weather&
 \psframebox[linestyle=none]{\rput(0.15,.04){
 	\psframe[linestyle=solid,linecolor=gray,fillstyle=solid,fillcolor=gray,linearc=0](-.2,-.08)(.2,.08)
 	\psframe[hatchwidth=2pt, hatchsep=1.5pt,linestyle=solid,linecolor=yellow,fillstyle=hlines,hatchangle=45,hatchcolor=yellow,fillcolor=gray,linearc=0](-.2,-.08)(.2,.08)
 	}
 	\hspace{.2in}}\vspace{0.05in}
- 	& Short wave radio\\
-\psframebox[linestyle=none]{\rput(0.05,.05){\psframebox[fillstyle=solid,fillcolor=Itinerant,linecolor=Itinerant,linearc=0,framesep=1pt]{\textcolor{Black}{GMRS}}}}&General Mobile Radio Service&
-\psframebox[linestyle=none]{\rput(0.15,-0.05){\wirelessmic}}&Wireless Microphone\\
+	& Short wave\\
+%
+%
 \psframebox[linestyle=none]{\rput(0.11,.05){\psframebox[fillstyle=solid,fillcolor=Itinerant,linecolor=Itinerant,linearc=0,framesep=1pt]{\textcolor{Black}{FRS}}}}&Family Radio Service&
-\psframebox[linestyle=none]{\rput(0.15,.05){\psframebox[fillstyle=solid,linearc=0,linecolor=yellow,framesep=1pt,fillcolor=yellow,linewidth=1pt,linestyle=solid]{\textcolor{Black}{CP}}}\hspace{.03in}\vspace{0.08in}} & Cellular Phones\\
-\psframebox[linestyle=none]{\rput(0.11,.05){\psframebox[linestyle=none,framesep=1pt,fillcolor=red,linearc=0]{\white SOS}}}&
-	\psset{dotsize=1pt 1}Distress signal, in Morse code:\vspace{0.18in}
-\rput(-1.4,-0.18){\rput(0,0.05){\psdots(0,0)(.1,0)(.2,0)\psline{cc-cc}(0.3,0)(0.42,0)\psline{cc-cc}(0.49,0)(0.61,0)\psline{cc-cc}(0.68,0)(0.8,0)\psdots(.9,0)(1,0)(1.1,0)}}&\hspace{0.1in}&\hspace{0.1in}\\
+\psframebox[linestyle=none]{\rput(0.15,-0.1){\wirelessmic}}&Wireless Mic.&
+\psframebox[linestyle=none]{
+% 	\rput(0.15,.05){
+% 		\psframebox[fillstyle=solid,linearc=0,linecolor=yellow,framesep=1pt,fillcolor=yellow,linewidth=1pt,linestyle=solid]{\textcolor{Black}{CP}}
+% 	}
+	\rput(0.08, 0.02){
+		\psset{linestyle=solid, linewidth=0.02in}
+		\psline[linecolor=cyan  ](-.15,0.04)(0.15,0.04)
+		\psline[linecolor=green ](-.20,0.02)(0.10,0.02)
+		\psline[linecolor=orange](-.10,0.00)(0.20,0.00)
+	} 
+	\hspace{.03in}\vspace{0.08in}} & Cellular Phones
+	\psframebox[fillstyle=solid,linearc=0,linecolor=orange,framesep=1pt,fillcolor=orange,linewidth=1pt,linestyle=solid]{\textcolor{Black}{3G}}
+	\psframebox[fillstyle=solid,linearc=0,linecolor=green, framesep=1pt,fillcolor=green, linewidth=1pt,linestyle=solid]{\textcolor{Black}{4G}}
+	\psframebox[fillstyle=solid,linearc=0,linecolor=cyan,  framesep=1pt,fillcolor=cyan,  linewidth=1pt,linestyle=solid]{\textcolor{Black}{5G}}
+\\
+%
+% \psframebox[linestyle=none]{
+% 	\rput(0.11,.05){
+% 		\psframebox[linestyle=none,framesep=1pt,fillcolor=red,linearc=0]{\white SOS}
+% 	}
+% }
+% &
+% 	\psset{dotsize=1pt 1}Distress signal, in Morse code:\vspace{0.18in}
+% \rput(-1.4,-0.18){
+% 	\rput(0,0.05){
+% 		\psdots(0,0)(.1,0)(.2,0)\psline{cc-cc}(0.3,0)(0.42,0)\psline{cc-cc}(0.49,0)(0.61,0)\psline{cc-cc}(0.68,0)(0.8,0)\psdots(.9,0)(1,0)(1.1,0)
+% 	}
+% }%
 \end{tabular}
-
+\input{tex/morse.tex}
 \end{itemize}

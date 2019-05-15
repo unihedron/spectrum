@@ -3,68 +3,89 @@
 \psset{linestyle=none}
 \textcolor{white}{\Large Refraction}
 
+%Prism
 \begin{itemize}
-\item Refraction of EMR is dependent on wavelength as can be seen by the prism example below.
+\item%
+\begin{tabular}[t]{@{}l@{\hspace{0.1in}}l}%
+	\begin{minipage}[t]{1.5in}\textcolor{white}{%
+		Refraction, or bending of EMR, is dependent on wavelength. All wavelengths of EMR can be refracted by using the proper materials.
+		White light can be spread by refraction into a spectrum of its composite colors with a glass prism.	
+	% 	A right-angle prism will act as a mirror instead of a light refractor.  The critical angle of a true light-refracting prism is 42\degree.
+		}%
+	\end{minipage}&
+	\raisebox{-0.8in}{\begin{minipage}[t]{1.42in}
+		\includegraphics[scale=0.8]{pictures/prism.eps}
+		\begin{center}Glass prism\end{center}
+	\end{minipage}}
+\end{tabular}
+
+\item%
+\begin{tabular}[t]{@{}l@{\hspace{0.1in}}l}%
+	\begin{minipage}[t]{1.35in}{%
+		Convex and concave lenses make objects appear closer and further and are used to correct far-sightedness and near-sightedness.
+	}%
+	\end{minipage}&
+ 	\raisebox{0.1in}
+	{\begin{minipage}[t]{1.11in}%
+		\rput(0.33,-.3){
+			%Convex
+			\psframebox{
+				\psscalebox{0.9}{
+					\psset{linestyle=solid,fillstyle=solid,fillcolor=darkgray}
+					\psarc{c-c}(+.693,0){.8}{150}{210}
+					\psarc{c-c}(-.693,0){.8}{330}{30}
+					\psset{linestyle=solid,fillstyle=none}
+					\psline{}(-.4,+.207)(-0.08,+.207)(.086,+.180)(.4,-.1)
+					\psline(-.4,-.207)(-0.08,-.207)(.086,-.180)(.4,+.1)
+				}
+				\rput(0,-.4){\white Convex}
+% 				\rput(0,-.47){\white lens}
+			}
+			%Concave
+			\rput(0.68,0){
+				\psframebox{
+					\psscalebox{0.9}{
+						\psclip{\psframe[fillstyle=none,linestyle=none,linearc=0,framearc=0](-.165,-.4)(.165,.4)}
+						\psframe[fillstyle=solid,fillcolor=darkgray,linestyle=none,linearc=0,framearc=0](-.15,-.4)(.15,.4)
+						\psset{linestyle=solid,fillstyle=solid,fillcolor=Black}
+						\pscircle(+.85,0){.8}
+						\pscircle(-.85,0){.8}
+						\psline(-.157,-.389)(+.157,-.389)
+						\psline(-.157,+.389)(+.157,+.389)
+						\endpsclip
+						\psset{linestyle=solid,fillstyle=none}
+						\psline(-.4,+.180)(-0.086,+.180)(.08,+.207)(.4,+.4)
+						\psline(-.4,-.180)(-0.086,-.180)(.08,-.207)(.4,-.4)
+					}
+					\rput(0,-.4){\white Concave}
+% 					\rput(0,-.47){\white lens}
+				}
+			}
+		}
+	\end{minipage}}
+	\end{tabular}
+
+\item%
+\begin{tabular}[t]{@{}l@{\hspace{0.14in}}l}%
+	\begin{minipage}[t]{1.48in}\textcolor{white}{%
+		Heavy objects like dense galaxies, stars, and large planets cause light to bend due to gravitational lensing as seen here in galaxy cluster Abell 2218:
+		}%
+	\end{minipage}&
+	\raisebox{0.00in}{%
+		\begin{minipage}[t]{1.16in}
+			%http://imgsrc.hubblesite.org/hu/db/2004/08/images/a/formats/large_web.jpg
+			\rput[tl]{90}(0,-.7){\textcolor{gray}{\footnotesize STScI}}
+			\rput[tl]{0}(0.1,0.1){\includegraphics[width=1.18in]{pictures/gravlens.eps}}
+		\end{minipage}
+	}
+\end{tabular}
+	
 \end{itemize}
 
-\begin{tabular}{cl}
-%Prism
-\begin{minipage}[b]{1.8in}\includegraphics{pictures/prism.eps}
-\end{minipage}&
-\hspace{0.0in}
-\begin{minipage}[b]{1.8in}\textcolor{white}{%
-	By using a glass prism, white light can be
-	spread by refraction into a spectrum of its composite colours.
-	All wavelengths of EMR can be refracted by using the proper materials.
-	Not all glass prisms behave alike; a right-angle prism will act as a mirror instead of a light refractor.  The critical angle of a true light-refracting prism is 42\degree.
-	}
-\end{minipage}
-\vspace{0.3in}\\
-%
-%Convex
-\vspace{0.3in}
-\psframebox{
-	\psset{linestyle=solid,fillstyle=solid,fillcolor=gray}
-	\psarc{c-c}(+.693,0){.8}{150}{210}
-	\psarc{c-c}(-.693,0){.8}{330}{30}
-	\rput(-.6,0){Source}
-	\rput(.5,.2){Focal point}
-	\psset{linestyle=solid,fillstyle=none}
-	\psline(-.4,+.207)(-0.08,+.207)(.086,+.180)(.6,-.1)
-	\psline(-.4,-.207)(-0.08,-.207)(.086,-.180)(.6,+.1)
-}&
-\hspace{0.0in}
-\begin{minipage}[b]{1.8in}\textcolor{white}{%
-	Convex lenses make objects appear closer and are used to correct far-sightedness.}
-\end{minipage}
-\vspace{0.3in}\\
-%
-%Concave
-\vspace{0.3in}
-\psframebox{
-	\psclip{\psframe[fillstyle=none,linestyle=none,linearc=0,framearc=0](-.157,-.4)(.157,.4)}
-	\psframe[fillstyle=solid,fillcolor=gray,linestyle=none,linearc=0,framearc=0](-.15,-.4)(.15,.4)
-	\psset{linestyle=solid,fillstyle=solid,fillcolor=Black}
-	\pscircle(+.85,0){.8}
-	\pscircle(-.85,0){.8}
-	\psline(-.157,-.389)(+.157,-.389)
-	\psline(-.157,+.389)(+.157,+.389)
-	\endpsclip
-	\rput(-.6,0){\white Source}
-	\psset{linestyle=solid,fillstyle=none}
-	\psline(-.4,+.180)(-0.086,+.180)(.08,+.207)(.6,+.4)
-	\psline(-.4,-.180)(-0.086,-.180)(.08,-.207)(.6,-.4)
-}&
-\hspace{0.0in}
-\begin{minipage}[b]{1.8in}\textcolor{white}{%
-	Concave lenses make objects appear farther away and are used to correct near-sightedness.}
-\end{minipage}
-\vspace{0.3in}\\
-%
-%
-%Gravity lens
-\vspace{0.0in}
-\psframebox{
+}
+
+%Gravity lens - manually drawn
+%\psframebox{
 %	\rput(-.75,0){
 %		\PstStarFive[unit=.1,
 %			fillstyle=solid,
@@ -89,13 +110,4 @@
 %			\endpsclip
 %		\endpsclip
 %	}
-%http://imgsrc.hubblesite.org/hu/db/2004/08/images/a/formats/large_web.jpg
-	\rput[tl]{90}(-0.15,0){\textcolor{gray}{Photo by STScI}}\includegraphics[width=1in]{pictures/gravlens.eps}
-}&
-\begin{minipage}[b]{1.8in}\textcolor{white}{%
-	Heavy objects like dense galaxies and large planets cause light to bend due to gravitational lensing.\vspace{0.2in}}
-\end{minipage}
-\vspace{0.0in}\\
-%
-\end{tabular}
-}
+%}

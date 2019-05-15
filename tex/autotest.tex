@@ -1,0 +1,47 @@
+\documentclass{article}
+  \usepackage{graphicx}
+\usepackage{amsfonts}
+\usepackage{amsmath}
+\usepackage{pstricks}
+\usepackage{auto-pst-pdf}
+\usepackage{pgfplots}
+\pgfplotsset{%
+	compat=1.14,
+	axis line style={draw=none},
+	tick style={draw=none},
+	xticklabels=\empty,
+	yticklabels=\empty,
+	domain=0:1000,
+	samples=1e3,
+}
+\begin{document}
+
+\begin{pspicture}(5,5)
+\pspolygon[linejoin = 1](1,1)(5,1)(1,4)
+\pscircle[linestyle=dotted](3,2.5){2.5}
+\pscircle[fillstyle=solid,fillcolor=lightgray](2,2){1}
+\psline{o-}(.08,.6)(.5,.6)\uput{2pt}[0](.5,.6){White Hot}
+\end{pspicture}
+
+
+\newcommand{\nA}{10}% Start frequency.
+\newcommand{\nB}{110}% End frequency - start frequency.
+\newcommand{\nC}{.1e3}% Number of samples.
+\newcommand{\nM}{0.5}% Multiplying factor for amplitude.
+
+\pgfplotsset{
+	colormap={bluered}{
+		rgb255(0cm)=(128,0,0); rgb255(1cm)=(255,0,0); rgb255(2cm)=(255,255,0);
+		rgb255(3cm)=(100,255,0);rgb255(4cm)=(0,255,255); rgb255(5cm)=(0,0,180)},
+	domain=1:\nC
+}
+
+\begin{tikzpicture}[rotate=90]
+	\begin{axis}[width=11in,height=1in]
+		% http://www.fon.hum.uva.nl/praat/manual/Script_for_creating_a_frequency_sweep.html
+		\addplot [black,line width=3pt,line join=round, line cap=round]             {\nM * sin(\nA * x + \nB * (x^2) / \nC)};
+		\addplot [mesh,point meta=x,line width=2pt,line join=round, line cap=round] {\nM * sin(\nA * x + \nB * (x^2) / \nC)};
+	\end{axis}
+\end{tikzpicture}
+
+\end{document} 

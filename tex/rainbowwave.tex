@@ -1,0 +1,41 @@
+%Rainbowwave.tex
+
+%This feature uses a lot of LaTeX memory.
+% As root:
+%  edit the texmf.cnf 
+%    and change main_memory = 12,435,456
+% then run:
+%   fmtutil-sys --all
+
+% Description: Rainbow colored sine wave
+
+% http://www.fon.hum.uva.nl/praat/manual/Script_for_creating_a_frequency_sweep.html
+%formula M*sin(A*x+B*(x^2)/C)
+%A=Start frequency
+%B=End frequency-Start frequency
+%C=number of samples
+%M=multiplying height factor since we need smaller pgfplots height than allowed.
+\newcommand{\nRainbowStartFreq}{5}% Start frequency.
+\newcommand{\nB}{40}% End frequency - start frequency.
+\newcommand{\nC}{1e3}% Number of samples. (was 1e3)
+\newcommand{\nM}{0.35}% Multiplying factor for amplitude.
+
+\pgfplotsset{
+	compat=1.14,
+	axis line style={draw=none},
+	tick style={draw=none},
+	xticklabels=\empty,
+	yticklabels=\empty,
+	colormap={redblue}{
+		rgb255(0cm)=(128,0,0); rgb255(1cm)=(255,0,0); rgb255(2cm)=(255,255,0);
+		rgb255(3cm)=(100,255,0);rgb255(4cm)=(0,255,255); rgb255(5cm)=(0,0,180)},
+	samples=8000,%was 1000, but capacity exceeded , looked into -shell escape external method make nonoverlapping pdfs (on separate pages).
+	domain=1:\nC%range
+}
+
+\begin{tikzpicture}[rotate=90]
+	\begin{axis}[width=48in,height=0.9in]
+		\addplot [white,line width=3pt,line join=round, line cap=round]             {\nM * sin(\nRainbowStartFreq * x + \nB * (x^2) / \nC)};
+		\addplot [mesh,point meta=x,line width=2pt,line join=round, line cap=round] {\nM * sin(\nRainbowStartFreq * x + \nB * (x^2) / \nC)};
+	\end{axis}
+\end{tikzpicture}

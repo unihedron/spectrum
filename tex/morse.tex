@@ -1,0 +1,152 @@
+% Slightly modified from this:
+%   https://github.com/sikvall/latex-morse
+
+\newcommand{\Mdotlength}{3pt}
+\newcommand{\Mdahlength}{9pt}
+\newcommand{\Mcharseplength}{9pt}
+\newcommand{\Mwordseplength}{21pt}
+\newcommand{\Mdiditlength}{6pt}
+\newcommand{\Mfetvadd}{1.5pt}
+\newcommand{\Mcharsep}{\hspace{9pt}}
+\newcommand{\Mwordsep}{\hspace{21pt}}
+
+\newcommand{\dit}{\raisebox{0.5ex}{$\rule{\Mdotlength}{\Mfetvadd}\hspace{\Mdotlength}$}}
+\newcommand{\dah}{\raisebox{0.5ex}{$\rule{\Mdahlength}{\Mfetvadd}\hspace{\Mdotlength}$}}
+
+\newcommand{\MCa}{\dit\dah            \Mcharsep}
+\newcommand{\MCb}{\dah\dit\dit\dit  \Mcharsep}
+\newcommand{\MCc}{\dah\dit\dah\dit   \Mcharsep}
+\newcommand{\MCd}{\dah\dit\dit       \Mcharsep}
+\newcommand{\MCe}{\dit                \Mcharsep} 
+\newcommand{\MCf}{\dit\dit\dah\dit   \Mcharsep}
+\newcommand{\MCg}{\dah\dah\dit      \Mcharsep}
+\newcommand{\MCh}{\dit\dit\dit\dit   \Mcharsep}
+\newcommand{\MCi}{\dit\dit            \Mcharsep}
+\newcommand{\MCj}{\dit\dah\dah\dah   \Mcharsep}
+\newcommand{\MCk}{\dah\dit\dah       \Mcharsep}
+\newcommand{\MCl}{\dit\dah\dit\dit  \Mcharsep}
+\newcommand{\MCm}{\dah\dah          \Mcharsep}
+\newcommand{\MCn}{\dah\dit          \Mcharsep}
+\newcommand{\MCo}{\dah\dah\dah        \Mcharsep}
+\newcommand{\MCp}{\dit\dah\dah\dit  \Mcharsep}
+\newcommand{\MCq}{\dah\dah\dit\dah \Mcharsep}
+\newcommand{\MCr}{\dit\dah\dit      \Mcharsep}
+\newcommand{\MCs}{\dit\dit\dit      \Mcharsep}
+\newcommand{\MCt}{\dah                \Mcharsep}
+\newcommand{\MCu}{\dit\dit\dah       \Mcharsep}
+\newcommand{\MCv}{\dit\dit\dit\dah  \Mcharsep}
+\newcommand{\MCw}{\dit\dah\dah     \Mcharsep}
+\newcommand{\MCx}{\dah\dit\dit\dah  \Mcharsep}
+\newcommand{\MCy}{\dah\dit\dah\dah   \Mcharsep}
+\newcommand{\MCz}{\dah\dah\dit\dit    \Mcharsep}
+\newcommand{\MCAke}{\dit\dah\dah\dit\dah \Mcharsep}
+\newcommand{\MCArlig}{\dit\dah\dit\dah   \Mcharsep}
+\newcommand{\MCOsten}{\dah\dah\dah\dit   \Mcharsep}
+\newcommand{\MCUbel}{\dit\dit\dah\dah    \Mcharsep} % Tyskt Ü
+\newcommand{\MCch}{\dah\dah\dah\dah      \Mcharsep} % Tyskt CH
+
+\newcommand{\MPunkt}{\dit\dah\dit\dah\dit\dah           \Mcharsep}
+\newcommand{\MSTOP}{\MPunkt}
+\newcommand{\MComma}{\dah\dah\dit\dit\dah\dah           \Mcharsep}
+\newcommand{\MQuestion}{\dit\dit\dah\dah\dit\dit     \Mcharsep}
+\newcommand{\MSlash}{\dah\dit\dit\dah\dit          \Mcharsep}
+\newcommand{\MHyphen}{\dah\dit\dit\dit\dit\dah     \Mcharsep}
+\newcommand{\MPlus}{\dit\dah\dit\dah\dit          \Mcharsep}
+\newcommand{\MColon}{\dah\dah\dah\dit\dit\dit \Mcharsep}
+\newcommand{\MApostrophe}{\dit\dah\dah\dah\dah\dit \Mcharsep}
+\newcommand{\MQuoteMarks}{\dit\dah\dit\dit\dah\dit \Mcharsep}
+\newcommand{\MSOS}{\dit\dit\dit\dah\dah\dah\dit\dit\dit \Mcharsep}
+
+\newcommand{\MRepetera}{\dit\dit\hspace{\Mdiditlength}\dit\dit \Mcharsep}
+\newcommand{\MAmpersand}{\dit\dah\dit\dit\dit                     \Mcharsep}
+\newcommand{\MAtSign}{\dit\dah\dah\dit\dah\dit            \Mcharsep}
+\newcommand{\MEquals}{\dah\dit\dit\dit\dah                \Mcharsep}
+\newcommand{\MFelskrivning}{\dit\dit\dit\dit\dit\dit\dit\dit  \Mcharsep}
+
+\newcommand{\MCone}{\dit\dah\dah\dah\dah   \Mcharsep}
+\newcommand{\MCtwo}{\dit\dit\dah\dah\dah	  \Mcharsep}
+\newcommand{\MCthree}{\dit\dit\dit\dah\dah   \Mcharsep}
+\newcommand{\MCfour}{\dit\dit\dit\dit\dah  \Mcharsep}
+\newcommand{\MCfive}{\dit\dit\dit\dit\dit   \Mcharsep}
+\newcommand{\MCsix}{\dah\dit\dit\dit\dit   \Mcharsep}
+\newcommand{\MCseven}{\dah\dah\dit\dit\dit   \Mcharsep}
+\newcommand{\MCeight}{\dah\dah\dah\dit\dit  \Mcharsep}
+\newcommand{\MCnine}{\dah\dah\dah\dah\dit   \Mcharsep}
+\newcommand{\MCzero}{\dah\dah\dah\dah\dah  \Mcharsep}
+
+\newcommand{\MWord}{\MWS}
+
+\lstset{%
+literate={A}{\MCa}1
+%          {b}{\MBertil}1
+%          {c}{\MCesar}1
+%          {d}{\MDavid}1
+%          {e}{\MErik}1
+%          {f}{\MFilip}1
+%          {g}{\MGustav}1
+%          {h}{\MHelge}1
+%          {i}{\MIvar}1
+%          {j}{\MJohan}1
+%          {k}{\MKalle}1
+%          {l}{\MLudvig}1
+%          {m}{\MMartin}1
+%          {n}{\MNiklas}1
+         {O}{\MCo}1
+%          {p}{\MPetter}1
+%          {q}{\MQvintus}1
+%          {r}{\MRudolf}1
+         {S}{\MCs}1
+%          {t}{\MTore}1
+%          {u}{\MUrban}1
+%          {v}{\MViktor}1
+%          {w}{\MWilhelm}1
+%          {x}{\MXerxes}1
+%          {y}{\MYngve}1
+%          {z}{\MZata}1
+         {å}{\MAke}1
+         {ä}{\MArlig}1
+         {ö}{\MOsten}1
+         {.}{\MPunkt}1
+         {\ }{\Mwordsep}1
+         {,}{\MComma}1
+%          {0}{\MNoll}1
+}
+\newcommand{\morse}[1]{\lstinline{#1}}
+
+International Telecommunication Union (ITU) standard morse code.
+
+% More codes here: https://morsecode.scphillips.com/morse.html
+\begin{tabular}{r@{\hspace{.5em}}lr@{\hspace{.5em}}lr@{\hspace{.5em}}lr@{\hspace{.5em}}lr@{\hspace{.5em}}l}
+	A & \MCa  & K & \MCk  &U & \MCu   & 0 & \MCzero	& \& &\MAmpersand\\
+	B & \MCb  & L & \MCl  &V & \MCv   & 1 & \MCone	&-&\MHyphen\\
+	C & \MCc  & M & \MCm  &W & \MCw   & 2 & \MCtwo	& =  &\MEquals \\
+	D & \MCd  & N & \MCn  &X & \MCx   & 3 & \MCthree& ,  &\MComma\\
+	E & \MCe  & O & \MCo  &Y & \MCy   & 4 & \MCfour	& '  & \MApostrophe\\
+	F & \MCf  & P & \MCp  &Z & \MCz   & 5 & \MCfive	& +  & \MPlus\\
+	G & \MCg  & Q & \MCq  &  &        & 6 & \MCsix	& ?  &\MQuestion\\
+	H & \MCh  & R & \MCr  &. &\MSTOP  & 7 & \MCseven& "  &\MQuoteMarks\\
+	I & \MCi  & S & \MCs  &@ &\MAtSign& 8 & \MCeight& /  &\MSlash\\
+	J & \MCj  & T & \MCt  &: &\MColon & 9 & \MCnine	& \psframebox[linestyle=none,framesep=1pt,fillcolor=red,linearc=0]{\white SOS} & \MSOS\\
+\end{tabular}
+
+%  Kommatecken           & \MKomma        \\
+%  Frågetecken (?)       & \MFragetecken  \\
+%  Bråktecken (/)        & \MBraktecken   \\
+%  Bindestreck (--)      & \MBindestreck  \\
+%  Sluttecken (+)        & \MSluttecken   \\
+%                        &  \\
+%  Repetera              & \MRepetera     \\
+%  Väntatecken           & \MVanta        \\
+%  Avslutningstecken (+) & \MAvslutning   \\
+%  Åtskillnadstecken (=) & \MAtskillnad   \\
+%  Felskrivningstecken   & \MFelskrivning \\
+%                        &  \\
+%                        &  \\
+%                        &  \\
+%                        &  \\
+
+
+
+% \vspace{\baselineskip}
+
+

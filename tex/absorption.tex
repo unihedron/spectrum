@@ -10,11 +10,15 @@
  When a photon hits an atom it may be absorbed if the energy is just right.
  The energy level of the electron is raised -- essentially holding the radiation.
  A new photon of specific wavelength is created when the energy is released.
- The jump in energy is a discrete step and many possible levels of energy exist in an atom.
+ The jump in energy is a discrete step and many possible discrete levels of energy exist in an atom.
 
-\item Johann Balmer created this formula defining the photon emission wavelength ($\lambda$); where $m$ is the initial electron energy level and $n$ is the final electron energy level:
+\item \begin{minipage}[t]{3.5in} Johann Balmer created this formula defining the photon emission wavelength ($\lambda$); where $m$ is the initial electron energy level integer number and $n$ is the final electron energy level integer number: \end{minipage}%
+\hspace{0.2in}
+\begin{minipage}[t]{1.5in}\vspace{0.01in}
+	$\lambda = 364.56nm \left( \frac{\D m^2}{\D m^2 - n^2} \right)$
+\end{minipage}
 
-\hspace{1in}$\lambda = 364.56nm \left( \frac{\D m^2}{\D m^2 - n^2} \right)$
+\vspace{0.02in}
 
 \item Much of the interstellar matter is made of the simplest atom hydrogen. The hydrogen visible-spectrum emission and absorption lines are shown below:
 
@@ -29,11 +33,19 @@
 	\psline[linestyle=solid](#2,0)(#2,.083)
 	\uput{2pt}[270](#2,#4){#3}
 }
-\vspace{0.2in}
+\vspace{0.15in}
 \psframebox[fillstyle=none,linestyle=none]{
 	\rput(0.1,0){
 	%Start at 760nm (0in)
-		\psset{xunit=.0120in,linestyle=none, linewidth=1pt, linecolor=Black, fillstyle=solid, fillcolor=Black,linearc=0}
+		\psset{
+			xunit=.0156in, % Change for length.
+			linestyle=none, 
+			linewidth=1pt, 
+			linecolor=Black, 
+			fillstyle=solid, 
+			fillcolor=Black,
+			linearc=0
+		}
 {
 %  Red 		760-620 nm
 %  Orange 	620-570 nm
@@ -93,11 +105,12 @@
 
 
 \textcolor{gray}{\hrule}
-\vspace{.4in}
-\hspace{.3in}
+\vspace{.1in}
+\hspace{.1in}
 \begin{tabular}{rl}
-%blackbody radiation
-\begin{minipage}[b]{1.1in}
+%Blackbody radiation
+\begin{minipage}[t]{1.3in}
+\rput(0,-.65){
 	\psframebox[linestyle=none]{
 		%
 		%The following picture was created using the above Plank formula in a 
@@ -105,7 +118,8 @@
 		%The vertical scale is log(x), temperatures are 2000K, 1000K, 700K.
 		\rput[bl](0,0){\includegraphics{pictures/blackbody.eps}}
 		%
-		\psline[fillstyle=none, linearc=0]{<->}(1.1,0)(0,0)(0,.9)
+		%Labelling for the plot:
+		\psline[fillstyle=none, linearc=0]{<->}(1.1,0)(0,0)(0,.8)
 		\rput[b]{90}(-.05,.45){Power}
 		\rput[t](.5,-.05){Wavelength}
 		\psset{border=1pt, bordercolor=Black, fillstyle=none, linearc=0,linecolor=green}
@@ -114,18 +128,33 @@
 		\psline{o-}(.18,.25)(.9,.25)\uput{2pt}[0](.9,.25){Hot}
 		\psline{o-}(.7,0)(.88,.1)(1.05,.1)\uput{2pt}[0](1.05,.1){CMB}
 	}
+}
 \end{minipage}&
-\hspace{0.0in}
-\begin{minipage}[b]{3in}
-\begin{itemize}
-\item Max Planck determined the relationship between the temperature of an object and its radiation profile; where $R_\lambda$ is the radiation power, $\lambda$ is the wavelength, $T$ is the temperature:
-
-\hspace{.7in} $R_\lambda = \frac{\D 37418}{\D \lambda^5 \epsilon^{\left( \frac{\D 14388}{\D \lambda T}\D - 1 \right) }}$
-
-\end{itemize}
+\begin{minipage}[t]{2.4in}
+	\begin{itemize}
+		\item Max Planck determined the relationship between the temperature of an object and its radiation profile; where $R_\lambda$ is the radiation power, $\lambda$ is the wavelength, $T$ is the temperature:
+	\end{itemize}
 \end{minipage}
+\begin{minipage}[b]{2.5in}
+	\rput(.9in,-.3in){$R_\lambda = \frac{\D 37418}{\D \lambda^5 \epsilon^{\left( \frac{\D 14388}{\D \lambda T}\D - 1 \right) }}$}
+\end{minipage}
+
 \end{tabular}
 \vspace{.15in}
+
+% Atmospheric electromagnetic transmittance or opacity.jpg
+% https://commons.wikimedia.org/wiki/File:Atmospheric_electromagnetic_transmittance_or_opacity.jpg
+% This file is in the public domain in the United States because it was solely created by NASA. NASA copyright policy states that "NASA material is not protected by copyright unless noted". (See Template:PD-USGov, NASA copyright policy page or JPL Image Use Policy.)	￼
+% ￼	Warnings:
+% Use of NASA logos, insignia and emblems is restricted per U.S. law 14 CFR 1221.
+% The NASA website hosts a large number of images from the Soviet/Russian space agency, and other non-American space agencies. These are not necessarily in the public domain.
+% Materials based on Hubble Space Telescope data may be copyrighted if they are not explicitly produced by the STScI.[1] See also {{PD-Hubble}} and {{Cc-Hubble}}.
+% The SOHO (ESA & NASA) joint project implies that all materials created by its probe are copyrighted and require permission for commercial non-educational use. [2]
+% Images featured on the Astronomy Picture of the Day (APOD) web site may be copyrighted. [3]
+% The National Space Science Data Center (NSSDC) site has been known to host copyrighted content. Its photo gallery FAQ states that all of the images in the photo gallery are in the public domain "Unless otherwise noted."
+
+
+
 
 
 

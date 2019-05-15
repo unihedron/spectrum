@@ -1,44 +1,49 @@
 \documentclass{article}
 \usepackage[T2A]{fontenc}
 \usepackage[utf8]{inputenc}
+\usepackage{enumitem}
+\usepackage{wrapfig}
+\usepackage{tabularx}
+\usepackage{listings}
+\usepackage[yyyymmdd]{datetime}
+
+\usepackage{pgfplots} %For rainbow sinewave plot along right side.
+% \usepgfplotslibrary{external}
+% \tikzexternalize
+\pgfplotsset{compat=1.14}
 
 \DeclareMathAlphabet{\mathrm}{OT1}{cmss}{m}{n}
-%try typewrite font instead of roman (mathrm) for clarity
-% I guess this must be defined at each math statement since defining it above as mathtt does not work
-
-%\usepackage{amsmath}
-%\usepackage{amsfonts}
-%\usepackage{amssymb}
 
 %Fix up for poorly hyphenated words.
 \hyphenation{meas-ured Micro-wave}
 
-\usepackage[dvips]{geometry}
 \usepackage{url}
 
-\usepackage[pstricks,squaren,cdot]{SIunits}	% used for SI units and other symbols like mu
-
+% Actual poster will be 20x39"
+% artwork will be 1 inch larger 21x40
+\usepackage[textwidth=\textwidth,textheight=\textheight]{geometry}
+%Actual paper size is 20x39
+%Full bleed oversize by 0.5in on each side. 21x40
 \geometry{
 	verbose,
 	noheadfoot,
-	paperwidth=24in,
-	paperheight=36in,
-	top=0.0in,
-	bottom=0.0in,
-	left=0.0in,
-	right=0.0in
+	paperwidth=21in,
+	paperheight=40in,
+	top=0in,
+	bottom=0in,
+	left=0in,
+	right=0in
 }
 
-%	textwidth=24in,
-%	height=36in
+\usepackage{pstricks,pst-poly,pst-3d,pst-node,pst-tree,pst-grad,pst-plot,pst-3dplot,pst-solides3d}
+
+% \usepackage[pstricks,squaren,cdot]{SIunits}	% used for SI units and other symbols like mu
+\usepackage{siunitx}	% used for SI units and other symbols like mu
+
+
 
 \newfont{\titlefont}{cmssbx10 at 50pt}    %Title Font
-%\newfont{\titlefont}{cmbx10 at 50pt}    %Old Title Font
-%\newfont{\peoplesize}{cmss10 at 4pt}    %People Font
 
-\usepackage{pstricks,pst-poly,pst-3d,pst-node,pst-tree,pst-grad,pst-plot}
-% \usepackage{pstricks,pst-poly,pst-3d,pst-node,pst-tree,pst-grad,pst-char,pst-plot}
-% \usepackage{pstricks,pstcol,pst-poly,pst-3d,pst-node,pst-tree,pst-grad,pst-char,pst-plot}
 \usepackage{color}
 \usepackage{calc}
 \usepackage{multido}
@@ -47,11 +52,11 @@
 %Allow polar co-ordinates (radius,angle) with pstricks
 \SpecialCoor
 
-%\pagecolor{Black}
-\pagestyle{empty}	% suppress page numbering
-
 \definecolor{Black}{rgb}{0.0,0.0,0.0} %Printer uses this layer as CMYK. For testing, alter the values from 0,0,0.
   
+\pagecolor{Black}
+\pagestyle{empty}	% suppress page numbering
+
 %Some backgrounds must be same black as gradient, cannot use CMYK black.
 %Try this trick to make an RGB black for the printhouse, use a black that is not quite black.
 \definecolor{RGBBlackBegin}{rgb}{0.001,0.001,0.001}
@@ -68,34 +73,40 @@
 \definecolor{Gray80}{rgb}{0.8,0.8,0.8}
 \definecolor{Gray20}{rgb}{0.2,0.2,0.2}
 
-\definecolor{FColor}{rgb}{0.8,0.8,1.0} %Frequency label colour
-\definecolor{WColor}{rgb}{0.8,1.0,0.8} %Wavelength label colour
-\definecolor{EColor}{rgb}{1.0,0.8,0.8} %Energy label colour
+\definecolor{FColor}{rgb}{0.8,0.8,1.0} %Frequency label color
+\definecolor{WColor}{rgb}{0.8,1.0,0.8} %Wavelength label color
+\definecolor{EColor}{rgb}{1.0,0.8,0.8} %Energy label color
 
 \definecolor{DarkRange}{rgb}{0.2,0.2,0.2}
 \definecolor{LightRange}{rgb}{0.3,0.3,0.3}
 
-\newlength{\VerticalSeparation}  \setlength{\VerticalSeparation}{.15in} %vertical separation of text boxes
+\newlength{\VerticalSeparation}  \setlength{\VerticalSeparation}{.1in} %vertical separation of text boxes
 
-\newlength{\EMRPosition}  \setlength{\EMRPosition}{-1.1in} %vertical centerline for arrows
+\newlength{\EMRPosition}  \setlength{\EMRPosition}{-.85in} %vertical centerline for arrows
 \newlength{\EMRPositionA} \setlength{\EMRPositionA}{\EMRPosition-0.2in}
 \newlength{\EMRPositionB} \setlength{\EMRPositionB}{\EMRPosition+0.1in}
-\newlength{\EMRPositionC} \setlength{\EMRPositionC}{\EMRPosition-0.4in} %Far left side of box
-\newlength{\EMRPositionD} \setlength{\EMRPositionD}{\EMRPosition+0.3in} %vertical centerline for alternative arrows
+\newlength{\EMRPositionC} \setlength{\EMRPositionC}{\EMRPosition-0.37in} %Far left side of box
+\newlength{\EMRPositionD} \setlength{\EMRPositionD}{\EMRPosition+0.27in} %vertical centerline for alternative arrows
 \newlength{\EMRPositionE} \setlength{\EMRPositionE}{10.1in} %far right side grey backgrounds on chart
 
 \newlength{\AudioPosition}    \setlength{\AudioPosition}{10.4in} % xpos centerline
-\newlength{\AudioPositionA}   \setlength{\AudioPositionA}{\AudioPosition-0.1in} %label left side
+%\newlength{\AudioPositionA}   \setlength{\AudioPositionA}{\AudioPosition-0.1in} %label left side
+\newlength{\AudioPositionA}   \setlength{\AudioPositionA}{\AudioPosition} %label left side
 \newlength{\AudioPositionB}   \setlength{\AudioPositionB}{\AudioPosition+0.1in} %label right side
-\newlength{\AudioPositionC}   \setlength{\AudioPositionC}{\AudioPosition-0.2in} %display box left side
-\newlength{\AudioPositionD}   \setlength{\AudioPositionD}{\AudioPosition+0.6in} %display box right side
-\newlength{\AudioPositionE}   \setlength{\AudioPositionE}{\AudioPosition+0.2in} %right side of piano keys
+% \newlength{\AudioPositionC}   \setlength{\AudioPositionC}{\AudioPosition-0.2in} %display box left side
+\newlength{\AudioPositionC}   \setlength{\AudioPositionC}{\AudioPosition-0.1in} %display box left side
+\newlength{\AudioPositionD}   \setlength{\AudioPositionD}{\AudioPosition+0.5in} %display box right side
+\newlength{\AudioPositionE}   \setlength{\AudioPositionE}{\AudioPosition+0.1in} %right side of piano keys
 \newlength{\AudioPositionF}   \setlength{\AudioPositionF}{\AudioPosition-0.5pt} %left side of centerline
 \newlength{\AudioPositionG}   \setlength{\AudioPositionG}{\AudioPosition+0.5pt} %right side of centerline
+\newlength{\AudioPositionH}   \setlength{\AudioPositionH}{\AudioPosition+0.2in} % approx center for some minipage labelling.
 
 
 % set normal size text for math fonts
 \newcommand{\D}{\displaystyle}
+
+% remove all itemize left margins for compactness.
+\setlist[itemize]{leftmargin=*}
 
 % Erbium-Doped Fiber Amplifier
 % \edfa{center Xpos, bottom Ypos}
@@ -183,14 +194,13 @@
 
   \newcommand{\blip}[2]{
 	\rput(#1){
-		\pscurve[linestyle=solid,linewidth=.8pt,linecolor=black,fillstyle=solid,fillcolor=white](-.1,0)(-.08,.02)(0,.2)(.08,.02)(.1,0)
+% 		\pscurve[linestyle=solid,linewidth=.8pt,linecolor=black,fillstyle=solid,fillcolor=white](-.1,0)(-.08,.02)(0,.2)(.08,.02)(.1,0)
+		\pscurve[linestyle=solid,linewidth=.8pt,linecolor=black,fillstyle=solid,fillcolor=white](-.1,0)(-.08,.05)(0,.25)(.08,.05)(.1,0)
 		\psline[linestyle=solid,linewidth=.8pt,linecolor=white](-.12,0)(.12,0)
-		\rput(0,0.09){\textcolor{Black}{#2}}
+		\rput(0,0.15){\textcolor{Black}{#2}}
 	}
 
   }
-
-
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Notes:
@@ -205,52 +215,119 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \begin{document} %===================================================================
-\flushleft
-
+\flushleft%
+%
 %\tiny
 %\scriptsize
 %\footnotesize
-\small
+\small%
 %\normalsize
 %\large
 %\Large
 %\LARGE
 %\huge
 %\Huge
-
-\sffamily
-
+%
+\sffamily%
+%
 \psset{unit=1in}% scaling factor for perfect printer to equal 1.000"
-%\psset{unit=1.0041841in}% scaling factor for Home Roland Raven printer to equal 1.000"
+%
+\begin{pspicture}(-.49,-.49)(20.49,39.49)% Dimensions must include all printable objects inside otherwise auto-pst-pdf will crop out items. Also, auto-pst-pdf adds 0.01in to width and height, compensate by subtracting that from the desired dimension -0.005 on each side and again since fitting this picture into the paper seems to require a bit of space also.
+%
+	\newlength{\nLeftWidth}\setlength{\nLeftWidth}{6.24in}
+	\rput(12.7,26.36){\input{tex/leftside.tex}}
+	\rput[t](12.7,24.1){\input{tex/leftsidemid.tex}}
+	\rput(12.7,15.35){\input{tex/leftsidelow.tex}}
+%
+	\rput(0, 4.62){
+		\psscalebox{0.96}{
+			% Left side: 0.55 for symbol edge, 0.25 for margin.
+			% Bottom: 0.1 for symbol edge, 0.25 for margin, 3.0 to reach top of page.
+			\rput(0.85, 0){\input{sources/sources.tex}}
 
-\begin{pspicture}(-1,-1)(23,35)
+			% Left side: 1.4 for symbol edge, 0.1 for space.
+			% Bottom: 0.1 for symbol edge, 0.25 for margin, 3.0 to reach top of page.
+			\rput(1.5, 0){\input{sizes/sizes.tex}}
 
-  %black background
-  \psframe[fillstyle=solid, fillcolor=Black, linestyle=none, linewidth=0pt](-.8,-.8)(22.8,34.8)
+			%Main section of poster
+			% Bottom 0.3 to match up to bottom of sources and sizes, 3.0 to move to top.
+			\rput{0}(3.11, 0){\small\input{tex/ranges.tex}}
+		}
+	}
+	
+	%Title
+	\rput[t]{0}(10.1,38.47){
+		\titlefont \white The Electromagnetic Radiation Spectrum
+	}
+%
+	%OLD sine wave down the side of the poster
+% 	\rput{270}(19.27,38.5){
+% 		% plotpoints = resolution detail
+% 		% {Xmin}{Xmax}{function} , note rotation where X is vertical length
+% 		% function {A div x mul x sin B div}
+% 		% A = frequency = 3000000 seems good, 30000000 is a bit high
+% 		% B = inverse of amplitude = 5 (original = 4 was good)
+% 	%	\psplot[linestyle=solid,linewidth=2pt,fillstyle=none, linecolor=white, plotpoints=5000]{1}{36000}{3000000 div x mul x sin 4 div} %original
+% 		\psplot[linestyle=solid,linewidth=2pt,fillstyle=none, linecolor=white, plotpoints=5000]
+% 			{1}{15100}{6000000 div x mul x sin 5 div} %working ver.20in
+% 	}
+%
+	\rput(0, 0.5){
+		\rput[bl](0.47,0){
+			\white\psset{cornersize=absolute,linearc=4pt,fillstyle=solid,fillcolor=Black, linecolor=white}\psframebox{\parbox[t][3.8in]{4in}{\input{tex/interesting.tex}}}
+		}
 
-  \rput{0}(-.35,-.6){\input{sources/sources.tex}}
+		\rput[bl](4.68,0){
+			\white\psset{cornersize=absolute,linearc=4pt,fillstyle=solid,fillcolor=Black, linecolor=white}\psframebox{\parbox[t][3.8in]{4.6in}{\input{tex/polarization.tex}}}
+		}
 
-  \rput{0}(.4,-.6){\input{sizes/sizes.tex}}
+		\rput[bl](9.5,0){
+			\white\psset{cornersize=absolute,linearc=4pt,fillstyle=solid,fillcolor=Black, linecolor=white}\psframebox{\parbox[t][3.8in]{3.2in}{\input{tex/refraction.tex}}}
+			}
 
-  \rput{0}(2.4,-.7){\small\input{tex/ranges.tex}}
+		\rput[bl](12.9,0){
+			\white\psset{cornersize=absolute,linearc=4pt,fillstyle=solid,fillcolor=Black, linecolor=white}\psframebox{\parbox[t][3.5in]{2.3in}{\input{tex/reflection.tex}}}
+		}
 
-  %Title
-  \rput[B]{0}(10.1,34.15){\titlefont \white The Electromagnetic Radiation Spectrum}
+	}
+	
+	\rput[br](19.14,0.8){
+		\white\psset{
+			cornersize=absolute,linearc=4pt,fillstyle=solid,fillcolor=Black, linecolor=white}\psframebox{\parbox[t][3.2in]{3.5in}{
+				\input{tex/infrared.tex}
+			}\
+		}
+	}
+%
+	%Company copyright 
+	\rput[br](19.10,0.5){%
+		\white\psset{
+			cornersize=absolute,linearc=4pt,fillstyle=solid,fillcolor=Black,linecolor=white}\psframebox{\parbox[t][0.1in]{3.5in}
+			{
+				\renewcommand{\dateseparator}{}%No date separator required for version number,too confusing.
+				\centering \copyright \hspace{0.1in} \url{unihedron.com}  \hspace{0.2in} \textcolor{gray}{\today}%
+			}\
+		}%
+	}%
+%
+	%Crop marks to remove bleed
+	{\psset{linecolor=yellow,linewidth=1pt}
+		\multido{\iY=0+39}{2}{\psline(-0.4 ,\iY )(-.1,\iY )} %Left side
+		\multido{\iY=0+39}{2}{\psline(20.1 ,\iY )(20.4,\iY )} %Right side
+		\multido{\iX=0+20}{2}{\psline(\iX ,-0.4)(\iX ,-0.1)} %Bottom side
+		\multido{\iX=0+20}{2}{\psline(\iX ,39.1)(\iX ,39.4)} %Top side
+	}
 
-  %sine wave down the side of the poster
-  \rput{270}(22.4,35.5){
-  	\psplot[linestyle=solid,linewidth=2pt,fillstyle=none, linecolor=white, plotpoints=5000]{1}{36000}{3000000 div x mul x sin 4 div}
-  }
+	%Visible cropped window (comment out for production).
+% 	\rput(0,0){\psframe[linecolor=white,linewidth=1pt](0,0)(20,39)}
+  
+	%Visible border window (comment out for production).
+% 	\rput(0.5in,0.5in){\psframe[linestyle=dotted, linecolor=white,linewidth=1pt](0,0)(19,38)}
 
-\input{tex/leftside.tex}
+	%Comment this right-side sine-wave rainbow out for faster compiling/testing
+	\rput[b](19.25in,-4.4in){\input{tex/rainbowwave.tex}}
+	
+\end{pspicture}%
 
-\input{tex/rightside.tex}
-
-%If/when copyright permission is ever given for most of these images then this can be restored
-%\input{tex/people.tex}
-
-  \rput[B]{0}(15.4,-.6){\input{tex/contact.tex}}
-
-\end{pspicture}
 
 \end{document} %===============================================================

@@ -1,0 +1,24 @@
+
+{
+  %Lower Left side notes
+  \psset{cornersize=absolute,linearc=4pt,fillstyle=solid,fillcolor=Black, linecolor=white}
+  \white
+
+  \rput[tl]{0}(0,0){
+    \parbox[t]{\nLeftWidth}{
+
+ 	\psframebox{\parbox[t]{\nLeftWidth}{\white\input{tex/laser.tex}}}
+  
+ 	\vspace{\VerticalSeparation}
+
+	\psframebox{\parbox[t]{\nLeftWidth}{\input{tex/tvtext.tex}}}
+
+	\vspace{\VerticalSeparation}
+
+	\psframebox{\parbox[t]{\nLeftWidth}{\input{tex/radiotext.tex}}}
+
+    }
+  }
+
+  
+}
