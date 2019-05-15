@@ -40,7 +40,7 @@ char *eng(double value, int places)
       places = (value >= 100.0) ? places-2 :
                (value >=  10.0) ? places-1 : places;
 
-      sprintf(res, "%.*f %s", places-1, value, prefixes[p]);
+      sprintf(res, "%.*f}{ %s", places-1, value, prefixes[p]);
 
       return result;
 }
@@ -48,7 +48,7 @@ char *eng(double value, int places)
 void printlabel(double number, char * color, char * label)
 {
 
-	printf("\\uput{2pt}[270]( %2.1f,%2.1f){\\textcolor{%s}{%s%s}}\n"  ,ColPosition ,RowPosition,color,eng(number,3),label);
+	printf("\\uput{2pt}[270]( %2.1f,%2.1f){\\textcolor{%s}{\\SI{%s%s}}}\n"  ,ColPosition ,RowPosition,color,eng(number,3),label);
 
 	ColPosition +=0.817;  /* Increment_value = pspicture_width / 12 divisions*/
 }

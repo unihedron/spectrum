@@ -2,7 +2,7 @@
 # Process this file with autoconf to produce a configure script.
 
 AC_PREREQ([2.69])
-AC_INIT([spectrum], [0.18], [BUG-REPORT-ADDRESS])
+AC_INIT([spectrum], [0.20], [BUG-REPORT-ADDRESS])
 AC_CONFIG_SRCDIR([numbers.c])
 AC_PATH_PROG([GS], [gs], [/usr/bin/gs])
 AC_PATH_PROG([LATEX], [latex])

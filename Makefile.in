@@ -14,7 +14,7 @@ all: numbers spectrum
 # Make the spectrum chart
 spectrum: pictures
 	$(LATEX) tex/spectrum.tex
-	$(DVIPS)  -Ppdf -T 24in,36in spectrum.dvi -f > spectrum.eps
+	$(DVIPS) -Ppdf -T 21in,40in spectrum.dvi -f > spectrum.eps
 	$(GS) -dSAFER -q -dNOPAUSE -dBATCH -sDEVICE=pdfwrite -sOutputFile=spectrum_current.pdf -dSAFER -c .setpdfwrite -f spectrum.eps
 
 pictures:
@@ -48,8 +48,15 @@ numbers: numbers.c
 	./numbers > tex/numbers.tex &
 
 # Compile the utility to convert frequencies to positions on chart
-xpos: xpos.c
+xpos: xpos.c xpose6.c
 	$(CC) -lm -o xpos xpos.c
+	$(CC) -lm -o xpose6 xpose6.c
+
+cell:
+	cat tex/3G-F.txt  | ./xpose6 1e6 0.000 0.020 > tex/3Gbands.tex
+	cat tex/LTE-F.txt | ./xpose6 1e6 0.020 0.020 > tex/4Gbands.tex
+	cat tex/5G-F1.txt | ./xpose6 1e6 0.040 0.020 > tex/5GF1bands.tex
+	cat tex/5G-F2.txt | ./xpose6 1e9 0.040 0.020 > tex/5GF2bands.tex
 
 # Compile the utility to convert a frequency range to positions on chart
 kuband:
