@@ -26,19 +26,22 @@
 	fillstyle=solid,
 	fillcolor=white,
 	linestyle=solid,
-	linewidth=2pt,
-	linecolor=WColor}
-
-%\rput{90}(0,0){\psframebox(0,3){\includegraphics{sizes/earth.eps}}}
+	linewidth=1pt,
+	linecolor=WColor
+}
 
 \psline(0,0)(0,35.1)
 
-%\psframe[fillstyle=crosshatch,hatchangle=45,hatchcolor=WColor,linewidth=1pt,linestyle=solid, hatchwidth=1pt, hatchsep=8pt](-.25,0)(0.25,35.1)
-
-\rput{0}(0,35.1){\psframebox{\parbox[t]
-	{0.5in}{\centering Sizes of EMR}}}
-\rput{0}(0,0.1){\psframebox{\parbox[t]
-	{0.5in}{\centering Sizes of EMR}}}
+\rput{0}(0,35.1){
+	\psframebox{\parbox[t]{0.5in}{
+		\centering Sizes of EMR}
+	}
+}
+\rput{0}(0,0.1){
+	\psframebox{\parbox[t]{0.5in}{
+		\centering Sizes of EMR}
+	}
+}
 
 % 12,756.32 kilometers
 \rput{0}(0,5.277){\psframebox{\parbox[t]
@@ -100,25 +103,25 @@
 % 10um Molecules (Ultraviolet)
 \rput{0}(0,25.385){
 \psframebox{\parbox[t]
-	{0.5in}{\centering\includegraphics{sizes/cell.eps} Single Cell 10\micro \meter}}}
+	{0.5in}{\centering\includegraphics{sizes/cell.eps} Single Cell \si{10\micro\meter}}}}
 
 \rput{0}(0,32.897){
 \psframebox{\parbox[t]
-	{0.5in}{\centering\includegraphics{sizes/H2O.eps} Water Molecule 0.3\nano \meter}}}
+	{0.5in}{\centering\includegraphics{sizes/H2O.eps} Water Molecule \SI{0.3}{\nano\meter}}}}
 
 
 
 %3um - 800nm
 \rput{0}(0,26.582){
 \psframebox{\parbox[t]
-	{0.5in}{\centering\includegraphics{sizes/bacteria.eps} Bacteria 3\micro \meter - 800\nano \meter}}}
+	{0.5in}{\centering\includegraphics{sizes/bacteria.eps} Bacteria \si{3\micro\meter} - \si{800\nano\meter}}}}
 
 %protien
 
 %17-300nm
 \rput{0}(0,28.374){
 \psframebox{\parbox[t]
-	{0.5in}{\centering\includegraphics{sizes/virus.eps} Virus 17-300\nano \meter}}}
+	{0.5in}{\centering\includegraphics{sizes/virus.eps} Virus \si{17 -} \si{300\nano\meter}}}}
 
 % Atoms (Xray)
 
