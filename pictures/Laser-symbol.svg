@@ -1,0 +1,34 @@
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  xmlns:xlink="http://www.w3.org/1999/xlink"
+  width="620"
+  height="560"
+  version="1.0">
+  <defs>
+    <g id="raypair">
+      <path d="M -2,0 l -5,-135 h 14 l -5,135" fill="black" stroke="none" />
+      <path d="M -2,0 l -3,-90 h 10 l -3,90" fill="black" stroke="none" transform="rotate(15)" />
+    </g>
+    <g id="triangle">
+      <path d="M 0,-330 l 280,490 h -560 z" stroke-linejoin="round" />
+    </g>
+  </defs>
+<g transform="translate(310,370)">
+  <use xlink:href="#triangle" fill="yellow" stroke="yellow" stroke-width="60" />
+  <circle cx="0" cy="0" r="45" fill="black" stroke="none" />
+  <use xlink:href="#raypair" />
+  <use xlink:href="#raypair" transform="rotate(30)" />
+  <use xlink:href="#raypair" transform="rotate(60)" />
+  <use xlink:href="#raypair" transform="rotate(90)" />
+  <use xlink:href="#raypair" transform="rotate(120)" />
+  <use xlink:href="#raypair" transform="rotate(150)" />
+  <use xlink:href="#raypair" transform="rotate(180)" />
+  <use xlink:href="#raypair" transform="rotate(210)" />
+  <use xlink:href="#raypair" transform="rotate(240)" />
+  <use xlink:href="#raypair" transform="rotate(270)" />
+  <use xlink:href="#raypair" transform="rotate(300)" />
+  <use xlink:href="#raypair" transform="rotate(330)" />
+  <path d="M 0,0 h 200" fill="none" stroke="black" stroke-width="14" />
+  <use xlink:href="#triangle" fill="none" stroke="black" stroke-width="30" />
+</g>
+</svg>
