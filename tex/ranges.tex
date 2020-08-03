@@ -21,7 +21,9 @@
 
   % Bottom end of spectrum fade to black
   \psframe[fillstyle=solid, fillcolor=Black, linecolor=Black](\EMRPositionC,-0.1)(2.9,0.4)
-  \psframe[fillstyle=gradient,gradangle=90,gradbegin=Black,gradend=Black,gradmidpoint=1.0,linewidth=0pt,linestyle=none](1.9,-0.1)(2.9,0.4)
+  % conversion of gradient to CMYK does not work for following line, just use solid.
+  %\psframe[fillstyle=gradient,gradangle=90,gradbegin=Black,gradend=Black,gradmidpoint=1.0,linewidth=0pt,linestyle=none](1.9,-0.1)(2.9,0.4)
+  \psframe[fillstyle=solid,fillcolor=Black,linewidth=0pt,linestyle=none](1.9,-0.1)(2.9,0.4)
 
   % ULF	Ultra Low Frequency  3 - 30Hz  source  http://www.haarp.alaska.edu/haarp/elf.html
   \psframe[fillcolor=LightRange](\EMRPositionC,3.792)(\EMRPositionE,5.453)
@@ -868,9 +870,10 @@
 % Cellular phone notes:
 % https://en.wikipedia.org/wiki/Cellular_frequencies  
 % 
+
 % 3G cell phone bands from https://en.wikipedia.org/wiki/UMTS_frequency_bands
 {
-	\psset{fillstyle=solid, fillcolor=orange} 
+	\psset{fillstyle=solid, fillcolor=3GBandColor} 
 % 	\psframe(9.653,18.14)(9.800,18.24)\rput[r](9.8,18.19){3G}\wrapuparrow{orange}{18.19}
 % 	\psframe(0.00,18.64)(0.147,18.74)\rput[l](0.0,18.69){3G}\wrapdnarrow{orange}{18.69}
 % 	\psframe(6.628,18.14)(6.776,18.24)\rput(6.702,18.19){3G}
@@ -880,14 +883,14 @@
 % 4G/LTE bands
 % https://en.wikipedia.org/wiki/LTE_frequency_bands#Frequency_bands_and_channel_bandwidths
 {
-	\psset{fillstyle=solid, fillcolor=green} 
+	\psset{fillstyle=solid, fillcolor=4GBandColor} 
 	\input{tex/4Gbands.tex}
 }
 
 % 5G bands
 % https://en.wikipedia.org/wiki/5G_NR_frequency_bands
 {
-	\psset{fillstyle=solid, fillcolor=cyan} 
+	\psset{fillstyle=solid, fillcolor=5GBandColor} 
 	\input{tex/5GF1bands.tex}
 	\input{tex/5GF2bands.tex}
 }
@@ -1231,8 +1234,10 @@
   % Cover bottom end range to identify infinity
   %
   % Put black box to cover unwanted lines and number labels
-  \psframe[fillstyle=solid,fillcolor=Black,linewidth=0pt,linestyle=none](-0.22,-.05)(1.9,0.31)
-  \psframe[fillstyle=gradient,gradangle=90,gradbegin=Black,gradend=Black,gradmidpoint=1.0,linewidth=0pt,linestyle=none](1.9,-0.1)(2.9,0.31)
+  \psframe[fillstyle=solid,fillcolor=RGBBlackBegin,linewidth=0pt,linestyle=none](-0.22,-.05)(1.9,0.31)
+  %The following does not work with CMYK because gradient are probably RGB
+  %\psframe[fillstyle=gradient,gradangle=90,gradbegin=Black,gradend=Black,gradmidpoint=1.0,linewidth=0pt,linestyle=none](1.9,-0.1)(2.9,0.31)
+  \psframe[fillstyle=solid,fillcolor=RGBBlackBegin,linewidth=0pt,linestyle=none](1.9,-0.1)(2.9,0.31)
   %
   %Arrow
   \psline[linecolor=white,linestyle=solid,linewidth=1pt]{<-}(1.9,0.152)(2.1,0.152)
@@ -1465,8 +1470,8 @@
   %Audio range
   \psset{framearc=0}
   \definecolor{AudioLineColor}{rgb}{1,1,1}
-  \definecolor{UltrasonicAudioColor}{rgb}{0.2,0.2,0.4}
-  \definecolor{SubSonicColor}{rgb}{0.2,0.2,0.4}
+  \definecolor{UltrasonicAudioColor}{rgb}{0.2,0.2,0.6}%B was 0.4
+  \definecolor{SubSonicColor}{rgb}{0.2,0.2,0.6}%B was 0.4
   \definecolor{DarkBackground}{rgb}{0.2,0.2,0.2}
   \definecolor{LightBackground}{rgb}{0.4,0.4,0.4}
   \definecolor{BoxColor}{rgb}{0.2,0.2,0.2}

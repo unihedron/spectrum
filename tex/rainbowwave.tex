@@ -11,12 +11,12 @@
 
 % http://www.fon.hum.uva.nl/praat/manual/Script_for_creating_a_frequency_sweep.html
 %formula M*sin(A*x+B*(x^2)/C)
-%A=Start frequency
-%B=End frequency-Start frequency
-%C=number of samples
-%M=multiplying height factor since we need smaller pgfplots height than allowed.
+%\nA = Start frequency
+%\nB = End frequency-Start frequency
+%\nC = number of samples
+%\nM = multiplying height factor since we need smaller pgfplots height than allowed.
 \newcommand{\nRainbowStartFreq}{5}% Start frequency.
-\newcommand{\nB}{40}% End frequency - start frequency.
+\newcommand{\nB}{40}% End frequency - start frequency. (was 40, seems to make no difference)
 \newcommand{\nC}{1e3}% Number of samples. (was 1e3)
 \newcommand{\nM}{0.35}% Multiplying factor for amplitude.
 
@@ -34,7 +34,7 @@
 }
 
 \begin{tikzpicture}[rotate=90]
-	\begin{axis}[width=48in,height=0.9in]
+	\begin{axis}[width=46.1in,height=0.9in]%height was 48
 		\addplot [white,line width=3pt,line join=round, line cap=round]             {\nM * sin(\nRainbowStartFreq * x + \nB * (x^2) / \nC)};
 		\addplot [mesh,point meta=x,line width=2pt,line join=round, line cap=round] {\nM * sin(\nRainbowStartFreq * x + \nB * (x^2) / \nC)};
 	\end{axis}

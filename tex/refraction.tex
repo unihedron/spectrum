@@ -13,9 +13,13 @@
 	% 	A right-angle prism will act as a mirror instead of a light refractor.  The critical angle of a true light-refracting prism is 42\degree.
 		}%
 	\end{minipage}&
-	\raisebox{-0.8in}{\begin{minipage}[t]{1.42in}
-		\includegraphics[scale=0.8]{pictures/prism.eps}
-		\begin{center}Glass prism\end{center}
+	\raisebox{-0.9in}{\begin{minipage}[t]{1.42in}{%
+			\setlength{\fboxsep}{0pt}%
+			\setlength{\fboxrule}{0.5pt}%
+			\fbox{\includegraphics[scale=0.8]{pictures/prism.eps}}%
+			}%
+		\rput[b](-.75in,-.16in){\textcolor{white}{\footnotesize\ Glass prism}}
+		%\begin{center}Glass prism\end{center}
 	\end{minipage}}
 \end{tabular}
 
@@ -74,8 +78,12 @@
 	\raisebox{0.00in}{%
 		\begin{minipage}[t]{1.16in}
 			%http://imgsrc.hubblesite.org/hu/db/2004/08/images/a/formats/large_web.jpg
-			\rput[tl]{90}(0,-.7){\textcolor{gray}{\footnotesize STScI}}
-			\rput[tl]{0}(0.1,0.1){\includegraphics[width=1.18in]{pictures/gravlens.eps}}
+			\rput[tl]{90}(0,-.9){\textcolor{gray}{\footnotesize STScI}}
+			\rput[tl]{0}(0.1,0.15){%
+			\setlength{\fboxsep}{0pt}%
+			\setlength{\fboxrule}{0.5pt}%
+			\fbox{\includegraphics[width=1.18in]{pictures/gravlens.eps}}%
+			}%
 		\end{minipage}
 	}
 \end{tabular}

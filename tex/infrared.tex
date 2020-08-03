@@ -10,9 +10,13 @@
 \item
 \begin{tabular}[t]{@{}ll@{\hspace{0.05in}}r}
 \raisebox{-.43\nIRdogHeight}{
-	\begin{minipage}{.73in}
+	\begin{minipage}{.8in}
 		{
-			\includegraphics[height=\nIRdogHeight]{pictures/Infrared_dog.eps}
+			{%
+			\setlength{\fboxsep}{0pt}%
+			\setlength{\fboxrule}{0.5pt}%
+			\fbox{\includegraphics[height=\nIRdogHeight]{pictures/Infrared_dog.eps}}%
+			}%
 			\rput[b](-.4in,-.16in){\textcolor{gray}{\footnotesize\ NASA/IPAC}}
 		}
 	\end{minipage}
@@ -21,8 +25,11 @@
  %
  % Get a regular outdoor night time photo with flash, use GIMP->Filters->EG-> Infrared Simulation
 \raisebox{-.43\nIRdogHeight}{\
-	\begin{minipage}{1in}
-		{\includegraphics[height=\nIRdogHeight]{pictures/nightvision.eps}}
+	\begin{minipage}{1in}{%
+			\setlength{\fboxsep}{0pt}%
+			\setlength{\fboxrule}{0.5pt}%
+			\fbox{\includegraphics[height=\nIRdogHeight]{pictures/nightvision.eps}}%
+			}%
 	\end{minipage}
 }
 \end{tabular}
